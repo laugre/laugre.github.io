@@ -136,6 +136,12 @@
 
 	}
 
+	.myscrollbar {
+		width: 500px;
+		height: 10px;
+		overflow: auto;
+	  }
+
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 18pt;
@@ -642,10 +648,11 @@
 				overflow: hidden;
 
 				img {
-					position: absolute;
-					top: 0;
-					height: 100%;
-					width: auto;
+					// position: absolute;
+					// top: 0;
+					// height: 100%;
+					// width: 100%;
+					
 				}
 			}
 
@@ -863,7 +870,7 @@
 		color: #fff;
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: center;
-		background: #35b88f url('../images/banner.svg') bottom center no-repeat;
+		background: #35b88f bottom center no-repeat;
 		padding: 5em 0 5em 0;
 		margin: 0;
 		background-size: 125% auto;

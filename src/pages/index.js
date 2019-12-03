@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'gatsby';
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
+import pic1 from '../assets/images/travelzik.png';
+import pic2 from '../assets/images/vsfactory.png';
+import pic3 from '../assets/images/lascaux4devanture.jpg';
 import Scroll from '../components/Scroll';
 import Gallery from '../components/Gallery';
 
@@ -60,21 +61,27 @@ const IndexPage = () => (
 
     <section id="banner">
       <header>
-        <h2>This is Overflow</h2>
+        <h2>Bonjour et bienvenue !</h2>
       </header>
       <p>
-        A brand new site template designed by{' '}
-        <a href="http://twitter.com/ajlkn">AJ</a> for{' '}
-        <a href="http://html5up.net">HTML5 UP</a>.<br />
-        It’s responsive, built on HTML5/CSS3, and entirely free
+        Je m'appelle Laurent Garnier, j'ai 34 ans.
         <br />
-        under the{' '}
-        <a href="http://html5up.net/license">Creative Commons license</a>.
+        Je développe des applications multimédias et des sites interactifs
+        depuis maintenant 8 ans.
+        <br />
+        Je travaille désormais en freelance afin de pouvoir échanger directement
+        avec des clients soucieux du détail.
+        <br />
+        Je souhaite entre autre leur apporter mes compétences
+        <br />
+        afin de leur proposer des Expériences Utilisateurs toujours plus
+        immersives, réactives et interactives.
+        <br />
       </p>
       <footer>
         <Scroll type="id" element="first">
           <a href="#first" className="button style2 scrolly">
-            Act on this message
+            Jettes un oeil à mes dernières réalisations !
           </a>
         </Scroll>
       </footer>
@@ -86,15 +93,11 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>
-            Lorem ipsum
-            <br />
-            dolor sit amet
-          </h2>
+          <h2>Travelzik</h2>
         </header>
         <p>
-          Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia
-          pellentesque eleifend vitae est elit tristique velit tempus etiam.
+          Sur ce projet en cours de web radio alternative du monde, je conçois
+          et développe l'application Travelzik pour smartphone/tablette.
         </p>
       </div>
     </article>
@@ -105,15 +108,26 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>
-            Mollis posuere
-            <br />
-            lectus lacus
-          </h2>
+          <h2>VS Factory</h2>
         </header>
         <p>
-          Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper.
-          Etiam egestas scelerisque ac duis magna lorem ipsum dolor.
+          Je travaille régulièrement avec cette agence parisienne pour réaliser
+          des projets créatifs tournés vers un futur complètement interactif.
+        </p>
+      </div>
+    </article>
+
+    <article className="container box style1 right">
+      <a href="/#" className="image fit">
+        <img src={pic3} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Lascaux IV</h2>
+        </header>
+        <p>
+          Réalisation d’un module interactif permettant de naviguer dans la
+          projection 3D stéréoscopique de la grotte de Lascaux.
         </p>
       </div>
     </article>

@@ -21,6 +21,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-images": "^0.5.19",
+    "smooth-scrollbar": "^8.5.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
@@ -36,15 +37,5 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.17.0",
     "rimraf": "^2.6.3"
-  },
-  "keywords": [
-    "gatsby",
-    "gatsby-starter",
-    "gatsby-starter-overflow"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-overflow/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-overflow#readme"
+  }
 }
