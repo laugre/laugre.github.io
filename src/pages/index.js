@@ -7,6 +7,12 @@ import { Link } from 'gatsby';
 import pic1 from '../assets/images/travelzik.png';
 import pic2 from '../assets/images/vsfactory.png';
 import pic3 from '../assets/images/lascaux4devanture.jpg';
+import pic4 from '../assets/images/quiz_mhnn_manger.png';
+import pic5 from '../assets/images/paleosite_morphing4.png';
+import pic6 from '../assets/images/musee_olympique_stades.png';
+import pic7 from '../assets/images/musee_olympique_livre3D.png';
+import pic8 from '../assets/images/csi_dataviz.png';
+import pic9 from '../assets/images/darwin-01.jpg';
 import Scroll from '../components/Scroll';
 import Gallery from '../components/Gallery';
 
@@ -55,6 +61,30 @@ const ROW2_IMAGES = [
     caption: 'People come and go and walk away',
   },
 ];
+
+const ROW3_IMAGES = [
+  {
+    src: require('../assets/images/fulls/01.jpg'),
+    thumbnail: require('../assets/images/thumbs/01.jpg'),
+    caption: 'Ad infinitum',
+  },
+  {
+    src: require('../assets/images/fulls/02.jpg'),
+    thumbnail: require('../assets/images/thumbs/02.jpg'),
+    caption: 'Dressed in Clarity',
+  },
+  {
+    src: require('../assets/images/fulls/03.jpg'),
+    thumbnail: require('../assets/images/thumbs/03.jpg'),
+    caption: 'Raven',
+  },
+  {
+    src: require('../assets/images/fulls/04.jpg'),
+    thumbnail: require('../assets/images/thumbs/04.jpg'),
+    caption: "I'll have a cup of Disneyland, please",
+  },
+];
+
 const IndexPage = () => (
   <Layout>
     <Header />
@@ -74,7 +104,7 @@ const IndexPage = () => (
         <br />
         Je souhaite entre autre leur apporter mes compétences
         <br />
-        afin de leur proposer des Expériences Utilisateurs toujours plus
+        afin de leur proposer des expériences utilisateurs toujours plus
         immersives, réactives et interactives.
         <br />
       </p>
@@ -96,7 +126,7 @@ const IndexPage = () => (
           <h2>Travelzik</h2>
         </header>
         <p>
-          Sur ce projet en cours de web radio alternative du monde, je conçois
+          Sur ce projet en cours de web radio alternative, je conçois
           et développe l'application Travelzik pour smartphone/tablette.
         </p>
       </div>
@@ -132,7 +162,94 @@ const IndexPage = () => (
       </div>
     </article>
 
-    <article className="container box style2">
+    <article className="container box style1 left">
+      <a href="/#" className="image fit">
+        <img src={pic4} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Quiz Interactif</h2>
+        </header>
+        <p>Développement front-end d'un quiz interactif.</p>
+      </div>
+    </article>
+
+    <article className="container box style1 right">
+      <a href="/#" className="image fit">
+        <img src={pic5} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Projet muséo, Paléosite</h2>
+        </header>
+        <p>Réalisation d'un dispositif de morphing temps réel.</p>
+      </div>
+    </article>
+
+    <article className="container box style1 left">
+      <a href="/#" className="image fit">
+        <img src={pic6} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Projet muséo, Musée Olympique</h2>
+        </header>
+        <p>
+          Réalisation de l'interface d'un dispositif interactif sur écran
+          tactile avec projection carte au sol.
+        </p>
+      </div>
+    </article>
+
+    <article className="container box style1 right">
+      <a href="/#" className="image fit">
+        <img src={pic7} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Projet muséo, Musée Olympique</h2>
+        </header>
+        <p>
+          Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque
+          page. Défilement des pages en touchless.
+        </p>
+      </div>
+    </article>
+
+    <article className="container box style1 left">
+      <a href="/#" className="image fit">
+        <img src={pic8} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Projet muséo, CSI Dataviz</h2>
+        </header>
+        <p>
+          Réalisation de l'interface d'un dispositif interactif sur écran
+          tactile avec slide de curseurs, gestion d'un modèle physique pour
+          faire tomber les billes, langages multiples.
+        </p>
+      </div>
+    </article>
+
+    <article className="container box style1 right">
+      <a href="/#" className="image fit">
+        <img src={pic9} alt="" />
+      </a>
+      <div className="inner">
+        <header>
+          <h2>Projet muséo, CSI Darwin</h2>
+        </header>
+        <p>
+          Réalisation d'un dispositif interactif en se positionnant debout face
+          à l'écran pour faire défiler et afficher des paires d'images en
+          touchless et se prendre en photo en train d'imiter un animal ou
+          personnage affiché et à l'envoyer vers une galerie de portraits.
+        </p>
+      </div>
+    </article>
+
+    {/* <article className="container box style2">
       <header>
         <h2>Magnis parturient</h2>
         <p>
@@ -158,7 +275,7 @@ const IndexPage = () => (
           }))}
         />
       </div>
-    </article>
+    </article> */}
 
     {/* <article className="container box style3">
       <header>
