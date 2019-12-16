@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'gatsby';
+import pic0 from '../assets/images/IMG_5585.jpg';
 import pic1 from '../assets/images/travelzik.png';
 import pic2 from '../assets/images/vsfactory.png';
 import pic3 from '../assets/images/lascaux4devanture.jpg';
@@ -62,29 +63,6 @@ const ROW2_IMAGES = [
   },
 ];
 
-const ROW3_IMAGES = [
-  {
-    src: require('../assets/images/fulls/01.jpg'),
-    thumbnail: require('../assets/images/thumbs/01.jpg'),
-    caption: 'Ad infinitum',
-  },
-  {
-    src: require('../assets/images/fulls/02.jpg'),
-    thumbnail: require('../assets/images/thumbs/02.jpg'),
-    caption: 'Dressed in Clarity',
-  },
-  {
-    src: require('../assets/images/fulls/03.jpg'),
-    thumbnail: require('../assets/images/thumbs/03.jpg'),
-    caption: 'Raven',
-  },
-  {
-    src: require('../assets/images/fulls/04.jpg'),
-    thumbnail: require('../assets/images/thumbs/04.jpg'),
-    caption: "I'll have a cup of Disneyland, please",
-  },
-];
-
 const IndexPage = () => (
   <Layout>
     <Header />
@@ -96,18 +74,19 @@ const IndexPage = () => (
       <p>
         Je m'appelle Laurent Garnier, j'ai 34 ans.
         <br />
-        Je développe des applications multimédias et des sites interactifs
-        depuis maintenant 8 ans.
+        Je développe des applications multimédias aux interfaces interactives
+        depuis 2009 et me suis tourné vers le web depuis 2 ans.
         <br />
         Je travaille désormais en freelance afin de pouvoir échanger directement
-        avec des clients soucieux du détail.
+        avec les clients sur des projets variés
         <br />
-        Je souhaite entre autre leur apporter mes compétences
+        et ainsi leur apporter mes compétences en leur proposant des solutions
         <br />
-        afin de leur proposer des expériences utilisateurs toujours plus
-        immersives, réactives et interactives.
+        aux expériences utilisateurs toujours plus immersives, réactives et
+        interactives.
         <br />
       </p>
+      <img src={pic0} alt="" className="image" />
       <footer>
         <Scroll type="id" element="first">
           <a href="#first" className="button style2 scrolly">
@@ -124,11 +103,12 @@ const IndexPage = () => (
       <div className="inner">
         <header>
           <h2>Travelzik</h2>
+          <h3>Mobile app</h3>
         </header>
-        <p>
-          Sur ce projet en cours de web radio alternative, je conçois
-          et développe l'application Travelzik pour smartphone/tablette.
-        </p>
+        {/* <p>
+          Sur ce projet en cours de web radio alternative, je conçois et
+          développe l'application Travelzik pour smartphone/tablette.
+        </p> */}
       </div>
     </article>
 
@@ -139,11 +119,12 @@ const IndexPage = () => (
       <div className="inner">
         <header>
           <h2>VS Factory</h2>
+          <h3>Agence</h3>
         </header>
-        <p>
+        {/* <p>
           Je travaille régulièrement avec cette agence parisienne pour réaliser
           des projets créatifs tournés vers un futur complètement interactif.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -154,11 +135,12 @@ const IndexPage = () => (
       <div className="inner">
         <header>
           <h2>Lascaux IV</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>
+        {/* <p>
           Réalisation d’un module interactif permettant de naviguer dans la
           projection 3D stéréoscopique de la grotte de Lascaux.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -168,9 +150,10 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Quiz Interactif</h2>
+          <h2>Quiz</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>Développement front-end d'un quiz interactif.</p>
+        {/* <p>Développement front-end d'un quiz interactif.</p> */}
       </div>
     </article>
 
@@ -180,9 +163,10 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Projet muséo, Paléosite</h2>
+          <h2>Paléosite</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>Réalisation d'un dispositif de morphing temps réel.</p>
+        {/* <p>Réalisation d'un dispositif de morphing temps réel.</p> */}
       </div>
     </article>
 
@@ -192,12 +176,13 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Projet muséo, Musée Olympique</h2>
+          <h2>Musée Olympique</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>
+        {/* <p>
           Réalisation de l'interface d'un dispositif interactif sur écran
           tactile avec projection carte au sol.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -207,12 +192,13 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Projet muséo, Musée Olympique</h2>
+          <h2>Musée Olympique</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>
+        {/* <p>
           Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque
           page. Défilement des pages en touchless.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -222,13 +208,14 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Projet muséo, CSI Dataviz</h2>
+          <h2>CSI Dataviz</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>
+        {/* <p>
           Réalisation de l'interface d'un dispositif interactif sur écran
           tactile avec slide de curseurs, gestion d'un modèle physique pour
           faire tomber les billes, langages multiples.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -238,14 +225,15 @@ const IndexPage = () => (
       </a>
       <div className="inner">
         <header>
-          <h2>Projet muséo, CSI Darwin</h2>
+          <h2>CSI Darwin</h2>
+          <h3>Projet Muséo</h3>
         </header>
-        <p>
+        {/* <p>
           Réalisation d'un dispositif interactif en se positionnant debout face
           à l'écran pour faire défiler et afficher des paires d'images en
           touchless et se prendre en photo en train d'imiter un animal ou
           personnage affiché et à l'envoyer vers une galerie de portraits.
-        </p>
+        </p> */}
       </div>
     </article>
 
@@ -277,7 +265,7 @@ const IndexPage = () => (
       </div>
     </article> */}
 
-    {/* <article className="container box style3">
+    <article className="container box style3">
       <header>
         <h2>Nisl sed ultricies</h2>
         <p>Diam dignissim lectus eu ornare volutpat orci.</p>
@@ -312,7 +300,7 @@ const IndexPage = () => (
           </div>
         </div>
       </form>
-    </article> */}
+    </article>
 
     {/* <article className="container box style3">
       <header>

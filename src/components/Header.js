@@ -7,12 +7,13 @@ export default function Header({ title, heading, avatar }) {
     <section id="header">
       <header>
         <h1>{config.authorName}</h1>
-        <p>{config.heading}</p>
+        <p>{config.heading1}</p>
+        <p>{config.heading2}</p>
       </header>
       <footer>
         <Scroll type="id" element="banner">
           <a href="#banner" className="button style2 ">
-            Suis Moi...
+            Qui suis-je ?
           </a>
         </Scroll>
       </footer>

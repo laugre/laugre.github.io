@@ -9,7 +9,8 @@ module.exports = {
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-overflow/`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Devologic',
-  heading: 'Développement Front-End',
+  heading1: 'Développement Front-End',
+  heading2: 'Artisan Concepteur et Développeur Multimédia Interactif',
   // social
   socialLinks: [
     {
