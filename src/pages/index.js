@@ -1,9 +1,10 @@
 import React from 'react';
+import { Parallax, Background } from 'react-parallax';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Link } from 'gatsby';
 import pic0 from '../assets/images/IMG_5585.jpg';
 import pic1 from '../assets/images/travelzik.png';
 import pic2 from '../assets/images/vsfactory.png';
@@ -96,11 +97,8 @@ const IndexPage = () => (
       </footer>
     </section>
 
-    <article id="first" className="container box style1 right">
-      <a href="/#" className="image fit">
-        <img src={pic1} alt="" />
-      </a>
-      <div className="inner">
+    <Parallax strength={150} className="container box style1 right">
+      <div id="first" className="inner">
         <header>
           <h2>Travelzik</h2>
           <h3>Mobile app</h3>
@@ -110,12 +108,12 @@ const IndexPage = () => (
           développe l'application Travelzik pour smartphone/tablette.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic1} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 left">
-      <a href="/#" className="image fit">
-        <img src={pic2} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 left">
       <div className="inner">
         <header>
           <h2>VS Factory</h2>
@@ -126,90 +124,90 @@ const IndexPage = () => (
           des projets créatifs tournés vers un futur complètement interactif.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic2} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 right">
-      <a href="/#" className="image fit">
-        <img src={pic3} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 right">
       <div className="inner">
         <header>
           <h2>Lascaux IV</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>
           Réalisation d’un module interactif permettant de naviguer dans la
           projection 3D stéréoscopique de la grotte de Lascaux.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic3} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 left">
-      <a href="/#" className="image fit">
-        <img src={pic4} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 left">
       <div className="inner">
         <header>
           <h2>Quiz</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>Développement front-end d'un quiz interactif.</p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic4} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 right">
-      <a href="/#" className="image fit">
-        <img src={pic5} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 right">
       <div className="inner">
         <header>
           <h2>Paléosite</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>Réalisation d'un dispositif de morphing temps réel.</p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic5} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 left">
-      <a href="/#" className="image fit">
-        <img src={pic6} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 left">
       <div className="inner">
         <header>
           <h2>Musée Olympique</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>
           Réalisation de l'interface d'un dispositif interactif sur écran
           tactile avec projection carte au sol.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic6} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 right">
-      <a href="/#" className="image fit">
-        <img src={pic7} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 right">
       <div className="inner">
         <header>
           <h2>Musée Olympique</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>
           Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque
           page. Défilement des pages en touchless.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic7} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 left">
-      <a href="/#" className="image fit">
-        <img src={pic8} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 left">
       <div className="inner">
         <header>
           <h2>CSI Dataviz</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>
           Réalisation de l'interface d'un dispositif interactif sur écran
@@ -217,16 +215,16 @@ const IndexPage = () => (
           faire tomber les billes, langages multiples.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic8} alt="" />
+      </Background>
+    </Parallax>
 
-    <article className="container box style1 right">
-      <a href="/#" className="image fit">
-        <img src={pic9} alt="" />
-      </a>
+    <Parallax strength={150} className="container box style1 right">
       <div className="inner">
         <header>
           <h2>CSI Darwin</h2>
-          <h3>Projet Muséo</h3>
+          <h3>Muséo</h3>
         </header>
         {/* <p>
           Réalisation d'un dispositif interactif en se positionnant debout face
@@ -235,7 +233,10 @@ const IndexPage = () => (
           personnage affiché et à l'envoyer vers une galerie de portraits.
         </p> */}
       </div>
-    </article>
+      <Background className="image">
+        <img src={pic9} alt="" />
+      </Background>
+    </Parallax>
 
     {/* <article className="container box style2">
       <header>
