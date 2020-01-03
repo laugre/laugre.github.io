@@ -1,20 +1,10 @@
 import React from 'react';
-import { Parallax, Background } from 'react-parallax';
 import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
+import Projects from '../components/Projects';
 import Footer from '../components/Footer';
-import pic0 from '../assets/images/IMG_5585.jpg';
-import pic1 from '../assets/images/travelzik.png';
-import pic2 from '../assets/images/vsfactory.png';
-import pic3 from '../assets/images/lascaux4devanture.jpg';
-import pic4 from '../assets/images/quiz_mhnn_manger.png';
-import pic5 from '../assets/images/paleosite_morphing4.png';
-import pic6 from '../assets/images/musee_olympique_stades.png';
-import pic7 from '../assets/images/musee_olympique_livre3D.png';
-import pic8 from '../assets/images/csi_dataviz.png';
-import pic9 from '../assets/images/darwin-01.jpg';
 import Scroll from '../components/Scroll';
 import Gallery from '../components/Gallery';
 
@@ -87,7 +77,7 @@ const IndexPage = () => (
         interactives.
         <br />
       </p>
-      <img src={pic0} alt="" className="image" />
+      {/* <img src={pic0} alt="" className="image" /> */}
       <footer>
         <Scroll type="id" element="first">
           <a href="#first" className="button style2 scrolly">
@@ -97,174 +87,7 @@ const IndexPage = () => (
       </footer>
     </section>
 
-    <Parallax strength={150} className="container box style1 right">
-      <div id="first" className="inner">
-        <header>
-          <h2>Travelzik</h2>
-          <h3>Mobile app</h3>
-        </header>
-        {/* <p>
-          Sur ce projet en cours de web radio alternative, je conçois et
-          développe l'application Travelzik pour smartphone/tablette.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic1} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 left">
-      <div className="inner">
-        <header>
-          <h2>VS Factory</h2>
-          <h3>Agence</h3>
-        </header>
-        {/* <p>
-          Je travaille régulièrement avec cette agence parisienne pour réaliser
-          des projets créatifs tournés vers un futur complètement interactif.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic2} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 right">
-      <div className="inner">
-        <header>
-          <h2>Lascaux IV</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>
-          Réalisation d’un module interactif permettant de naviguer dans la
-          projection 3D stéréoscopique de la grotte de Lascaux.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic3} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 left">
-      <div className="inner">
-        <header>
-          <h2>Quiz</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>Développement front-end d'un quiz interactif.</p> */}
-      </div>
-      <Background className="image">
-        <img src={pic4} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 right">
-      <div className="inner">
-        <header>
-          <h2>Paléosite</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>Réalisation d'un dispositif de morphing temps réel.</p> */}
-      </div>
-      <Background className="image">
-        <img src={pic5} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 left">
-      <div className="inner">
-        <header>
-          <h2>Musée Olympique</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>
-          Réalisation de l'interface d'un dispositif interactif sur écran
-          tactile avec projection carte au sol.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic6} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 right">
-      <div className="inner">
-        <header>
-          <h2>Musée Olympique</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>
-          Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque
-          page. Défilement des pages en touchless.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic7} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 left">
-      <div className="inner">
-        <header>
-          <h2>CSI Dataviz</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>
-          Réalisation de l'interface d'un dispositif interactif sur écran
-          tactile avec slide de curseurs, gestion d'un modèle physique pour
-          faire tomber les billes, langages multiples.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic8} alt="" />
-      </Background>
-    </Parallax>
-
-    <Parallax strength={150} className="container box style1 right">
-      <div className="inner">
-        <header>
-          <h2>CSI Darwin</h2>
-          <h3>Muséo</h3>
-        </header>
-        {/* <p>
-          Réalisation d'un dispositif interactif en se positionnant debout face
-          à l'écran pour faire défiler et afficher des paires d'images en
-          touchless et se prendre en photo en train d'imiter un animal ou
-          personnage affiché et à l'envoyer vers une galerie de portraits.
-        </p> */}
-      </div>
-      <Background className="image">
-        <img src={pic9} alt="" />
-      </Background>
-    </Parallax>
-
-    {/* <article className="container box style2">
-      <header>
-        <h2>Magnis parturient</h2>
-        <p>
-          Justo phasellus et aenean dignissim
-          <br />
-          placerat cubilia purus lectus.
-        </p>
-      </header>
-
-      <div className="inner gallery">
-        <Gallery
-          images={ROW1_IMAGES.map(({ src, thumbnail, caption }) => ({
-            src,
-            thumbnail,
-            caption,
-          }))}
-        />
-        <Gallery
-          images={ROW2_IMAGES.map(({ src, thumbnail, caption }) => ({
-            src,
-            thumbnail,
-            caption,
-          }))}
-        />
-      </div>
-    </article> */}
+    <Projects />
 
     <article className="container box style3">
       <header>

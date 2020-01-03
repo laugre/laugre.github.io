@@ -1,0 +1,65 @@
+[
+  {
+    "id": 0,
+    "title": "Travelzik",
+    "subtitle": "Mobile app",
+    "image": "travelzik.png",
+    "text" : "Sur ce projet en cours de web radio alternative, je conçois et développe l'application Travelzik pour smartphone/tablette."
+  },
+  {
+    "id": 1,
+    "title": "VS Factory",
+    "subtitle": "Agence",
+    "image": "vsfactory.png",
+    "text" : " Je travaille régulièrement avec cette agence parisienne pour réaliser des projets créatifs tournés vers un futur complètement interactif."
+  },
+  {
+    "id": 2,
+    "title": "Lascaux IV",
+    "subtitle": "Muséo",
+    "image": "lascaux_devanture.jpg",
+    "text" : "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux."
+  },
+  {
+    "id": 3,
+    "title": "Quiz",
+    "subtitle": "Muséo",
+    "image": "quiz_mhnn_manger.png",
+    "text" : "Développement front-end d'un quiz interactif."
+  },
+  {
+    "id": 4,
+    "title": "Paléosite",
+    "subtitle": "Muséo",
+    "image": "paleosite_morphing4.png",
+    "text" : "Réalisation d'un dispositif de morphing temps réel."
+  },
+  {
+    "id": 5,
+    "title": "Musée Olympique",
+    "subtitle": "Muséo",
+    "image": "musee_olympique_stades.png",
+    "text" : "Réalisation de l'interface d'un dispositif interactif sur écran  tactile avec projection carte au sol."
+  },
+  {
+    "id": 6,
+    "title": "Musée Olympique",
+    "subtitle": "Muséo",
+    "image": "musee_olympique_livre3D.png",
+    "text" : "Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque page. Défilement des pages en touchless."
+  },
+  {
+    "id": 7,
+    "title": "CSI Dataviz",
+    "subtitle": "Muséo",
+    "image": "csi_dataviz.png",
+    "text" : "Réalisation de l'interface d'un dispositif interactif sur écran tactile avec slide de curseurs, gestion d'un modèle physique pour faire tomber les billes, langages multiples."
+  },
+  {
+    "id": 8,
+    "title": "CSI Darwin",
+    "subtitle": "Muséo",
+    "image": "darwin-01.jpg",
+    "text" : "Réalisation d'un dispositif interactif en se positionnant debout face à l'écran pour faire défiler et afficher des paires d'images en touchless et se prendre en photo en train d'imiter un animal ou personnage affiché et à l'envoyer vers une galerie de portraits."
+  }
+]
