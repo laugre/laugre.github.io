@@ -7,7 +7,6 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  // pathPrefix: `/gatsby-starter-overflow/`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'Devologic',
   heading1: 'Développement Front-End',
   heading2: 'Artisan Concepteur et Développeur Multimédia Interactif',
