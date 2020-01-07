@@ -66,7 +66,7 @@ const IndexPage = () => (
         Je m'appelle Laurent Garnier, j'ai 34 ans.
         <br />
         Je développe des applications multimédias aux interfaces interactives
-        depuis 2009 et me suis tourné vers le web depuis 2 ans.
+        depuis 2009 et je me focalise aujourd'hui sur le développement web front end.
         <br />
         Je travaille désormais en freelance afin de pouvoir échanger directement
         avec les clients sur des projets variés
@@ -91,8 +91,8 @@ const IndexPage = () => (
 
     <article className="container box style3">
       <header>
-        <h2>Nisl sed ultricies</h2>
-        <p>Diam dignissim lectus eu ornare volutpat orci.</p>
+        <h2>CONTACT</h2>
+        <p>Une idée à faire germer ? Besoin d'un avis, d'un conseil, d'un devis ? Écris-moi !</p>
       </header>
       <form method="post" action="#">
         <div className="row gtr-50">
@@ -126,7 +126,7 @@ const IndexPage = () => (
       </form>
     </article>
 
-    {/* <article className="container box style3">
+    <article className="container box style3">
       <header>
         <h2>Elements</h2>
         <p>This starter has other elements.</p>
@@ -134,7 +134,7 @@ const IndexPage = () => (
         Check it out
         <Link to="/Element"> here </Link>
       </header>
-    </article> */}
+    </article>
 
     <Footer />
   </Layout>
