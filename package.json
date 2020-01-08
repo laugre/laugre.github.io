@@ -27,7 +27,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build && gh-pages -d public -b master",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
