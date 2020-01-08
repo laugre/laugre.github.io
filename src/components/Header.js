@@ -8,12 +8,12 @@ export default function Header({ title, heading, avatar }) {
       <header>
         <h1>{config.authorName}</h1>
         <p>{config.heading1}</p>
-        <p>{config.heading2}</p>
+        {/* <p>{config.heading2}</p> */}
       </header>
       <footer>
         <Scroll type="id" element="banner">
           <a href="#banner" className="button style2 ">
-            Qui suis-je ?
+            What Else ?
           </a>
         </Scroll>
       </footer>

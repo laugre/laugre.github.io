@@ -279,8 +279,14 @@ h6 a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 1.75em;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   letter-spacing: 5px;
 }
@@ -305,7 +311,7 @@ a {
     'transition',
     ('border-color 0.35s ease-in-out', 'color 0.35s ease-in-out')
   );
-  color: #35b88f;
+  color: white;
   text-shadow: 0 0 0.5px rgba(53, 184, 143, 0.25);
   text-decoration: none;
   border-bottom: dotted 1px rgba(53, 184, 143, 0.5);
@@ -783,6 +789,7 @@ button,
 
   &.style2 {
     text-align: center;
+    color: #3a3939;
 
     header {
       display: inline-block;
@@ -805,7 +812,7 @@ button,
         position: absolute;
         top: 0;
         left: 50%;
-        height: 100%;
+        height: 59%;
         border-left: solid 1px #fff;
       }
 
@@ -832,8 +839,8 @@ button,
   }
 
   &.style3 {
-    color: black;
     background: #fff;
+    color: #3a3939;
     padding: 3em;
 
     header {
@@ -901,7 +908,7 @@ button,
       &:before {
         content: '';
         display: block;
-        border-top: solid 1px rgba(255, 255, 255, 0.5);
+        // border-top: solid 1px rgba(255, 255, 255, 0.5);
         margin: 4px 0 0.8em 0;
       }
     }
@@ -961,7 +968,7 @@ button,
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
   text-align: center;
   background: #35b88f bottom center no-repeat;
-  padding: 2em 0 2em 0;
+  padding: 2em 10em 2em 10em;
   margin-left: 5em;
   margin-right: 5em;
   background-size: 125% auto;
