@@ -30,7 +30,17 @@ const ROW1_IMAGES = [
 
 const project = props => {
   const { pageContext } = props;
-  const { title, subtitle } = pageContext;
+  const {
+    title,
+    subtitle,
+    text,
+    quote,
+    objectif,
+    client,
+    year,
+    role,
+    technology,
+  } = pageContext;
   return (
     <Layout>
       <section id="header">
@@ -54,48 +64,28 @@ const project = props => {
         <header>
           <h2>{title}</h2>
         </header>
-        <p>
-          <a href="http://www.travelzik.com/">Travelzik</a> est une webradio
-          alternative consacrée à la découverte et aux voyages.
-        </p>
-        <blockquote>
-          "Écoutez, lisez et voyagez avec des émissions et chroniques de
-          <br />
-          passionnés. Une playlist éclectique, retravaillée chaque mois, des
-          <br />
-          émissions curieuses avec la possibilité de réecouter en podcast, des
-          <br />
-          lives et mixes en direct et plein de belles surprises et le tout sans
-          pub !"
-        </blockquote>
-        <p>
-          Mon objectif en tant que bénévole sur ce projet en cours d'évolution :
-          <br />
-          concevoir et développer{' '}
-          <a href="https://play.google.com/store/apps/details?id=com.travelzik.player&hl=fr">
-            l'application
-          </a>{' '}
-          pour smartphones et tablettes.
-        </p>
-        <footer>
+        <p>{text}</p>
+        <blockquote>{quote}</blockquote>
+        <p>{objectif}</p>
+        {/* <footer>
           <a
             href="https://play.google.com/store/apps/details?id=com.travelzik.player&hl=fr"
             className="button style2"
           >
             Go to play store !
           </a>
-        </footer>
+        </footer> */}
       </section>
 
       <article className="container box style2">
         <header>
-          <p>Client : Travelzik</p>
-          <p>Année : 2019</p>
-          <p>Rôle : Développeur</p>
-          <p>Technologies : React Native, iOS, Android</p>
+          <p>{client}</p>
+          <p>{year}</p>
+          <p>{role}</p>
+          <p>{technology}</p>
         </header>
 
-        <div className="inner gallery">
+        {/* <div className="inner gallery">
           <Gallery
             images={ROW1_IMAGES.map(({ src, thumbnail, caption }) => ({
               src,
@@ -103,7 +93,7 @@ const project = props => {
               caption,
             }))}
           />
-        </div>
+        </div> */}
       </article>
 
       {/* <article className="container box style3">

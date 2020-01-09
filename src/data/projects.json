@@ -5,7 +5,13 @@
     "slug": "travelzik",
     "subtitle": "Appli Mobile",
     "image": "travelzik3.png",
-    "text" : "Sur ce projet en cours de web radio alternative, je conçois et développe l'application Travelzik pour smartphone/tablette."
+    "text": "Travelzik est une webradio alternative consacrée à la découverte et aux voyages.",
+    "quote": "\"Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !\"",
+    "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
+    "client": "Client : Travelzik",
+    "year" : "Année : 2019",
+    "role":"Rôle : Développeur", 
+    "technology": "Technologies : React Native, iOS, Android"
   },
   {
     "id": 1,
@@ -13,7 +19,13 @@
     "slug": "vs-factory",
     "subtitle": "Agence",
     "image": "vsfactory.png",
-    "text" : " Je travaille régulièrement avec cette agence parisienne pour réaliser des projets créatifs tournés vers un futur complètement interactif."
+    "text": " Je travaille régulièrement avec cette agence parisienne pour réaliser des projets créatifs tournés vers un futur interactif.",
+    "quote": "\"Passionnés et forts d'une longue expérience depuis 1998, nous sommes des concepteurs, des créateurs d'émotions, producteurs d'environnements digitaux, interactifs, expérientiels et immersifs.\"",
+    "objectif": "Mon objectif sur ces différents projets : réaliser les développements front end des différents dispositifs interactifs.",
+    "client": "Client : VS-Factory",
+    "year" : "Année : 2019",
+    "role":"Rôle : Développeur Front End", 
+    "technology": "Technologies : Vue.js"
   },
   {
     "id": 2,
@@ -21,7 +33,12 @@
     "slug": "lascaux4",
     "subtitle": "Muséo",
     "image": "lascaux_devanture.jpg",
-    "text" : "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux."
+    "text": "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux.",
+    "quote": "\"La technologie au service de la médiation\"",
+    "objectif": "Mon objectif sur ce double projet : réaliser un module piloté par une interface tactile de type iPad. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (images, vidéos). Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande.",
+    "client": "Client : Projet réalisé en tant que salarié chez Blue Yeti",
+    "role":"Rôle : Développeur Front/Back End", 
+    "technology": "Technologies : Vue.js, Unity 3D"
   },
   {
     "id": 3,
@@ -29,7 +46,13 @@
     "slug": "quiz-mhnn",
     "subtitle": "Muséo",
     "image": "quiz_mhnn_manger.png",
-    "text" : "Développement front-end d'un quiz interactif."
+    "text": "Développement front-end d'un quiz interactif.",
+    "quote": "",
+    "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
+    "client": "Client : Travelzik",
+    "year" : "Année : 2019",
+    "role":"Rôle : Développeur", 
+    "technology": "Technologies : React Native, iOS, Android"
   },
   {
     "id": 4,
@@ -37,38 +60,12 @@
     "slug": "paleosite",
     "subtitle": "Muséo",
     "image": "paleosite_morphing4.png",
-    "text" : "Réalisation d'un dispositif de morphing temps réel."
-  },
-  {
-    "id": 5,
-    "title": "Musée Olympique",
-    "slug": "musee-olympique1",
-    "subtitle": "Muséo",
-    "image": "musee_olympique_stades.png",
-    "text" : "Réalisation de l'interface d'un dispositif interactif sur écran  tactile avec projection carte au sol."
-  },
-  {
-    "id": 6,
-    "title": "Musée Olympique",
-    "slug": "musee-olympique2",
-    "subtitle": "Muséo",
-    "image": "musee_olympique_livre3D.png",
-    "text" : "Réalisation d'un livre virtuel en 3D avec vidéos à lire sur chaque page. Défilement des pages en touchless."
-  },
-  {
-    "id": 7,
-    "title": "CSI Dataviz",
-    "slug": "csi-dataviz",
-    "subtitle": "Muséo",
-    "image": "csi_dataviz.png",
-    "text" : "Réalisation de l'interface d'un dispositif interactif sur écran tactile avec slide de curseurs, gestion d'un modèle physique pour faire tomber les billes, langages multiples."
-  },
-  {
-    "id": 8,
-    "title": "CSI Darwin",
-    "slug": "csi-darwin",
-    "subtitle": "Muséo",
-    "image": "darwin-01.jpg",
-    "text" : "Réalisation d'un dispositif interactif en se positionnant debout face à l'écran pour faire défiler et afficher des paires d'images en touchless et se prendre en photo en train d'imiter un animal ou personnage affiché et à l'envoyer vers une galerie de portraits."
+    "text": "Réalisation d'un dispositif de morphing temps réel.",
+    "quote": "Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !",
+    "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
+    "client": "Client : Travelzik",
+    "year" : "Année : 2019",
+    "role":"Rôle : Développeur", 
+    "technology": "Technologies : React Native, iOS, Android"
   }
 ]

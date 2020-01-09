@@ -16,6 +16,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             subtitle
             image
             text
+            quote
+            objectif
+            client
+            year
+            role
+            technology
           }
         }
       }
@@ -32,6 +38,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         subtitle: project.subtitle,
         image: project.image,
         text: project.text,
+        quote: project.quote,
+        objectif: project.objectif,
+        client: project.client,
+        year: project.year,
+        role: project.role,
+        technology: project.technology,
       },
     });
   });
