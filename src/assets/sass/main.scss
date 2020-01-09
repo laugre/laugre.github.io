@@ -874,56 +874,70 @@ button,
 /* Header */
 
 #header {
-  @include vendor('transition', 'opacity 2s ease-in-out');
-  position: relative;
-  color: #fff;
-  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-  text-align: center;
-  margin: 0;
-  padding: 14em 0 14em 0;
+  @include vendor('display', 'flex');
+  @include vendor('flex-direction', 'column');
+  @include vendor('justify-content', 'center');
   cursor: default;
   height: 100vh;
+  min-height: 35em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 
-  header {
+  h2 {
+    @include vendor('transform', 'scale(1)');
+    @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
     display: inline-block;
-    padding: 0 0 4.5em 0;
+    font-size: 1.75em;
+    opacity: 1;
+    padding: 0.35em 1em;
+    position: relative;
+    z-index: 1;
 
-    h1 {
-      font-weight: 600;
-      font-size: 2em;
-      letter-spacing: 10px;
+    &:before,
+    &:after {
+      @include vendor('transition', 'width 0.85s ease');
+      @include vendor('transition-delay', '0.25s');
+      background: _palette(fg-bold);
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      width: 100%;
     }
 
-    p {
-      border-top: solid 1px rgba(255, 255, 255, 0.5);
-      color: #fff;
+    &:before {
+      top: 0;
+      left: 0;
+    }
 
-      text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.1875);
-      font-size: 1em;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      padding: 0;
-      margin-top: 0.35em;
-
-      &:before {
-        content: '';
-        display: block;
-        // border-top: solid 1px rgba(255, 255, 255, 0.5);
-        margin: 4px 0 0.8em 0;
-      }
+    &:after {
+      bottom: 0;
+      right: 0;
     }
   }
 
-  footer {
+  p {
+    margin-top: 1em;
+    letter-spacing: _size(letter-spacing-alt);
+    text-transform: uppercase;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .more {
     @include vendor(
       'transition',
-      ('opacity 2s ease-in-out', 'transform 1s ease-in-out')
+      ('transform 0.75s ease', 'opacity 0.75s ease')
     );
-    @include vendor('transition-delay', '1.25s');
+    @include vendor('transition-delay', '3.5s');
+    @include vendor('transform', 'translateY(0)');
     position: absolute;
-    bottom: 9em;
-    margin: 0;
-    width: 100%;
+    bottom: 3em;
+    margin-left: 40%;
+    width: 20%;
 
     &:after {
       content: '';
@@ -935,27 +949,55 @@ button,
       border-left: solid 1px #fff;
     }
 
-    // &:before {
-    // 	content: '';
-    // 	display: block;
-    // 	width: 90px;
-    // 	height: 66px;
-    // 	position: absolute;
-    // 	left: 50%;
-    // 	bottom: -4.5em;
-    // 	margin-left: -45px;
-    // 	margin-bottom: -33px;
-    // 	background: url('../images/arrow.svg') no-repeat;
-    // }
+    &:before {
+    	content: '';
+    	display: block;
+    	width: 90px;
+    	height: 66px;
+    	position: absolute;
+    	left: 50%;
+    	bottom: -4.5em;
+    	margin-left: -45px;
+    	margin-bottom: -33px;
+    }
   }
 
-  body.is-preload,
-  .main-body.is-preload & {
+  &:after {
+    @include vendor('pointer-events', 'none');
+    @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
+    @include vendor('transition-delay', '1.25s');
+    content: '';
+    background: _palette(bg);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     opacity: 0;
+  }
+}
 
-    footer {
-      @include vendor('transform', 'translateY(1em)');
+body.is-preload,
+.main-body.is-preload {
+  #header {
+    h2 {
+      @include vendor('transform', 'scale(0.95)');
       opacity: 0;
+
+      &:before,
+      &:after {
+        width: 0;
+      }
+    }
+
+    .more {
+      @include vendor('transform', 'translateY(8.5em)');
+      opacity: 0;
+    }
+
+    &:after {
+      opacity: 1;
     }
   }
 }

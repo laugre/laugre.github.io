@@ -47,7 +47,7 @@ const IndexPage = () => (
         <h2>CONTACT</h2>
         <p>Une idée à faire germer ? Besoin d'un avis, d'un conseil, d'un devis ? Écris-moi !</p>
       </header>
-      <form method="post" action="#">
+      {/* <form method="post" action="#">
         <div className="row gtr-50">
           <div className="col-6 col-12-mobile">
             <input
@@ -76,10 +76,10 @@ const IndexPage = () => (
             </ul>
           </div>
         </div>
-      </form>
+      </form> */}
     </article>
 
-    <article className="container box style3">
+    {/* <article className="container box style3">
       <header>
         <h2>Elements</h2>
         <p>This starter has other elements.</p>
@@ -87,7 +87,7 @@ const IndexPage = () => (
         Check it out
         <Link to="/Element"> here </Link>
       </header>
-    </article>
+    </article> */}
 
     <Footer />
   </Layout>
