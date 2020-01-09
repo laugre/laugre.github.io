@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Parallax, Background } from 'react-parallax';
 import { Link } from 'gatsby';
-import ProjectData from '../datas/projects.json';
+import ProjectData from '../data/projects.json';
 
 export class Projects extends Component {
   render() {
@@ -9,7 +9,7 @@ export class Projects extends Component {
       <div>
         {ProjectData.map((projectDetails, index) => {
           return (
-            <Link to={'/Project'}>
+            <Link to={'/projects/' + projectDetails.slug}>
               {' '}
               <Parallax
                 strength={150}

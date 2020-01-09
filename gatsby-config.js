@@ -21,5 +21,14 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./src/data/",
+      },
+    },
+    "gatsby-transformer-json",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
   ],
 };
