@@ -18,15 +18,17 @@ const IndexPage = () => (
       <p>
         Je m'appelle Laurent Garnier, j'ai 34 ans.
         <br />
-        Je développe des applications multimédias aux interfaces interactives
-        depuis 2009 et je me focalise aujourd'hui sur le développement web front end.
+        Développeur d'applications multimédias aux interfaces interactives
+        depuis 2009, je me focalise aujourd'hui sur le développement front end, web et mobile.
         <br />
-        Je travaille désormais en freelance afin de pouvoir échanger directement
-        avec les clients sur des projets variés
+        Appréciant la diversité des projets et le côté relationnel,
         <br />
-        et ainsi leur apporter mes compétences en leur proposant des solutions
+        je travaille désormais en freelance afin de pouvoir échanger directement
+        avec les clients sur des projets variés.
         <br />
-        aux expériences utilisateurs toujours plus immersives, réactives et
+        Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.
+        <br />
+        Mon objectif est de rendre l'expérience utilisateur toujours plus immersives, réactives et
         interactives.
         <br />
       </p>
