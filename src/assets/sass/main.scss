@@ -889,10 +889,10 @@ button,
     @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
     display: inline-block;
     font-size: 1.75em;
-    opacity: 1;
     padding: 0.35em 1em;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    margin-bottom: 1em;
 
     &:before,
     &:after {
@@ -918,21 +918,19 @@ button,
   }
 
   p {
-    margin-top: 1em;
+    @include vendor('transform', 'scale(1)');
+    @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
+    @include vendor('transition-delay', '1s');
     letter-spacing: _size(letter-spacing-alt);
     text-transform: uppercase;
-
-    a {
-      color: inherit;
-    }
   }
 
   .more {
     @include vendor(
       'transition',
-      ('transform 0.75s ease', 'opacity 0.75s ease')
+      ('transform 0.5s ease', 'opacity 0.75s ease')
     );
-    @include vendor('transition-delay', '3.5s');
+    @include vendor('transition-delay', '2.5s');
     @include vendor('transform', 'translateY(0)');
     position: absolute;
     bottom: 3em;
@@ -949,32 +947,10 @@ button,
       border-left: solid 1px #fff;
     }
 
-    &:before {
-    	content: '';
-    	display: block;
-    	width: 90px;
-    	height: 66px;
-    	position: absolute;
-    	left: 50%;
-    	bottom: -4.5em;
-    	margin-left: -45px;
-    	margin-bottom: -33px;
+    &:hover {
+      @include vendor('transition', 'transform 0.2s ease');
+      @include vendor('transform', 'translateY(0.5em)');
     }
-  }
-
-  &:after {
-    @include vendor('pointer-events', 'none');
-    @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-    @include vendor('transition-delay', '1.25s');
-    content: '';
-    background: _palette(bg);
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
   }
 }
 
@@ -991,6 +967,10 @@ body.is-preload,
       }
     }
 
+    p {
+      opacity: 0;
+    }
+
     .more {
       @include vendor('transform', 'translateY(8.5em)');
       opacity: 0;
@@ -999,6 +979,10 @@ body.is-preload,
     &:after {
       opacity: 1;
     }
+  }
+
+  #banner {
+    height: 0;
   }
 }
 
@@ -1014,6 +998,16 @@ body.is-preload,
   margin-left: 5em;
   margin-right: 5em;
   background-size: 125% auto;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3em;
+    left: 50%;
+    height: 3em;
+    border-left: solid 1px #fff;
+  }
 
   .button {
     color: #35b882;
