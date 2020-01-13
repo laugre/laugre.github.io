@@ -9,7 +9,7 @@ export class Projects extends Component {
       <div>
         {ProjectData.map((projectDetails, index) => {
           return (
-            <Link to={'/projects/' + projectDetails.slug}>
+            <Link key={index} to={'/projects/' + projectDetails.slug}>
               {' '}
               <Parallax
                 strength={150}

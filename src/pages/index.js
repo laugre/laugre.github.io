@@ -6,13 +6,26 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
+import config from '../../config';
 
 const IndexPage = () => (
   <Layout>
-    <Header />
+    {/* <Header title={config.authorName} heading1={config.heading1} heading2={config.heading2} onClick={() => console.log(`Bonjour !`)}/> */}
+    <section id="header">
+      <div className="inner">
+        <h2>{config.authorName}</h2>
+        <p>{config.heading1}</p>
+        <p>{config.heading2}</p>
+      </div>
+      <Scroll type="id" element="banner" offset={-100}>
+        <a href="#banner" className="button style2 more" onClick={() => console.log(`Bonjour !`)}>
+          What Else ?
+        </a>
+      </Scroll>
+    </section>
 
     <section id="banner">
-      <header>
+    {/*<header>
         <h2>Bonjour et bienvenue !</h2>
       </header>
       <p>
@@ -32,14 +45,14 @@ const IndexPage = () => (
         interactives.
         <br />
       </p>
-      {/* <img src={pic0} alt="" className="image" /> */}
+       {/~ <img src={pic0} alt="" className="image" />  ~/}
       <footer>
         <Scroll type="id" element="first">
           <a href="#first" className="button style2 scrolly">
-            Jettes un oeil à mes dernières réalisations !
+             Jettes un oeil à mes dernières réalisations ! 
           </a>
         </Scroll>
-      </footer>
+      </footer>*/}
     </section>
 
     <Projects />

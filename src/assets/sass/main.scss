@@ -982,22 +982,23 @@ body.is-preload,
   }
 
   #banner {
-    height: 0;
+    width: 0;
   }
 }
 
 /* Banner */
 
 #banner {
+  @include vendor('transition', 'width 1s ease');
+  height: 80vh;
+  width: 80%;
   position: relative;
   color: #fff;
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
   text-align: center;
   background: #35b88f bottom center no-repeat;
-  padding: 2em 10em 2em 10em;
-  margin-left: 5em;
-  margin-right: 5em;
-  background-size: 125% auto;
+  // padding: 2em 10em 2em 10em;
+  margin: auto;
 
   &:before {
     content: '';
@@ -1014,15 +1015,7 @@ body.is-preload,
     text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
   }
 
-  .image {
-    width: 10em;
-    height: auto;
-    margin: 1em 0 0 0;
-  }
-
   header {
-    // margin: 0 0 1em 0;
-
     h2 {
       font-weight: 400;
       font-size: 1.75em;
@@ -1032,10 +1025,6 @@ body.is-preload,
 
   p {
     margin: 0;
-  }
-
-  footer {
-    // margin: 1em 0 0 0;
   }
 
   a {
