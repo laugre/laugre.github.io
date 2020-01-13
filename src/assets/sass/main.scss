@@ -982,6 +982,7 @@ body.is-preload,
   }
 
   #banner {
+    // @include vendor('transition', 'width 1s ease');
     width: 0;
   }
 }
@@ -989,9 +990,8 @@ body.is-preload,
 /* Banner */
 
 #banner {
-  @include vendor('transition', 'width 1s ease');
+  width: 0;
   height: 80vh;
-  width: 80%;
   position: relative;
   color: #fff;
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
@@ -999,6 +999,11 @@ body.is-preload,
   background: #35b88f bottom center no-repeat;
   // padding: 2em 10em 2em 10em;
   margin: auto;
+
+  &.show {
+    @include vendor('transition', 'width 1s ease');
+    width: 80%;
+  }
 
   &:before {
     content: '';

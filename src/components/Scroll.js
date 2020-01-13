@@ -12,6 +12,7 @@ class Scroll extends React.Component {
     element: PropTypes.string,
     offset: PropTypes.number,
     timeout: PropTypes.number,
+    onClick: PropTypes.func,
     children: PropTypes.node.isRequired,
   };
   constructor() {
@@ -22,6 +23,7 @@ class Scroll extends React.Component {
     smoothscroll.polyfill();
   }
   handleClick(e) {
+    this.props.onClick();
     e.preventDefault();
     let elem = 0;
     let scroll = true;
