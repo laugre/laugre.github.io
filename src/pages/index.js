@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import Typewriter from 'typewriter-effect';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -10,10 +11,42 @@ import config from '../../config';
 
 const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const [typeWriter, setTypeWriter] = useState();
+  const [showProjectButton, setShowProjectButton] = useState(false);
 
   const toggleBannerVisible = () => {
-    setShowBanner(!showBanner);
-    console.log(`Bonjour !`);
+    setShowBanner(true);
+    typeWriter.start();
+  };
+
+  const createTypingAnim = typewriter => {
+    setTypeWriter(typewriter);
+    typewriter
+      .changeDelay(20)
+      .pauseFor(1000)
+      .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
+      .pauseFor(2000)
+      .typeString("<p>Je m'appelle Laurent Garnier, j'ai 34 ans.<br />")
+      .pauseFor(1000)
+      .typeString(
+        "Développeur d'applications multimédias aux interfaces interactives depuis 2009, je me focalise aujourd'hui sur le développement front end, web et mobile.<br />"
+      )
+      .pauseFor(1000)
+      .typeString(
+        'Appréciant la diversité des projets et le côté relationnel,<br />je travaille désormais en freelance afin de pouvoir échanger directement avec les clients sur des projets variés.<br />'
+      )
+      .pauseFor(1000)
+      .typeString(
+        "Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.<br />"
+      )
+      .pauseFor(1000)
+      .typeString(
+        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive, réactive et interactive."
+      )
+      .pauseFor(2000)
+      .callFunction(() => {
+        setShowProjectButton(true);
+      });
   };
 
   return (
@@ -38,34 +71,14 @@ const IndexPage = () => {
       </section>
 
       <section id="banner" className={showBanner ? 'show' : ''}>
-        {/*<header>
-      <h2>Bonjour et bienvenue !</h2>
-    </header>
-    <p>
-      Je m'appelle Laurent Garnier, j'ai 34 ans.
-      <br />
-      Développeur d'applications multimédias aux interfaces interactives
-      depuis 2009, je me focalise aujourd'hui sur le développement front end, web et mobile.
-      <br />
-      Appréciant la diversité des projets et le côté relationnel,
-      <br />
-      je travaille désormais en freelance afin de pouvoir échanger directement
-      avec les clients sur des projets variés.
-      <br />
-      Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.
-      <br />
-      Mon objectif est de rendre l'expérience utilisateur toujours plus immersives, réactives et
-      interactives.
-      <br />
-    </p>
-     {/~ <img src={pic0} alt="" className="image" />  ~/}
-    <footer>
-      <Scroll type="id" element="first">
-        <a href="#first" className="button style2 scrolly">
-           Jettes un oeil à mes dernières réalisations ! 
-        </a>
-      </Scroll>
-    </footer>*/}
+        <Typewriter onInit={createTypingAnim} />
+        <footer className={showProjectButton ? 'show' : ''}>
+          <Scroll type="id" element="first">
+            <a href="#first" className="button style2 scrolly">
+              Découvrons ensemble une sélection de mes réalisations
+            </a>
+          </Scroll>
+        </footer>
       </section>
 
       <Projects />
@@ -74,8 +87,8 @@ const IndexPage = () => {
         <header>
           <h2>CONTACT</h2>
           <p>
-            Une idée à faire germer ? Besoin d'un avis, d'un conseil, d'un devis
-            ? Écris-moi !
+            Une idée à faire germer ?<br />
+            Besoin d'un avis, d'un conseil, d'un devis ?<br /> Écris-moi !
           </p>
         </header>
         {/* <form method="post" action="#">

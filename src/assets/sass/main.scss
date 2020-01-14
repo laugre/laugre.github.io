@@ -982,7 +982,6 @@ body.is-preload,
   }
 
   #banner {
-    // @include vendor('transition', 'width 1s ease');
     width: 0;
   }
 }
@@ -991,13 +990,13 @@ body.is-preload,
 
 #banner {
   width: 0;
-  height: 80vh;
+  height: 85vh;
   position: relative;
   color: #fff;
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
   text-align: center;
   background: #35b88f bottom center no-repeat;
-  // padding: 2em 10em 2em 10em;
+  padding: 2em 10em 2em 10em;
   margin: auto;
 
   &.show {
@@ -1038,6 +1037,16 @@ body.is-preload,
 
     &:hover {
       border-bottom-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  footer {
+    opacity: 0;
+    scale: 0;
+
+    &.show {
+      @include vendor('transition', 'opacity 1s ease');
+      opacity: 1;
     }
   }
 }
