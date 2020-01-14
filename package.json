@@ -28,7 +28,9 @@
     "react-helmet": "^5.2.1",
     "react-images": "^0.5.19",
     "react-parallax": "^3.0.0",
-    "smoothscroll-polyfill": "^0.4.4"
+    "react-side-effect": "^2.1.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "typewriter-effect": "^2.12.2"
   },
   "scripts": {
     "develop": "gatsby develop",
