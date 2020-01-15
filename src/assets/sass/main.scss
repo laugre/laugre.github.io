@@ -207,7 +207,6 @@ html {
 body,
 .main-body {
   background-color: #183026;
-  // background-color: black;
   background-image: url('../images/overlay.png'), url('../images/bg.jpg');
   background-repeat: repeat, no-repeat;
   background-size: cover;
@@ -223,10 +222,10 @@ body,
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
   -webkit-text-stroke: 0.25px;
 
-  &.is-scroll {
-    background-attachment: scroll, scroll;
-    background-size: auto, 100% auto;
-  }
+  // &.is-scroll {
+  //   background-attachment: scroll, scroll;
+  //   background-size: auto, 100% auto;
+  // }
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -237,12 +236,6 @@ body,
       @include vendor('transition', 'none !important');
     }
   }
-}
-
-.myscrollbar {
-  width: 500px;
-  height: 10px;
-  overflow: auto;
 }
 
 input,
@@ -880,7 +873,6 @@ button,
   cursor: default;
   height: 100vh;
   min-height: 35em;
-  overflow: hidden;
   position: relative;
   text-align: center;
 

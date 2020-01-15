@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import Typewriter from 'typewriter-effect';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import Layout from '../components/Layout';
-import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
@@ -46,11 +45,15 @@ const IndexPage = () => {
       .pauseFor(2000)
       .callFunction(() => {
         setShowProjectButton(true);
+        enableBodyScroll(targetRef.current);
       });
   };
 
+  const targetRef = React.createRef();
+  disableBodyScroll(targetRef.current);
+
   return (
-    <Layout>
+    <Layout ref={targetRef}>
       {/* <Header title={config.authorName} heading1={config.heading1} heading2={config.heading2} onClick={() => console.log(`Bonjour !`)}/> */}
       <section id="header">
         <div className="inner">
