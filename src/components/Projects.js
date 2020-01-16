@@ -10,27 +10,29 @@ export class Projects extends Component {
         {ProjectData.map((projectDetails, index) => {
           return (
             <Link key={index} to={'/projects/' + projectDetails.slug}>
-              {' '}
               <Parallax
-                strength={150}
-                className={
-                  'container box style1 ' + (index % 2 ? 'left' : 'right')
-                }
-              >
-                <div id="first" className="inner">
-                  <header>
-                    <h1>{projectDetails.title}</h1>
-                    <h3>{projectDetails.subtitle}</h3>
-                  </header>
-                  {/* <p>{projectDetails.text}</p> */}
-                </div>
-                <Background className="image">
-                  <img
-                    src={require('../assets/images/' + projectDetails.image)}
-                    alt=""
+                strength={200}
+                bgImage={require('../assets/images/' + projectDetails.image)}
+                className={'project-selector ' + (index % 2 ? 'right' : 'left')}
+                renderLayer={percentage => (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      background: `rgba(0, 0, 0, ${Math.cos(2*Math.PI*percentage)})`,
+                      width: '100%',
+                      height: '100%',
+                    }}
                   />
-                </Background>
-              </Parallax>{' '}
+                )}
+              >
+                <div className="parallax-content"></div>
+              </Parallax>
+              <header
+                className={'project-header ' + (index % 2 ? 'right1' : 'left1')}
+              >
+                <h1>{projectDetails.title}</h1>
+                <h3>{projectDetails.subtitle}</h3>
+              </header>
             </Link>
           );
         })}

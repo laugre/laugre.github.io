@@ -18,31 +18,33 @@ const IndexPage = () => {
     typeWriter.start();
   };
 
+  const delay = 1;
+  const pause = 1;
   const createTypingAnim = typewriter => {
     setTypeWriter(typewriter);
     typewriter
-      .changeDelay(20)
-      .pauseFor(1000)
+      .changeDelay(delay)
+      .pauseFor(pause)
       .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
-      .pauseFor(2000)
+      .pauseFor(pause*2)
       .typeString("<p>Je m'appelle Laurent Garnier, j'ai 34 ans.<br />")
-      .pauseFor(1000)
+      .pauseFor(pause)
       .typeString(
         "Développeur d'applications multimédias aux interfaces interactives depuis 2009, je me focalise aujourd'hui sur le développement front end, web et mobile.<br />"
       )
-      .pauseFor(1000)
+      .pauseFor(pause)
       .typeString(
         'Appréciant la diversité des projets et le côté relationnel,<br />je travaille désormais en freelance afin de pouvoir échanger directement avec les clients sur des projets variés.<br />'
       )
-      .pauseFor(1000)
+      .pauseFor(pause)
       .typeString(
         "Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.<br />"
       )
-      .pauseFor(1000)
+      .pauseFor(pause)
       .typeString(
         "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive, réactive et interactive."
       )
-      .pauseFor(2000)
+      .pauseFor(pause*2)
       .callFunction(() => {
         setShowProjectButton(true);
         enableBodyScroll(targetRef.current);
@@ -50,11 +52,10 @@ const IndexPage = () => {
   };
 
   const targetRef = React.createRef();
-  disableBodyScroll(targetRef.current);
+  // disableBodyScroll(targetRef.current);
 
   return (
     <Layout ref={targetRef}>
-      {/* <Header title={config.authorName} heading1={config.heading1} heading2={config.heading2} onClick={() => console.log(`Bonjour !`)}/> */}
       <section id="header">
         <div className="inner">
           <h2>{config.authorName}</h2>
