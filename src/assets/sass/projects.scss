@@ -25,6 +25,7 @@
     @include vendor('transition', ('opacity 0.5s ease'));
     opacity: 0.5;
 
+    &.hover,
     &:hover {
       @include vendor('transition', ('opacity 0.5s ease'));
       opacity: 0;
@@ -34,7 +35,6 @@
 
 .project-header {
   position: relative;
-// width:10%;
   top: -20em;
   margin: auto;
 
