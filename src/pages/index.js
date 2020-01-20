@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import ScrollLock from 'react-scrolllock';
 
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
@@ -12,21 +12,23 @@ const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [typeWriter, setTypeWriter] = useState();
   const [showProjectButton, setShowProjectButton] = useState(false);
+  const [lockScroll, setLockScroll] = useState(true);
 
   const toggleBannerVisible = () => {
+    setLockScroll(false);
     setShowBanner(true);
     typeWriter.start();
   };
 
-  const delay = 1;
-  const pause = 1;
+  const delay = 20;
+  const pause = 1000;
   const createTypingAnim = typewriter => {
     setTypeWriter(typewriter);
     typewriter
       .changeDelay(delay)
       .pauseFor(pause)
       .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
-      .pauseFor(pause*2)
+      .pauseFor(pause * 2)
       .typeString("<p>Je m'appelle Laurent Garnier, j'ai 34 ans.<br />")
       .pauseFor(pause)
       .typeString(
@@ -44,18 +46,15 @@ const IndexPage = () => {
       .typeString(
         "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive, réactive et interactive."
       )
-      .pauseFor(pause*2)
+      .pauseFor(pause * 2)
       .callFunction(() => {
         setShowProjectButton(true);
-        enableBodyScroll(targetRef.current);
       });
   };
 
-  const targetRef = React.createRef();
-  // disableBodyScroll(targetRef.current);
-
   return (
-    <Layout ref={targetRef}>
+    <Layout>
+      <ScrollLock isActive={lockScroll} />
       <section id="header">
         <div className="inner">
           <h2>{config.authorName}</h2>
