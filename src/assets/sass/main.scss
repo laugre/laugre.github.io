@@ -731,40 +731,6 @@ button,
   }
 }
 
-.project-selector {
-  margin: auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  width: 50%;
-
-  &.left {
-    left: -10%;
-  }
-
-  &.right {
-    right: -10%;
-  }
-
-  .parallax-content {
-    height: 20em;
-  }
-}
-
-.project-header {
-  position: relative;
-  top: -20em;
-
-  &.left1 {
-    text-align: right;
-    right: 20%;
-  }
-
-  &.right1 {
-    text-align: left;
-    left: 20%;
-  }
-}
-
 /* Box */
 
 .box {
@@ -1016,7 +982,7 @@ body.is-preload,
 
 #banner {
   width: 0;
-  height: 85vh;
+  height: 30em;
   position: relative;
   color: #fff;
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
