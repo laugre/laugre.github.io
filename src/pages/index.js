@@ -12,7 +12,7 @@ const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [typeWriter, setTypeWriter] = useState();
   const [showProjectButton, setShowProjectButton] = useState(false);
-  const [lockScroll, setLockScroll] = useState(true);
+  const [lockScroll, setLockScroll] = useState(false);
 
   const toggleBannerVisible = () => {
     setLockScroll(false);
@@ -26,13 +26,15 @@ const IndexPage = () => {
     setTypeWriter(typewriter);
     typewriter
       .changeDelay(delay)
-      .pauseFor(pause)
+      .pauseFor(pause * 2)
       .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
       .pauseFor(pause * 2)
-      .typeString("<p>Je m'appelle Laurent Garnier, j'ai 34 ans.<br />")
+      .typeString(
+        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, je suis passionné de nouvelles technologies. <br />"
+      )
       .pauseFor(pause)
       .typeString(
-        "Développeur d'applications multimédias aux interfaces interactives depuis 2009, je me focalise aujourd'hui sur le développement front end, web et mobile.<br />"
+        "Concepteur d'applications interactives dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le développement front end, web, mobile et multimédia.<br />"
       )
       .pauseFor(pause)
       .typeString(
@@ -44,7 +46,11 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive, réactive et interactive."
+        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive.<br />"
+      )
+      .pauseFor(pause)
+      .typeString(
+        'Activité, Réactivité et Interactivité sont les trois critères qui guident mes développements.'
       )
       .pauseFor(pause * 2)
       .callFunction(() => {
@@ -64,7 +70,7 @@ const IndexPage = () => {
         <Scroll
           type="id"
           element="banner"
-          offset={-100}
+          offset={-10}
           onClick={toggleBannerVisible}
         >
           <a href="#banner" className="button style2 more">
@@ -73,15 +79,17 @@ const IndexPage = () => {
         </Scroll>
       </section>
 
-      <section id="banner" className={showBanner ? 'show' : ''}>
-        <Typewriter onInit={createTypingAnim} />
-        <footer className={showProjectButton ? 'show' : ''}>
-          <Scroll type="id" element="first">
-            <a href="#first" className="button style2 scrolly">
-              Découvrons ensemble une sélection de mes réalisations
-            </a>
-          </Scroll>
-        </footer>
+      <section id="banner" >
+        <div className={'content ' + (showBanner ? 'show' : '')}>
+          <Typewriter onInit={createTypingAnim} />
+          <footer className={showProjectButton ? 'show' : ''}>
+            <Scroll type="id" element="first">
+              <a href="#first" className="button style2 scrolly">
+                Découvrons ensemble une sélection de mes réalisations
+              </a>
+            </Scroll>
+          </footer>
+        </div>
       </section>
 
       <Projects />

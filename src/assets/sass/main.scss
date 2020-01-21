@@ -981,64 +981,69 @@ body.is-preload,
 /* Banner */
 
 #banner {
-  width: 0;
-  height: 30em;
   position: relative;
-  color: #fff;
-  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
-  text-align: center;
-  background: #35b88f bottom center no-repeat;
-  padding: 2em 10em 2em 10em;
-  margin: auto;
+  height: 100vh;
 
-  &.show {
-    @include vendor('transition', 'width 1s ease');
-    width: 80%;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -3em;
-    left: 50%;
-    height: 3em;
-    border-left: solid 1px #fff;
-  }
-
-  .button {
-    color: #35b882;
-    text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
-  }
-
-  header {
-    h2 {
-      font-weight: 400;
-      font-size: 1.75em;
-      letter-spacing: 8px;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    color: inherit;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-
-    &:hover {
-      border-bottom-color: rgba(255, 255, 255, 0);
-    }
-  }
-
-  footer {
-    opacity: 0;
-    scale: 0;
+  .content {
+    width: 0;
+    height: 2em;
+    color: #fff;
+    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+    text-align: center;
+    background: #35b88f bottom center no-repeat;
+    padding: 2em 10em 2em 10em;
+    margin: auto;
 
     &.show {
-      @include vendor('transition', 'opacity 1s ease');
-      opacity: 1;
+      @include vendor('transition', ('height 1s ease 1s', 'width 1s ease 1.5s'));
+      width: 80%;
+      height: 35em;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -3em;
+      left: 50%;
+      height: 3em;
+      border-left: solid 1px #fff;
+    }
+
+    .button {
+      color: #35b882;
+      text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
+    }
+
+    header {
+      h2 {
+        font-weight: 400;
+        font-size: 1.75em;
+        letter-spacing: 8px;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+      border-bottom-color: rgba(255, 255, 255, 0.5);
+
+      &:hover {
+        border-bottom-color: rgba(255, 255, 255, 0);
+      }
+    }
+
+    footer {
+      opacity: 0;
+      scale: 0;
+
+      &.show {
+        @include vendor('transition', 'opacity 1s ease');
+        opacity: 1;
+      }
     }
   }
 }
