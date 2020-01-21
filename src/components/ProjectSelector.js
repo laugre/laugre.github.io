@@ -6,8 +6,8 @@ import '../assets/sass/projects.scss';
 export default function ProjectSelector({ projectDetails, index }) {
   const [hover, setHover] = useState(false);
 
-  const toggleHover = () => {
-    setHover(!hover);
+  const toggleHover = state => {
+    setHover(state);
   };
 
   return (
@@ -20,11 +20,11 @@ export default function ProjectSelector({ projectDetails, index }) {
           <div
             style={{
               position: 'absolute',
+              width: '100%',
+              height: '100%',
               background: `rgba(0, 0, 0, ${Math.cos(
                 2 * Math.PI * percentage
               )})`,
-              width: '100%',
-              height: '100%',
             }}
           />
         )}
@@ -36,8 +36,8 @@ export default function ProjectSelector({ projectDetails, index }) {
       <Link
         id="first"
         to={'/projects/' + projectDetails.slug}
-        onMouseEnter={toggleHover}
-        onMouseLeave={toggleHover}
+        onMouseEnter={() => toggleHover(true)}
+        onMouseLeave={() => toggleHover(false)}
       >
         <header className={'project-header ' + (index % 2 ? 'right' : 'left')}>
           <h1>{projectDetails.title}</h1>
