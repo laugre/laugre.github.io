@@ -12,7 +12,7 @@ const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [typeWriter, setTypeWriter] = useState();
   const [showProjectButton, setShowProjectButton] = useState(false);
-  const [lockScroll, setLockScroll] = useState(false);
+  const [lockScroll, setLockScroll] = useState(true);
 
   const toggleBannerVisible = () => {
     setLockScroll(false);
