@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Parallax } from 'react-parallax';
 import { Link } from 'gatsby';
-import '../assets/sass/projects.scss';
+import '../assets/sass/project-selector.scss';
 
 export default function ProjectSelector({ projectDetails, index }) {
   const [hover, setHover] = useState(false);
@@ -39,7 +39,7 @@ export default function ProjectSelector({ projectDetails, index }) {
         onMouseEnter={() => toggleHover(true)}
         onMouseLeave={() => toggleHover(false)}
       >
-        <header className={'project-header ' + (index % 2 ? 'right' : 'left')}>
+        <header className={'project-selector-header ' + (index % 2 ? 'right' : 'left')}>
           <h1>{projectDetails.title}</h1>
           <h3>{projectDetails.subtitle}</h3>
         </header>

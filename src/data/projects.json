@@ -4,14 +4,16 @@
     "title": "Travelzik",
     "slug": "travelzik",
     "subtitle": "Appli Mobile",
-    "image": "travelzik3.png",
+    "image": "travelzik.png",
     "text": "Travelzik est une webradio alternative consacrée à la découverte et aux voyages.",
     "quote": "\"Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !\"",
     "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
     "client": "Client : Travelzik",
-    "year" : "Année : 2019",
-    "role":"Rôle : Développeur", 
-    "technology": "Technologies : React Native, iOS, Android"
+    "year": "Année : 2019",
+    "role": "Rôle : Développeur",
+    "technology": "Technologies : React Native, iOS, Android",
+    "images": ["travelzik1.png", "travelzik2.png", "travelzik3.png"],
+    "video": ""
   },
   {
     "id": 1,
@@ -23,9 +25,11 @@
     "quote": "\"Passionnés et forts d'une longue expérience depuis 1998, nous sommes des concepteurs, des créateurs d'émotions, producteurs d'environnements digitaux, interactifs, expérientiels et immersifs.\"",
     "objectif": "Mon objectif sur ces différents projets : réaliser les développements front end des différents dispositifs interactifs.",
     "client": "Client : VS-Factory",
-    "year" : "Année : 2019",
-    "role":"Rôle : Développeur Front End", 
-    "technology": "Technologies : Vue.js"
+    "year": "Année : 2019",
+    "role": "Rôle : Développeur Front End",
+    "technology": "Technologies : Vue.js",
+    "images": ["travelzik1.png", "travelzik2.png", "travelzik3.png"],
+    "video": ""
   },
   {
     "id": 2,
@@ -37,8 +41,10 @@
     "quote": "\"La technologie au service de la médiation\"",
     "objectif": "Mon objectif sur ce double projet : réaliser un module piloté par une interface tactile de type iPad. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (images, vidéos). Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande.",
     "client": "Client : Projet réalisé en tant que salarié chez Blue Yeti",
-    "role":"Rôle : Développeur Front/Back End", 
-    "technology": "Technologies : Vue.js, Unity 3D"
+    "role": "Rôle : Développeur Front/Back End",
+    "technology": "Technologies : Vue.js, Unity 3D",
+    "images": ["travelzik1.png", "travelzik2.png", "travelzik3.png"],
+    "video": ""
   },
   {
     "id": 3,
@@ -50,9 +56,11 @@
     "quote": "",
     "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
     "client": "Client : Travelzik",
-    "year" : "Année : 2019",
-    "role":"Rôle : Développeur", 
-    "technology": "Technologies : React Native, iOS, Android"
+    "year": "Année : 2019",
+    "role": "Rôle : Développeur",
+    "technology": "Technologies : React Native, iOS, Android",
+    "images": ["travelzik1.png", "travelzik2.png", "travelzik3.png"],
+    "video": ""
   },
   {
     "id": 4,
@@ -64,8 +72,10 @@
     "quote": "Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !",
     "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
     "client": "Client : Travelzik",
-    "year" : "Année : 2019",
-    "role":"Rôle : Développeur", 
-    "technology": "Technologies : React Native, iOS, Android"
+    "year": "Année : 2019",
+    "role": "Rôle : Développeur",
+    "technology": "Technologies : React Native, iOS, Android",
+    "images": ["travelzik1.png", "travelzik2.png", "travelzik3.png"],
+    "video": ""
   }
 ]

@@ -11,6 +11,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       allProjectsJson {
         edges {
           node {
+            id
             title
             slug
             subtitle
@@ -33,6 +34,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/projects/${project.slug}/`,
       component: require.resolve('./src/templates/project.js'),
       context: {
+        index: project.id,
         title: project.title,
         slug: project.slug,
         subtitle: project.subtitle,

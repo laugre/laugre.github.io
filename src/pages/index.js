@@ -79,7 +79,7 @@ const IndexPage = () => {
         </Scroll>
       </section>
 
-      <section id="banner" >
+      <section id="banner">
         <div className={'content ' + (showBanner ? 'show' : '')}>
           <Typewriter onInit={createTypingAnim} />
           <footer className={showProjectButton ? 'show' : ''}>

@@ -878,7 +878,7 @@ button,
 
   h2 {
     @include vendor('transform', 'scale(1)');
-    @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
+    @include vendor('transition', ('transform 0.2s ease', 'opacity 0.2s ease'));
     display: inline-block;
     font-size: 1.75em;
     padding: 0.35em 1em;
@@ -888,7 +888,7 @@ button,
 
     &:before,
     &:after {
-      @include vendor('transition', 'width 0.85s ease');
+      @include vendor('transition', 'width 0.5s ease');
       @include vendor('transition-delay', '0.25s');
       background: _palette(fg-bold);
       content: '';
@@ -912,7 +912,7 @@ button,
   p {
     @include vendor('transform', 'scale(1)');
     @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
-    @include vendor('transition-delay', '1s');
+    @include vendor('transition-delay', '.5s');
     letter-spacing: _size(letter-spacing-alt);
     text-transform: uppercase;
   }
@@ -920,9 +920,9 @@ button,
   .more {
     @include vendor(
       'transition',
-      ('transform 0.5s ease', 'opacity 0.75s ease')
+      ('transform 0.5s ease', 'opacity 0.5s ease')
     );
-    @include vendor('transition-delay', '2.5s');
+    @include vendor('transition-delay', '0.2s');
     @include vendor('transform', 'translateY(0)');
     position: absolute;
     bottom: 3em;
