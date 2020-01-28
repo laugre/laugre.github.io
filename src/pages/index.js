@@ -73,7 +73,7 @@ const IndexPage = () => {
           offset={-10}
           onClick={toggleBannerVisible}
         >
-          <a href="#banner" className="button style2 more">
+          <a href="#banner" className="button style1 more">
             What Else ?
           </a>
         </Scroll>

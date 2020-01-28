@@ -4,7 +4,6 @@ import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
 
-import ProjectData from '../data/projects.json';
 import '../assets/sass/project.scss';
 
 const project = props => {
@@ -21,13 +20,14 @@ const project = props => {
     year,
     role,
     technology,
+    images,
   } = pageContext;
   return (
     <Layout>
       <section id="project-header">
         <img src={require('../assets/images/' + image)} alt="" />
         <Scroll type="id" element="project-banner" offset={-10}>
-          <a href="#banner" className="button style2 more">
+          <a href="#banner" className="button style1 more">
             {title}
           </a>
         </Scroll>
@@ -43,9 +43,23 @@ const project = props => {
       </section>
 
       <section>
-        {ProjectData[id].images.map((image, index) => {
-          <img key={index} src={require('../assets/images/' + image)} alt="" />;
-        })}
+        {images.map((image, index) => (
+          <article key={index} id="project-media" className={'style1 ' + (index % 2 ? 'right' : 'left')}>
+            <div className="image">
+              <img src={require('../assets/images/' + image.image)} alt="" />
+            </div>
+            <div className="inner">
+              <header>
+                <h2>
+                  {image.title}
+                </h2>
+              </header>
+              <p>
+              {image.caption}
+              </p>
+            </div>
+          </article>
+        ))}
       </section>
 
       <article className="container box style2">

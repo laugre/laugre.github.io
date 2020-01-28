@@ -23,6 +23,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             year
             role
             technology
+            images {
+              title
+              caption
+              image
+            }
           }
         }
       }
@@ -46,6 +51,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         year: project.year,
         role: project.role,
         technology: project.technology,
+        images: project.images,
       },
     });
   });

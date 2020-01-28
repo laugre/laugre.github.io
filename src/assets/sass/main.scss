@@ -336,6 +336,7 @@ blockquote {
   border-left: solid 0.5em #eae9e9;
   padding: 1em 0 1em 2em;
   font-style: italic;
+  font-size: 0.85em;
 }
 
 p,
@@ -685,10 +686,6 @@ input[type='submit'],
 input[type='reset'],
 button,
 .button {
-  @include vendor(
-    'transition',
-    ('background-color 0.35s ease-in-out', 'color 0.35s ease-in-out')
-  );
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
@@ -708,25 +705,40 @@ button,
     background: #45c89f;
   }
 
-  &.style2 {
+  &.style1 {
+    @include vendor(
+      'transition',
+      (
+        'transform 0.25s ease',
+        'opacity 0.25s ease',
+        'background-color 0.25s ease-in-out',
+        'color 0.25s ease-in-out'
+      )
+    );
+    @include vendor('transition-delay', '0.2s');
+    @include vendor('transform', 'translateY(0)');
     color: #3a3939;
     background: #fff;
     box-shadow: inset 0 0 0 1px #fff;
+    position: absolute;
+    bottom: 3em;
+    margin-left: 40%;
+    width: 20%;
 
     &:hover {
       background: rgba(255, 255, 255, 0.1);
-      color: #fff !important;
-      text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25) !important;
-    }
-  }
-
-  &.style3 {
-    background: none;
-    color: #3a3939;
-    box-shadow: inset 0 0 0 1px #dad9d9;
-
-    &:hover {
-      background: rgba(58, 57, 57, 0.025);
+      color: #fff;
+      text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+      @include vendor(
+      'transition',
+      (
+        'transform 0.25s ease',
+        'opacity 0.25s ease',
+        'background-color 0.25s ease-in-out',
+        'color 0.25s ease-in-out'
+      )
+    );
+      @include vendor('transform', 'translateY(0.5em)');
     }
   }
 }
@@ -734,50 +746,36 @@ button,
 /* Box */
 
 .box {
-  &.style1 {
-    width: 100%;
-    height: 25em;
-    margin-top: 10em;
+  position: relative;
+  margin-top: 9em;
+  margin-left: auto;
+  margin-right: auto;
 
-    .image {
-      position: relative;
-      width: 100%;
-    }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -9em;
+    left: 50%;
+    height: 9em;
+    border-left: solid 1px #fff;
+  }
 
-    .inner {
-      position: relative;
-      top: 5em;
-    }
+  &:before {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 66px;
+    position: absolute;
+    left: 50%;
+    top: -4.5em;
+    margin-left: -45px;
+    margin-top: -33px;
+    background: url('../images/arrow.svg') no-repeat;
+  }
 
-    &.right {
-      .image {
-        left: -20%;
-
-        img {
-          // right: 0;
-        }
-      }
-
-      .inner {
-        text-align: right;
-        right: 23%;
-      }
-    }
-
-    &.left {
-      .image {
-        right: -20%;
-
-        img {
-          // left: 0;
-        }
-      }
-
-      .inner {
-        text-align: left;
-        left: 23%;
-      }
-    }
+  :last-child {
+    margin-bottom: 0;
   }
 
   &.style2 {
@@ -918,17 +916,6 @@ button,
   }
 
   .more {
-    @include vendor(
-      'transition',
-      ('transform 0.5s ease', 'opacity 0.5s ease')
-    );
-    @include vendor('transition-delay', '0.2s');
-    @include vendor('transform', 'translateY(0)');
-    position: absolute;
-    bottom: 3em;
-    margin-left: 40%;
-    width: 20%;
-
     &:after {
       content: '';
       display: block;
@@ -937,11 +924,6 @@ button,
       left: 50%;
       height: 9em;
       border-left: solid 1px #fff;
-    }
-
-    &:hover {
-      @include vendor('transition', 'transform 0.2s ease');
-      @include vendor('transform', 'translateY(0.5em)');
     }
   }
 }
@@ -995,7 +977,10 @@ body.is-preload,
     margin: auto;
 
     &.show {
-      @include vendor('transition', ('height 1s ease 1s', 'width 1s ease 1.5s'));
+      @include vendor(
+        'transition',
+        ('height 1s ease 1s', 'width 1s ease 1.5s')
+      );
       width: 80%;
       height: 35em;
     }
