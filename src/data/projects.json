@@ -4,7 +4,7 @@
     "title": "Travelzik",
     "slug": "travelzik",
     "subtitle": "Appli Mobile",
-    "image": "travelzik.png",
+    "image": "travelzik1.jpg",
     "text": "Travelzik est une webradio alternative consacrée à la découverte et aux voyages.",
     "quote": "\"Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !\"",
     "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
@@ -14,14 +14,19 @@
     "technology": "Technologies : React Native, iOS, Android",
     "images": [
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
+        "title": "Appli smartphone",
+        "caption": "Le but était de recréer une application mobile composée d'un player jouant le flux continu de la web radio dont l'interface responsive devait être capable de s'afficher correctement sur n'importe quel smarphone et tablette.",
         "image": "travelzik3.png"
       },
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
+        "title": "Site Web",
+        "caption": "Le développement d'une appli mobile était indispensable pour écouter la web radio en voyageant. En effet les fonctionnalités plus poussées d'une application native étaient nécessaires, celles proposées par le simple accès au player web depuis le navigateur du smartphone n'étant pas suffisantes pour un player radio.",
         "image": "travelzik.png"
+      },
+      {
+        "title": "Around the world",
+        "caption": "Travelzik voyage et fait voyager...Travelzik app est en cours de développement. L'application est à ce jour disponible en version bêta sur le Google Play Store !",
+        "image": "travelzik6.png"
       }
     ]
   },

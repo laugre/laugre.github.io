@@ -50,9 +50,9 @@ const project = props => {
             </div>
             <div className="inner">
               <header>
-                <h2>
+                <h3>
                   {image.title}
-                </h2>
+                </h3>
               </header>
               <p>
               {image.caption}

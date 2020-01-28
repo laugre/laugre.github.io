@@ -25,7 +25,8 @@
   }
 
   img {
-    width: 100%;
+    width: auto;
+    height: 100vh;
   }
 }
 
@@ -78,7 +79,7 @@
   margin-right: auto;
   color: black;
   width: 80%;
-  height: 18em;
+  height: 20em;
 
   &:after {
     content: '';
@@ -110,7 +111,7 @@
     display: block;
     position: absolute;
     width: 50%;
-    height: 18em;
+    height: 20em;
     overflow: hidden;
 
     img {
@@ -123,7 +124,7 @@
   .inner {
     background: #fff;
     width: 50%;
-    height: 18em;
+    height: 20em;
     padding: 3em;
 
     > :last-child {
