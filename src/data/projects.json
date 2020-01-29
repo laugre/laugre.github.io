@@ -12,21 +12,24 @@
     "year": "Année : 2019",
     "role": "Rôle : Développeur",
     "technology": "Technologies : React Native, iOS, Android",
-    "images": [
+    "medias": [
       {
         "title": "Appli smartphone",
         "caption": "Le but était de recréer une application mobile composée d'un player jouant le flux continu de la web radio dont l'interface responsive devait être capable de s'afficher correctement sur n'importe quel smarphone et tablette.",
-        "image": "travelzik3.png"
+        "type": "image",
+        "media": "travelzik3.png"
       },
       {
         "title": "Site Web",
         "caption": "Le développement d'une appli mobile était indispensable pour écouter la web radio en voyageant. En effet les fonctionnalités plus poussées d'une application native étaient nécessaires, celles proposées par le simple accès au player web depuis le navigateur du smartphone n'étant pas suffisantes pour un player radio.",
-        "image": "travelzik.png"
+        "type": "image",
+        "media": "travelzik.png"
       },
       {
         "title": "Around the world",
         "caption": "Travelzik voyage et fait voyager...Travelzik app est en cours de développement. L'application est à ce jour disponible en version bêta sur le Google Play Store !",
-        "image": "travelzik6.png"
+        "type": "image",
+        "media": "travelzik6.png"
       }
     ]
   },
@@ -43,16 +46,18 @@
     "year": "Année : 2019",
     "role": "Rôle : Développeur Front End",
     "technology": "Technologies : Vue.js",
-    "images": [
+    "medias": [
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik3.png"
+        "title": "EDF INGEUM",
+        "caption": "Développement de l'interface utilisateur d'une application responsive destinée à être affichée sur support de type tablette tactile",
+        "type": "video",
+        "media": "edf_ingeum.webm"
       },
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik.png"
+        "title": "NOVALAC",
+        "caption": "Développement de l'interface utilisateur d'une application responsive destinée à être affichée sur support de type tablette tactile",
+        "type": "video",
+        "media": "edf_ingeum.webm"
       }
     ]
   },
@@ -64,20 +69,20 @@
     "image": "lascaux_devanture.jpg",
     "text": "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux.",
     "quote": "\"La technologie au service de la médiation\"",
-    "objectif": "Mon objectif sur ce double projet : réaliser un module piloté par une interface tactile de type iPad. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (images, vidéos). Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande.",
+    "objectif": "Mon objectif sur ce double projet : réaliser un module piloté par une interface tactile de type iPad. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (medias, vidéos). Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande.",
     "client": "Client : Projet réalisé en tant que salarié chez Blue Yeti",
     "role": "Rôle : Développeur Front/Back End",
     "technology": "Technologies : Vue.js, Unity 3D",
-    "images": [
+    "medias": [
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik3.png"
+        "media": "travelzik3.png"
       },
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik.png"
+        "media": "travelzik.png"
       }
     ]
   },
@@ -94,16 +99,16 @@
     "year": "Année : 2019",
     "role": "Rôle : Développeur",
     "technology": "Technologies : React Native, iOS, Android",
-    "images": [
+    "medias": [
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik3.png"
+        "media": "travelzik3.png"
       },
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik.png"
+        "media": "travelzik.png"
       }
     ]
   },
@@ -120,16 +125,16 @@
     "year": "Année : 2019",
     "role": "Rôle : Développeur",
     "technology": "Technologies : React Native, iOS, Android",
-    "images": [
+    "medias": [
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik3.png"
+        "media": "travelzik3.png"
       },
       {
         "title": "Site Internet",
         "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "image": "travelzik.png"
+        "media": "travelzik.png"
       }
     ]
   }

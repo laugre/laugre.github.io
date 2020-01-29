@@ -29,6 +29,7 @@
     "react-helmet": "^5.2.1",
     "react-images": "^0.5.19",
     "react-parallax": "^3.0.0",
+    "react-player": "^1.14.2",
     "react-scrolllock": "^5.0.0",
     "react-side-effect": "^2.1.0",
     "smoothscroll-polyfill": "^0.4.4",

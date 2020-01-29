@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
+import ReactPlayer from 'react-player';
 
 import '../assets/sass/project.scss';
 
@@ -20,7 +21,7 @@ const project = props => {
     year,
     role,
     technology,
-    images,
+    medias,
   } = pageContext;
   return (
     <Layout>
@@ -43,20 +44,42 @@ const project = props => {
       </section>
 
       <section>
-        {images.map((image, index) => (
-          <article key={index} id="project-media" className={'style1 ' + (index % 2 ? 'right' : 'left')}>
-            <div className="image">
-              <img src={require('../assets/images/' + image.image)} alt="" />
+        {medias.map((media, index) => (
+          <article
+            key={index}
+            id="project-media"
+            className={'style1 ' + (index % 2 ? 'right' : 'left')}
+          >
+            <div className="media">
+              {(() => {
+                switch (media.type) {
+                  case 'image':
+                    return (
+                      <img
+                        src={require('../assets/images/' + media.media)}
+                        alt=""
+                      />
+                    );
+                  case 'video':
+                    return (
+                      <ReactPlayer
+                        url={require('../assets/videos/' + media.media)}
+                        playing="true"
+                        loop="true"
+                        width="100%"
+                        height="100%"
+                      />
+                    );
+                  default:
+                    return null;
+                }
+              })()}
             </div>
             <div className="inner">
               <header>
-                <h3>
-                  {image.title}
-                </h3>
+                <h3>{media.title}</h3>
               </header>
-              <p>
-              {image.caption}
-              </p>
+              <p>{media.caption}</p>
             </div>
           </article>
         ))}

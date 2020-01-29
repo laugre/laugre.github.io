@@ -107,7 +107,8 @@
   :last-child {
     margin-bottom: 0;
   }
-  .image {
+
+  .media {
     display: block;
     position: absolute;
     width: 50%;
@@ -133,7 +134,7 @@
   }
 
   &.right {
-    .image {
+    .media {
       left: 0;
 
       img {
@@ -147,7 +148,7 @@
   }
 
   &.left {
-    .image {
+    .media {
       right: 0;
 
       img {
