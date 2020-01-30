@@ -67,22 +67,36 @@
     "slug": "lascaux4",
     "subtitle": "Muséo",
     "image": "lascaux_devanture.jpg",
-    "text": "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux.",
+    "text": "Réalisation d’un module interactif permettant de naviguer dans la projection 3D stéréoscopique de la grotte de Lascaux. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (medias, vidéos).",
     "quote": "\"La technologie au service de la médiation\"",
-    "objectif": "Mon objectif sur ce double projet : réaliser un module piloté par une interface tactile de type iPad. Il permet à un animateur ou à un intervenant conférencier de proposer une balade 3D dans la grotte soit en navigation libre soit à partir d’itinéraires pré-définis et d’afficher des médias (medias, vidéos). Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande.",
-    "client": "Client : Projet réalisé en tant que salarié chez Blue Yeti",
+    "objectif": "Ce dispositif est architecturé autour d’un Front Office, supporté par un serveur 3D temps réel, dont l’image est projetée dans la salle, et d'un Back Office, installé sur la tablette et qui sert de module de commande. Mon objectif fut de réaliser l'interface de pilotage dans le modèle 3D sur un écran tactile de type iPad, j'ai utilisé pour cela le framework web javascript Vue. J'ai également réalisé l'intégration du modèle 3D de la grotte, la gestion des commandes temps réel provenant de l'iPad et la lancement des animations avec le logiciel Unity 3D.",
+    "client": "Client : Projet réalisé en tant que développeur chez Blue Yeti",
     "role": "Rôle : Développeur Front/Back End",
-    "technology": "Technologies : Vue.js, Unity 3D",
+    "technology": "Technologies : Vue.js, Websocket, Unity 3D, Projection stéréoscopique",
     "medias": [
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik3.png"
+        "title": "Interface de contrôle iPad",
+        "caption": "Ecran d'accueil de l'interface de pilotage dans le modèle 3D de la grotte. J'ai mis en place une communication de type websocket entre l'iPad et l'application de rendu du modèle 3D.",
+        "type": "image",
+        "media": "lascaux_control_01.png"
       },
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik.png"
+        "title": "Points d'intérêt",
+        "caption": "L'onglet Positions permet de sélectionner un des points d'intérêt de la grotte et d'y accéder sur la projection. Il est possible d'allumer une lampe torche afin d'observer les détails du modèles 3D, notamment les peintures rupestres.",
+        "type": "image",
+        "media": "lascaux_control_02.png"
+      },
+      {
+        "title": "Navigation",
+        "caption": "L'utilisateur et intervenant peut se déplacer en temps réel dans le modèle 3D de la grotte en utilisant les joysticks virtuels sur l'iPad. Les deux autres onglets permettent de lancer des séquences de navigation et d'afficher des médias sur la projection afin d'agrémenter la conférence.",
+        "type": "image",
+        "media": "lascaux_control_03.png"
+      },
+      {
+        "title": "Projection 3D",
+        "caption": "La projection du modèle 3D en stéréoscopie sur un mur écran de 15m permet aux visiteurs d'être en immersion et de visualiser les explications et les actions de l'intervenant en temps réel.",
+        "type": "image",
+        "media": "lascaux_proj_01.jpg"
       }
     ]
   },
@@ -92,49 +106,65 @@
     "slug": "quiz-mhnn",
     "subtitle": "Muséo",
     "image": "quiz_mhnn_manger.png",
-    "text": "Développement front-end d'un quiz interactif.",
-    "quote": "",
-    "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
-    "client": "Client : Travelzik",
-    "year": "Année : 2019",
-    "role": "Rôle : Développeur",
-    "technology": "Technologies : React Native, iOS, Android",
+    "text": "Développement front end d'un quiz interactif.",
+    "quote": "Je mange donc je suis.",
+    "objectif": "Mon objectif sur ce projet fut de développer l'interface d'un quiz sur borne tactile interactive réalisé dans le cadre d'une exposition 'Manger' pour le Muséum d'Histoire Naturelle de Neuchâtel. Le but fut de rendre l'expérience utilisateur ludique et agréable en apportant des animations fluides aux graphismes qui me furent fournis par la société Blue Yeti.",
+    "client": "Client : Projet réalisé en tant que développeur chez Blue Yeti",
+    "year": "Année : 2017",
+    "role": "Rôle : Développeur front-end",
+    "technology": "Technologies : AIR",
     "medias": [
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik3.png"
-      },
-      {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik.png"
+        "title": "Interface Utilisateur",
+        "caption": "Quiz interactif configurable en plusieurs langues. Possible envoi des résultats et de la carte de profil pas email à l'utilisateur à la fin du quiz.",
+        "type": "video",
+        "media": "quiz_manger.webm"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Paléosite",
-    "slug": "paleosite",
+    "title": "Morphing",
+    "slug": "morphing",
     "subtitle": "Muséo",
     "image": "paleosite_morphing4.png",
     "text": "Réalisation d'un dispositif de morphing temps réel.",
-    "quote": "Écoutez, voyagez, en un clic, cela est désormais possible grâce à la webradio Travelzik, dédiée aux musiques des quatre coins du monde. Travelzik est une webradio disponible en ligne, en live ou en podcast. Écoutez, lisez et voyagez avec des émissions et chroniques de passionnés. Une playlist éclectique, retravaillée chaque mois, des émissions curieuses avec la possibilité de réecouter en podcast, des lives et mixes en direct et plein de belles surprises et le tout sans pub !",
-    "objectif": "Mon objectif en tant que bénévole sur ce projet en cours d'évolution : concevoir et développer l'application pour smartphones et tablettes.",
-    "client": "Client : Travelzik",
-    "year": "Année : 2019",
+    "quote": "En inclinant le joystick dans un sens ou dans l'autre, faites défiler les millénaires !",
+    "objectif": "Dispositif réalisé en Unity 3D avec contrôles à l'aide d'un lecteur de carte visiteur, d'un bouton physique et d'un joystick pour effectuer progressivement le morphing du visage et la poussée des cheveux de l'homme de Néandertal en temps réel, avec image caméra en mouvement sur l'image de face et captation 3D pour déformer l'image et afficher la perruque 3D sur la tête.",
+    "client": "Client : Projet réalisé en tant que développeur chez Blue Yeti",
+    "year": "Année : 2017",
     "role": "Rôle : Développeur",
-    "technology": "Technologies : React Native, iOS, Android",
+    "technology": "Technologies : Unity 3D, Caméra Realsense SR300",
     "medias": [
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik3.png"
+        "title": "Ecran d'accueil",
+        "caption": "Le visiteur peut s'asseoir face à cet écran d'accueil sur lequel tourne une animation en boucle.",
+        "type": "image",
+        "media": "paleosite_morphing.png"
       },
       {
-        "title": "Site Internet",
-        "caption": "L'application Travelzik est à ce jour disponible en version bêta sur le Google Play Store",
-        "media": "travelzik.png"
+        "title": "Pass visiteur",
+        "caption": "Un lecteur de carte que j'ai connecté à l'application de morphing permet au visiteur d'insérer son pass et de commencer la séquence.",
+        "type": "image",
+        "media": "paleosite_morphing2.png"
+      },
+      {
+        "title": "Sequence de morphing",
+        "caption": "Sequence de test des prises de photos face par la caméra 3D Realsense et profil par la webcam. Puis test de rendu du morphing du visage de face et de profil.",
+        "type": "video",
+        "media": "morphing.webm"
+      },
+      {
+        "title": "Envoi",
+        "caption": "Le visiteur peut choisir d'envoyer ses photos afin que celles ci soient imprimées et qu'il reparte avec.",
+        "type": "image",
+        "media": "paleosite_morphing4.png"
+      },
+      {
+        "title": "Impression",
+        "caption": "Exemple d'impression face et profil avec morphing et perruque virtuelle 3D",
+        "type": "image",
+        "media": "paleosite_morphing5.jpg"
       }
     ]
   }
