@@ -109,16 +109,19 @@
   }
 
   .media {
-    display: block;
+    @include vendor('display', 'flex');
+    @include vendor('justify-content', 'center');
+    @include vendor('align-items', 'center');
     position: absolute;
     width: 50%;
     height: 20em;
     overflow: hidden;
+    background-color: white;
 
     img {
       position: absolute;
-      width: auto;
-      height: 100%;
+      width: 90%;
+      height: auto;
     }
   }
 
@@ -136,10 +139,6 @@
   &.right {
     .media {
       left: 0;
-
-      img {
-        right: 0;
-      }
     }
 
     .inner {
@@ -150,10 +149,6 @@
   &.left {
     .media {
       right: 0;
-
-      img {
-        left: 0;
-      }
     }
 
     .inner {
