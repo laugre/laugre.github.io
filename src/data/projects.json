@@ -49,15 +49,15 @@
     "medias": [
       {
         "title": "EDF INGEUM",
-        "caption": "Développement de l'interface utilisateur d'une application responsive destinée à être affichée sur support de type tablette tactile",
+        "caption": "Développement de l'interface utilisateur d'une application responsive destinée à être affichée sur support de type tablette tactile. Le but était d'obtenir un rendu optimal en proposant une interface aux animations fluides et en poussant l'expérience utilisateur à son paroxisme.",
         "type": "video",
         "media": "edf_ingeum.webm"
       },
       {
         "title": "NOVALAC",
-        "caption": "Développement de l'interface utilisateur d'une application responsive destinée à être affichée sur support de type tablette tactile",
+        "caption": "Développement de l'interface utilisateur d'une application responsive type quiz interactif destinée à être affichée sur support de type tablette tactile",
         "type": "video",
-        "media": "edf_ingeum.webm"
+        "media": "novalac.webm"
       }
     ]
   },
