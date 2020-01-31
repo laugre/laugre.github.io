@@ -60,49 +60,49 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <ScrollLock isActive={lockScroll} />
-      <section id="header">
-        <div className="inner">
-          <h2>{config.authorName}</h2>
-          <p>{config.heading1}</p>
-          <p>{config.heading2}</p>
-        </div>
-        <Scroll
-          type="id"
-          element="banner"
-          offset={-10}
-          onClick={toggleBannerVisible}
-        >
-          <a href="#banner" className="button style1 more">
-            What Else ?
-          </a>
-        </Scroll>
-      </section>
+        <ScrollLock isActive={lockScroll} />
+        <section id="header">
+          <div className="inner">
+            <h2>{config.authorName}</h2>
+            <p>{config.heading1}</p>
+            <p>{config.heading2}</p>
+          </div>
+          <Scroll
+            type="id"
+            element="banner"
+            offset={-10}
+            onClick={toggleBannerVisible}
+          >
+            <a href="#banner" className="button style1 more">
+              What Else ?
+            </a>
+          </Scroll>
+        </section>
 
-      <section id="banner">
-        <div className={'content ' + (showBanner ? 'show' : '')}>
-          <Typewriter onInit={createTypingAnim} />
-          <footer className={showProjectButton ? 'show' : ''}>
-            <Scroll type="id" element="first">
-              <a href="#first" className="button style2 scrolly">
-                Découvrons ensemble une sélection de mes réalisations
-              </a>
-            </Scroll>
-          </footer>
-        </div>
-      </section>
+        <section id="banner">
+          <div className={'content ' + (showBanner ? 'show' : '')}>
+            <Typewriter onInit={createTypingAnim} />
+            <footer className={showProjectButton ? 'show' : ''}>
+              <Scroll type="id" element="first">
+                <a href="#first" className="button style2 scrolly">
+                  Découvrons ensemble une sélection de mes réalisations
+                </a>
+              </Scroll>
+            </footer>
+          </div>
+        </section>
 
-      <Projects />
+        <Projects />
 
-      <article className="container box style3">
-        <header>
-          <h2>CONTACT</h2>
-          <p>
-            Une idée à faire germer ?<br />
-            Besoin d'un avis, d'un conseil, d'un devis ?<br /> Écris-moi !
-          </p>
-        </header>
-        {/* <form method="post" action="#">
+        <article className="container box style3">
+          <header>
+            <h2>CONTACT</h2>
+            <p>
+              Une idée à faire germer ?<br />
+              Besoin d'un avis, d'un conseil, d'un devis ?<br /> Écris-moi !
+            </p>
+          </header>
+          {/* <form method="post" action="#">
       <div className="row gtr-50">
         <div className="col-6 col-12-mobile">
           <input
@@ -132,9 +132,9 @@ const IndexPage = () => {
         </div>
       </div>
     </form> */}
-      </article>
+        </article>
 
-      {/* <article className="container box style3">
+        {/* <article className="container box style3">
     <header>
       <h2>Elements</h2>
       <p>This starter has other elements.</p>
@@ -144,7 +144,7 @@ const IndexPage = () => {
     </header>
   </article> */}
 
-      <Footer />
+        <Footer />
     </Layout>
   );
 };

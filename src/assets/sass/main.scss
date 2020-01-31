@@ -221,11 +221,7 @@ body,
   color: white;
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
   -webkit-text-stroke: 0.25px;
-
-  // &.is-scroll {
-  //   background-attachment: scroll, scroll;
-  //   background-size: auto, 100% auto;
-  // }
+  overflow: hidden;
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -237,6 +233,33 @@ body,
     }
   }
 }
+
+[data-scrollbar] {
+  width: 100%;
+  height: 100vh;
+}
+
+// [data-scrollbar] img {
+//   display: block;
+//   width: 1920px;
+// }
+
+// [data-scrollbar] ol {
+//   width: 600px;
+// }
+
+// [data-scrollbar] footer {
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   width: 600px;
+//   text-align: center;
+//   font-size: 2em;
+//   background: skyblue;
+//   text-align: center;
+//   color: #fff;
+//   transition: opacity .5s;
+// }
 
 input,
 textarea,
