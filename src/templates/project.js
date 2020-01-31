@@ -10,9 +10,7 @@ import '../assets/sass/project.scss';
 const project = props => {
   const { pageContext } = props;
   const {
-    id,
     title,
-    subtitle,
     image,
     text,
     quote,
@@ -64,8 +62,8 @@ const project = props => {
                     return (
                       <ReactPlayer
                         url={require('../assets/videos/' + media.media)}
-                        playing="true"
-                        loop="true"
+                        playing={true}
+                        loop={true}
                         width="100%"
                         height="100%"
                       />
