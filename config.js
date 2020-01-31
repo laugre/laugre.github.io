@@ -25,11 +25,6 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/laurent-garnier-b079a916/',
     },
-    // {
-    //   icon: 'fa-github',
-    //   name: 'Github',
-    //   url: 'https://github.com/laugre',
-    // },
     {
       icon: 'fa-envelope-o',
       name: 'Email',

@@ -57,7 +57,7 @@ const IndexPage = () => {
         setShowProjectButton(true);
       });
   };
-
+  
   return (
     <Layout>
         <ScrollLock isActive={lockScroll} />
