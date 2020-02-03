@@ -26,7 +26,7 @@ const project = props => {
       <section id="project-header">
         <img src={require('../assets/images/' + image)} alt="" />
         <Scroll type="id" element="project-banner" offset={-10}>
-          <a href="#banner" className="button style1 more">
+          <a href="#project-banner" className="button style1">
             {title}
           </a>
         </Scroll>
