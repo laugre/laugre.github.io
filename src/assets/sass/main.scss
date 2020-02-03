@@ -208,11 +208,11 @@ body,
 .main-body {
   background-color: #183026;
   background-image: url('../images/overlay.png'), url('../images/bg.jpg');
-  background-repeat: repeat, no-repeat;
+  // background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left, center 0;
+  // background-position: top left, center 0;
   background-attachment: fixed, fixed;
-  background-blend-mode: hard-light;
+  // background-blend-mode: hard-light;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18pt;
   line-height: 1.75em;
@@ -221,7 +221,8 @@ body,
   color: white;
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
   -webkit-text-stroke: 0.25px;
-  overflow: hidden;
+
+  // overflow-x: hidden;
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -234,10 +235,10 @@ body,
   }
 }
 
-[data-scrollbar] {
-  width: 100%;
-  height: 100vh;
-}
+// [data-scrollbar] {
+//   width: 100%;
+//   height: 100vh;
+// }
 
 // [data-scrollbar] img {
 //   display: block;

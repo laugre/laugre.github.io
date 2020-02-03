@@ -35,16 +35,17 @@
 
 .project-selector-header {
   position: relative;
+  width: 30%;
   top: -20em;
   margin: auto;
 
   &.left {
     text-align: right;
-    right: 20%;
+    right: -10%;
   }
 
   &.right {
     text-align: left;
-    left: 20%;
+    left: -10%;
   }
 }
