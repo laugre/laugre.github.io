@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Parallax } from 'react-parallax';
-import { Link } from 'gatsby';
+import Link from 'gatsby-plugin-transition-link';
+import TransitionLink from 'gatsby-plugin-transition-link';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import ProjectData from '../data/projects.json';
 import '../assets/sass/project-selector.scss';
 
@@ -9,7 +11,11 @@ export default function Projects() {
     <div>
       {ProjectData.map((projectDetails, index) => {
         return (
-          <ProjectSelector key={index} projectDetails={projectDetails} index={index}></ProjectSelector>
+          <ProjectSelector
+            key={index}
+            projectDetails={projectDetails}
+            index={index}
+          ></ProjectSelector>
         );
       })}
     </div>
@@ -42,21 +48,36 @@ export function ProjectSelector({ projectDetails, index }) {
           />
         )}
       >
-        <Link id="first" to={'/projects/' + projectDetails.slug}>
+        <AniLink
+          cover
+          id="first"
+          to={'/projects/' + projectDetails.slug}
+          direction="up"
+          bg="black"
+        >
           <div className={'parallax-content ' + (!hover ? 'hover' : '')}></div>
-        </Link>
+        </AniLink>
       </Parallax>
-      <Link
+      <AniLink
+        cover
+        id="first"
+        to={'/projects/' + projectDetails.slug}
+        direction="up"
+        bg="black"
         id="first"
         to={'/projects/' + projectDetails.slug}
         onMouseEnter={() => toggleHover(true)}
         onMouseLeave={() => toggleHover(false)}
       >
-        <header className={'project-selector-header ' + (index % 2 ? 'right' : 'left')}>
+        <header
+          className={
+            'project-selector-header ' + (index % 2 ? 'right' : 'left')
+          }
+        >
           <h1>{projectDetails.title}</h1>
           <h3>{projectDetails.subtitle}</h3>
         </header>
-      </Link>
+      </AniLink>
     </div>
   );
 }

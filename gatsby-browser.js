@@ -11,7 +11,7 @@ exports.shouldUpdateScroll = ({
 //   const currentPosition = getSavedScrollPosition(location)
 //   const queriedPosition = getSavedScrollPosition({ pathname: `/random` })
 
-  window.scrollTo(...([0, 0]))
+  // window.scrollTo(...([0, 0]))
 
   return false
 }
