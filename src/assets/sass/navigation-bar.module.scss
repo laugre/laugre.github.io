@@ -1,0 +1,65 @@
+$smallerDevicesMaxWidth: 360px;
+$maxWidth: 700px;
+$minWidth: 701px;
+$maxHeight: 600px;
+
+.navigationBar {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  // border-bottom: 1px solid rgba(205, 205, 205, 0.4);
+  // box-sizing: border-box;
+  // background-color: white;
+  // box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+
+  //   fix at the top of page
+  top: 0px;
+  padding: 0 1rem 0 1rem;
+
+  display: flex;
+  // to have logo on the left and links on the right
+  justify-content: space-between;
+}
+
+@media (max-width: $maxWidth) {
+  .navigationBar {
+    height: 54px;
+  }
+}
+@media (min-width: $minWidth) and (min-height: $maxHeight) {
+  .navigationBar {
+    height: 72px;
+  }
+}
+// headerMenu
+.navigationBarMenu {
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navigationBarMenu li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: $maxWidth) {
+  .navigationBarMenu li a {
+    padding: 3px 10px 5px 0;
+    font-size: 16px;
+  }
+}
+@media (max-width: $smallerDevicesMaxWidth) {
+  .navigationBarMenu li a {
+    padding: 3px 5px 5px 0;
+    font-size: 13px;
+  }
+}
+@media (min-width: $minWidth) {
+  .navigationBarMenu li a {
+    padding: 15px 15px;
+    font-size: 22px;
+  }
+}

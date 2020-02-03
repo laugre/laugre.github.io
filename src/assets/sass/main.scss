@@ -208,9 +208,7 @@ body,
 .main-body {
   background-color: #183026;
   background-image: url('../images/overlay.png'), url('../images/bg.jpg');
-  // background-repeat: no-repeat;
   background-size: cover;
-  // background-position: top left, center 0;
   background-attachment: fixed, fixed;
   // background-blend-mode: hard-light;
   font-family: 'Source Sans Pro', sans-serif;
@@ -448,70 +446,6 @@ article:last-child {
   }
 }
 
-/* Image */
-
-.image {
-  display: inline-block;
-  border: 0;
-
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  &.featured {
-    display: block;
-    width: 100%;
-    margin: 0 0 2em 0;
-  }
-
-  &.fit {
-    display: block;
-    width: 100%;
-  }
-
-  &.left {
-    float: left;
-    margin: 0 2em 2em 0;
-  }
-
-  &.centered {
-    display: block;
-    margin: 0 0 2em 0;
-
-    img {
-      margin: 0 auto;
-      width: auto;
-    }
-  }
-}
-
-/* List */
-
-ul {
-  list-style: disc;
-  padding-left: 1em;
-
-  li {
-    padding-left: 1.5em;
-    margin-top: 1.5em;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
-ol {
-  list-style: decimal;
-  padding-left: 1.25em;
-
-  li {
-    padding-left: 1.25em;
-    margin-top: 1.5em;
-  }
-}
-
 /* Icons */
 
 ul.icons {
@@ -532,47 +466,6 @@ ul.icons {
     line-height: 2.5em;
     text-align: center;
     border: 0;
-  }
-}
-
-/* Menu */
-
-ul.menu {
-  cursor: default;
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    display: inline-block;
-    line-height: 1em;
-    border-left: solid 1px #dad9d9;
-    padding: 0 0 0 0.5em;
-    margin: 0 0 0 0.5em;
-
-    &:first-child {
-      border-left: 0;
-      padding-left: 0;
-      margin-left: 0;
-    }
-  }
-}
-
-/* Actions */
-
-ul.actions {
-  cursor: default;
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    display: inline-block;
-    margin: 0 0 0 0.5em;
-    padding-left: 0;
-    margin-top: 0;
-
-    &:first-child {
-      margin-left: 0;
-    }
   }
 }
 
@@ -664,42 +557,6 @@ form {
       margin-bottom: 0;
       text-align: center;
     }
-  }
-}
-
-/* Table */
-
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-table {
-  width: 100%;
-
-  tbody {
-    tr {
-      border-top: solid 1px #eae9e9;
-
-      &:first-child {
-        border-top: 0;
-      }
-    }
-  }
-
-  td {
-    padding: 0.75em 1.25em 0.75em 1.25em;
-  }
-
-  th {
-    text-align: left;
-    font-weight: 400;
-    padding: 0.75em 1.25em 0.75em 1.25em;
-  }
-
-  thead {
-    background: #f5f5f5;
   }
 }
 
