@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import ScrollLock from 'react-scrolllock';
+// import ScrollLock from 'react-scrolllock';
 
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
@@ -60,7 +60,7 @@ const IndexPage = () => {
   
   return (
     <Layout>
-        <ScrollLock isActive={lockScroll} />
+        {/* <ScrollLock isActive={lockScroll} /> */}
         <section id="header">
           <div className="inner">
             <h2>{config.authorName}</h2>
@@ -84,7 +84,7 @@ const IndexPage = () => {
             <Typewriter onInit={createTypingAnim} />
             <footer className={showProjectButton ? 'show' : ''}>
               <Scroll type="id" element="first">
-                <a href="#first" className="button style2 scrolly">
+                <a href="#first" className="button">
                   Découvrons ensemble une sélection de mes réalisations
                 </a>
               </Scroll>

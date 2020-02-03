@@ -23,10 +23,10 @@ const project = props => {
   } = pageContext;
   return (
     <Layout>
-      <section id="project-header">
+      <section id="header">
         <img src={require('../assets/images/' + image)} alt="" />
         <Scroll type="id" element="project-banner" offset={-10}>
-          <a href="#project-banner" className="button style1">
+          <a href="#project-banner" className="button style1 more">
             {title}
           </a>
         </Scroll>
