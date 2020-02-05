@@ -10,7 +10,7 @@ class NavigationBar extends Component {
           {this.props.navigationProps.map((item, index) => (
             <li key={index}>
               <AniLink cover to={item.link} direction="bottom" bg="black">
-                {item.name}
+                <div className={`icon ${item.icon}`}></div>
               </AniLink>
             </li>
           ))}
