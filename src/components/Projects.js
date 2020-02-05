@@ -22,6 +22,7 @@ export default function Projects() {
 
 export function ProjectSelector({ projectDetails, index }) {
   const [hover, setHover] = useState(false);
+  const [percentage, setPercentage] = useState(0);
 
   const toggleHover = state => {
     setHover(state);
@@ -43,7 +44,10 @@ export function ProjectSelector({ projectDetails, index }) {
                 2 * Math.PI * percentage
               )})`,
             }}
-          />
+          >
+            {' '}
+            {setPercentage(percentage)}
+          </div>
         )}
       >
         <AniLink
@@ -68,6 +72,7 @@ export function ProjectSelector({ projectDetails, index }) {
         onMouseLeave={() => toggleHover(false)}
       >
         <header
+          style={{ opacity: 1-Math.cos(2 * Math.PI * percentage) }}
           className={
             'project-selector-header ' +
             (hover ? 'hover ' : ' ') +
