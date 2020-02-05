@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 import ReactPlayer from 'react-player';
 
 import '../assets/sass/project.scss';
+import Pagination from '../components/Pagination';
 
 const project = props => {
   const { pageContext } = props;
@@ -20,9 +21,12 @@ const project = props => {
     role,
     technology,
     medias,
+    previous,
+    next,
   } = pageContext;
   return (
     <Layout>
+      <Pagination previous={'/projects/' + previous.slug} next={'/projects/' + next.slug}></Pagination>
       <section id="header">
         <img src={require('../assets/images/' + image)} alt="" />
         <Scroll type="id" element="project-banner" offset={-10}>

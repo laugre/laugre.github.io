@@ -321,21 +321,6 @@ i {
   font-style: italic;
 }
 
-a {
-  @include vendor(
-    'transition',
-    ('border-color 0.35s ease-in-out', 'color 0.35s ease-in-out')
-  );
-  color: white;
-  text-shadow: 0 0 0.5px rgba(53, 184, 143, 0.25);
-  text-decoration: none;
-  border-bottom: dotted 1px rgba(53, 184, 143, 0.5);
-
-  &:hover {
-    border-bottom-color: rgba(53, 184, 143, 0);
-  }
-}
-
 sub {
   position: relative;
   top: 0.5em;

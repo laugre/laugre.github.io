@@ -38,6 +38,13 @@
   width: 30%;
   top: -20em;
   margin: auto;
+  @include vendor('transition', ('color 0.35s ease-in-out'));
+  color: white;
+
+  &.hover,
+  &:hover {
+    color: #45c89f;
+  }
 
   &.left {
     text-align: right;

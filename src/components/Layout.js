@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 // import MagicScroll from 'magic-scroll.js';
 import '../assets/sass/main.scss';
+import NavigationBar from '../components/NavigationBar';
 
 class Layout extends Component {
   constructor(props) {
@@ -34,6 +35,12 @@ class Layout extends Component {
   render() {
     const { children } = this.props;
     const { isPreloaded } = this.state;
+    const navigationItems = [
+      { link: '/#home', name: 'home' },
+      // { link: '#project', name: 'Projets' },
+      { link: '#about', name: 'about' },
+      // { link: '#contact', name: 'Contact' },
+    ];
     return (
       <StaticQuery
         query={graphql`
@@ -56,6 +63,7 @@ class Layout extends Component {
             >
               <html lang="en" />
             </Helmet>
+            <NavigationBar navigationProps={navigationItems} />
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>

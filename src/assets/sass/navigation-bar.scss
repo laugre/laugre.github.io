@@ -1,3 +1,12 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
+@import url('font-awesome.min.css');
+
 $smallerDevicesMaxWidth: 360px;
 $maxWidth: 700px;
 $minWidth: 701px;
@@ -7,10 +16,6 @@ $maxHeight: 600px;
   width: 100%;
   position: fixed;
   z-index: 1;
-  // border-bottom: 1px solid rgba(205, 205, 205, 0.4);
-  // box-sizing: border-box;
-  // background-color: white;
-  // box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 
   //   fix at the top of page
   top: 0px;
@@ -41,9 +46,17 @@ $maxHeight: 600px;
 }
 
 .navigationBarMenu li a {
+  @include vendor(
+    'transition',
+    ('color 0.35s ease-in-out')
+  );
   display: block;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: #45c89f;
+  }
 }
 @media (max-width: $maxWidth) {
   .navigationBarMenu li a {

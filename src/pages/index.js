@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 // import ScrollLock from 'react-scrolllock';
 
-import NavigationBar from '../components/NavigationBar';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
@@ -47,7 +46,7 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive.<br />"
+        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive et intuitive.<br />"
       )
       .pauseFor(pause)
       .typeString(
@@ -59,17 +58,9 @@ const IndexPage = () => {
       });
   };
 
-  const navigationItems = [
-    { link: '#home', name: 'Accueil' },
-    // { link: '#project', name: 'Projets' },
-    { link: '#about', name: 'À propos' },
-    // { link: '#contact', name: 'Contact' },
-  ];
-
   return (
     <Layout>
       {/* <ScrollLock isActive={lockScroll} /> */}
-      <NavigationBar headerProps={navigationItems} />
       <section id="header">
         <div className="inner">
           <h2>{config.authorName}</h2>

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import styles from '../assets/sass/navigation-bar.module.scss';
+import '../assets/sass/navigation-bar.scss';
 
 class NavigationBar extends Component {
   render() {
     return (
-      <header className={styles.navigationBar}>
-        <ul className={styles.navigationBarMenu}>
-          {this.props.headerProps.map((item, index) => (
+      <header className="navigationBar">
+        <ul className="navigationBarMenu">
+          {this.props.navigationProps.map((item, index) => (
             <li key={index}>
               <a href={item.link}>{item.name}</a>
             </li>

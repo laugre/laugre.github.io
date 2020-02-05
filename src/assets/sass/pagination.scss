@@ -1,0 +1,58 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
+@import url('font-awesome.min.css');
+
+$smallerDevicesMaxWidth: 360px;
+$maxWidth: 700px;
+$minWidth: 701px;
+$maxHeight: 600px;
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  padding: 0 1rem 0 1rem;
+
+  .button-previous,
+  .button-next {
+    @include vendor(
+      'transition',
+      ('opacity 0.5s ease-in-out', 'background-color 0.5s ease-in-out')
+    );
+    position: absolute;
+    width: 96px;
+    height: 64px;
+    top: calc(50% - 1.5em);
+    mask-image: url('../images/poptrox-nav.svg');
+    background-color: white;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    .button-next,
+    .button-previous {
+      opacity: 1;
+
+      &:hover {
+        background-color: #45c89f;
+      }
+    }
+  }
+
+  .button-next {
+    right: 0;
+  }
+
+  .button-previous {
+    @include vendor('transform', 'scaleX(-1)');
+    left: 0;
+  }
+}
