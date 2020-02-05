@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import '../assets/sass/navigation-bar.scss';
 
 class NavigationBar extends Component {
@@ -8,7 +9,9 @@ class NavigationBar extends Component {
         <ul className="navigationBarMenu">
           {this.props.navigationProps.map((item, index) => (
             <li key={index}>
-              <a href={item.link}>{item.name}</a>
+              <AniLink cover to={item.link} direction="bottom" bg="black">
+                {item.name}
+              </AniLink>
             </li>
           ))}
         </ul>
