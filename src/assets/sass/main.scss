@@ -220,7 +220,7 @@ body,
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
   -webkit-text-stroke: 0.25px;
 
-  overflow: hidden;
+  // overflow: hidden;
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -839,7 +839,7 @@ body.is-preload,
 
   .content {
     width: 0;
-    // height: 2em;
+    height: 2em;
     color: #fff;
     text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
     text-align: center;
@@ -853,7 +853,7 @@ body.is-preload,
         ('height 1s ease 1s', 'width 1s ease 1.5s')
       );
       width: 80%;
-      // height: 35em;
+      height: 37em;
     }
 
     &:before {

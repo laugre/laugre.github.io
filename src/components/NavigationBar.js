@@ -6,11 +6,11 @@ class NavigationBar extends Component {
   render() {
     return (
       <header className="navigationBar">
-        <ul className="navigationBarMenu">
+        <ul className="navigationBarMenu icons">
           {this.props.navigationProps.map((item, index) => (
             <li key={index}>
               <AniLink cover to={item.link} direction="bottom" bg="black">
-                <div className={`icon ${item.icon}`}></div>
+                <div className={`icon ${item.icon}`} style={{fontSize: 1.5 + 'em'}}></div>
               </AniLink>
             </li>
           ))}

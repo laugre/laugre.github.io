@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-// import ScrollLock from 'react-scrolllock';
+import ScrollLock from 'react-scrolllock';
 
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
@@ -60,7 +60,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/* <ScrollLock isActive={lockScroll} /> */}
+      <ScrollLock isActive={lockScroll} />
       <section id="header">
         <div className="inner">
           <h2>{config.authorName}</h2>

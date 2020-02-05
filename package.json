@@ -31,6 +31,7 @@
     "react-images": "^0.5.19",
     "react-parallax": "^3.0.0",
     "react-player": "^1.14.2",
+    "react-scrolllock": "^5.0.0",
     "typewriter-effect": "^2.12.2"
   },
   "scripts": {

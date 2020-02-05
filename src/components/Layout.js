@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-// import MagicScroll from 'magic-scroll.js';
+// import MagicScroll from 'magic-scroll';
 import '../assets/sass/main.scss';
 import NavigationBar from '../components/NavigationBar';
 
@@ -22,8 +22,11 @@ class Layout extends Component {
     // let magicScroll = new MagicScroll({
     //   speed: 50,
     //   smooth: 20,
-    //   // current: 1980,
     // });
+    // window.document.scrollingElement.scrollTop = 0;
+    // magicScroll.pos = window.document.scrollingElement.scrollTop;
+
+    // console.log(window.document.scrollingElement.scrollTop);
   }
 
   componentWillUnmount() {
@@ -36,9 +39,9 @@ class Layout extends Component {
     const { children } = this.props;
     const { isPreloaded } = this.state;
     const navigationItems = [
-      { link: '/#home', name: 'home' },
+      { link: '/#home', name: 'home', icon: 'fa-home' },
       // { link: '#project', name: 'Projets' },
-      { link: '#about', name: 'about' },
+      { link: '/#about', name: 'about', icon: 'fa-address-card' },
       // { link: '#contact', name: 'Contact' },
     ];
     return (
