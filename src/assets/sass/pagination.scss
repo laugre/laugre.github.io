@@ -7,10 +7,26 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
 @import url('font-awesome.min.css');
 
-$smallerDevicesMaxWidth: 360px;
-$maxWidth: 700px;
-$minWidth: 701px;
-$maxHeight: 600px;
+@include breakpoints(
+  (
+    wide: (
+      1081px,
+      1680px,
+    ),
+    normal: (
+      841px,
+      1080px,
+    ),
+    narrow: (
+      737px,
+      840px,
+    ),
+    mobile: (
+      null,
+      736px,
+    ),
+  )
+);
 
 .pagination-buttons {
   display: flex;
@@ -54,5 +70,24 @@ $maxHeight: 600px;
   .button-previous {
     @include vendor('transform', 'scaleX(-1)');
     left: 0;
+  }
+}
+
+@include breakpoint('<=mobile') {
+  .pagination-buttons {
+    .button-previous,
+    .button-next {
+      
+    }
+
+    .button-next {
+      @include vendor('transform', 'scale(.5)');
+      right: -2.5em;
+    }
+
+    .button-previous {
+      @include vendor('transform', 'scale(-0.5)');
+      left: -2.5em;
+    }
   }
 }

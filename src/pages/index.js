@@ -30,27 +30,27 @@ const IndexPage = () => {
       .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
       .pauseFor(pause * 2)
       .typeString(
-        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, je suis passionné de nouvelles technologies. <br />"
+        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, je suis passionné de nouvelles technologies.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        "Concepteur d'applications interactives dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le développement front end, web, mobile et multimédia.<br />"
+        "<p>Concepteur d'applications interactives dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le développement front end, web, mobile et multimédia.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        'Appréciant la diversité des projets et le côté relationnel,<br />je travaille désormais en freelance afin de pouvoir échanger directement avec les clients sur des projets variés.<br />'
+        '<p>Appréciant la diversité des projets et le côté relationnel,je travaille désormais en freelance afin de pouvoir échanger directement avec les clients sur des projets variés.</p>'
       )
       .pauseFor(pause)
       .typeString(
-        "Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.<br />"
+        "<p>Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        "Mon objectif est de rendre l'expérience utilisateur toujours plus immersive et intuitive.<br />"
+        "<p>Mon objectif est de rendre l'expérience utilisateur toujours plus immersive et intuitive.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        'Activité, Réactivité et Interactivité sont les trois critères qui guident mes développements.'
+        '<p>Activité, Réactivité et Interactivité sont les trois critères qui guident mes développements.</p>'
       )
       .pauseFor(pause * 2)
       .callFunction(() => {
@@ -70,7 +70,7 @@ const IndexPage = () => {
         <Scroll
           type="id"
           element="banner"
-          offset={-10}
+          offset={-80}
           onClick={toggleBannerVisible}
         >
           <a href="#banner" className="button style1 more">
@@ -82,17 +82,21 @@ const IndexPage = () => {
       <section id="banner">
         <div className={'content ' + (showBanner ? 'show' : '')}>
           <Typewriter onInit={createTypingAnim} />
-          <footer className={showProjectButton ? 'show' : ''}>
+          {/* <footer className={showProjectButton ? 'show' : ''}>
             <Scroll type="id" element="first">
               <a href="#first" className="button">
                 Découvrons ensemble une sélection de mes réalisations
               </a>
             </Scroll>
-          </footer>
+          </footer> */}
         </div>
       </section>
 
       <Projects />
+
+      <article className="container box style3">
+        
+      </article>
 
       <article className="container box style3">
         <header>

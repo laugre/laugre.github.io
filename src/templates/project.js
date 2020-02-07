@@ -26,10 +26,13 @@ const project = props => {
   } = pageContext;
   return (
     <Layout>
-      <Pagination previous={'/projects/' + previous.slug} next={'/projects/' + next.slug}></Pagination>
+      <Pagination
+        previous={'/projects/' + previous.slug}
+        next={'/projects/' + next.slug}
+      ></Pagination>
       <section id="header">
         <img src={require('../assets/images/' + image)} alt="" />
-        <Scroll type="id" element="project-banner" offset={-10}>
+        <Scroll type="id" element="project-banner" offset={-60}>
           <a href="#project-banner" className="button style1 more">
             {title}
           </a>
@@ -45,45 +48,47 @@ const project = props => {
         <p>{objectif}</p>
       </section>
 
-      <section>
+      <section id="project-contents">
         {medias.map((media, index) => (
-          <article
-            key={index}
-            id="project-media"
-            className={'style1 ' + (index % 2 ? 'right' : 'left')}
-          >
-            <div className="media">
-              {(() => {
-                switch (media.type) {
-                  case 'image':
-                    return (
-                      <img
-                        src={require('../assets/images/' + media.media)}
-                        alt=""
-                      />
-                    );
-                  case 'video':
-                    return (
-                      <ReactPlayer
-                        url={require('../assets/videos/' + media.media)}
-                        playing={true}
-                        loop={true}
-                        width="100%"
-                        height="100%"
-                      />
-                    );
-                  default:
-                    return null;
-                }
-              })()}
-            </div>
-            <div className="inner">
-              <header>
-                <h3>{media.title}</h3>
-              </header>
-              <p>{media.caption}</p>
-            </div>
-          </article>
+          <>
+            <div className="line"></div>
+            <article
+              key={index}
+              className={'project-content ' + (index % 2 ? 'right' : 'left')}
+            >
+              <div className="media">
+                {(() => {
+                  switch (media.type) {
+                    case 'image':
+                      return (
+                        <img
+                          src={require('../assets/images/' + media.media)}
+                          alt=""
+                        />
+                      );
+                    case 'video':
+                      return (
+                        <ReactPlayer
+                          url={require('../assets/videos/' + media.media)}
+                          playing={true}
+                          loop={true}
+                          width="100%"
+                          height="100%"
+                        />
+                      );
+                    default:
+                      return null;
+                  }
+                })()}
+              </div>
+              <div className="inner">
+                <header>
+                  <h3>{media.title}</h3>
+                </header>
+                <p>{media.caption}</p>
+              </div>
+            </article>
+          </>
         ))}
       </section>
 
