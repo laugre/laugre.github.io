@@ -41,7 +41,7 @@ class Layout extends Component {
     const navigationItems = [
       { link: '/#home', name: 'home', icon: 'fa-home' },
       // { link: '#project', name: 'Projets' },
-      { link: '/#about', name: 'about', icon: 'fa-address-card' },
+      // { link: '/#about', name: 'about', icon: 'fa-address-card' },
       // { link: '#contact', name: 'Contact' },
     ];
     return (

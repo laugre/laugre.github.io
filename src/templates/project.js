@@ -24,6 +24,7 @@ const project = props => {
     previous,
     next,
   } = pageContext;
+
   return (
     <Layout>
       <Pagination
@@ -43,9 +44,9 @@ const project = props => {
         <header>
           <h2>{title}</h2>
         </header>
-        <p>{text}</p>
+        <p dangerouslySetInnerHTML={{ __html: text }} />
         <blockquote>{quote}</blockquote>
-        <p>{objectif}</p>
+        <p dangerouslySetInnerHTML={{ __html: objectif }} />
       </section>
 
       <section id="project-contents">
@@ -85,7 +86,7 @@ const project = props => {
                 <header>
                   <h3>{media.title}</h3>
                 </header>
-                <p>{media.caption}</p>
+                <p dangerouslySetInnerHTML={{ __html: media.caption }} />
               </div>
             </article>
           </>

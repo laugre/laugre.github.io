@@ -21,7 +21,7 @@ const IndexPage = () => {
   };
 
   const delay = 20;
-  const pause = 1000;
+  const pause = 500;
   const createTypingAnim = typewriter => {
     setTypeWriter(typewriter);
     typewriter
@@ -34,23 +34,23 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "<p>Concepteur d'applications interactives dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le développement front end, web, mobile et multimédia.</p>"
+        "<p><strong>Concepteur d'applications interactives</strong> dans les secteurs de la <strong>muséographie</strong> et de l'<strong>évènementiel</strong> depuis 2009, je me focalise aujourd'hui sur le <strong>développement front end</strong>, <strong>web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        '<p>Appréciant la diversité des projets et le côté relationnel,je travaille désormais en freelance afin de pouvoir échanger directement avec les clients sur des projets variés.</p>'
+        '<p>Appréciant la diversité des projets et le côté relationnel, je travaille désormais en <strong>freelance</strong> afin de pouvoir échanger directement avec les clients sur des projets variés.</p>'
       )
       .pauseFor(pause)
       .typeString(
-        "<p>Mon souhait est d'apporter mes compétences en proposant des solutions sur mesure.</p>"
+        "<p>Je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        "<p>Mon objectif est de rendre l'expérience utilisateur toujours plus immersive et intuitive.</p>"
+        "<p>Mon objectif est de rendre l'<strong>expérience utilisateur</strong> toujours plus <strong>immersive</strong> et <strong>intuitive</strong>.</p>"
       )
       .pauseFor(pause)
       .typeString(
-        '<p>Activité, Réactivité et Interactivité sont les trois critères qui guident mes développements.</p>'
+        '<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> sont les trois critères qui guident mes développements.</p>'
       )
       .pauseFor(pause * 2)
       .callFunction(() => {
@@ -70,7 +70,7 @@ const IndexPage = () => {
         <Scroll
           type="id"
           element="banner"
-          offset={-80}
+          offset={0}
           onClick={toggleBannerVisible}
         >
           <a href="#banner" className="button style1 more">
@@ -82,28 +82,24 @@ const IndexPage = () => {
       <section id="banner">
         <div className={'content ' + (showBanner ? 'show' : '')}>
           <Typewriter onInit={createTypingAnim} />
-          {/* <footer className={showProjectButton ? 'show' : ''}>
-            <Scroll type="id" element="first">
-              <a href="#first" className="button">
-                Découvrons ensemble une sélection de mes réalisations
-              </a>
-            </Scroll>
-          </footer> */}
         </div>
+        <Scroll type="id" element="first">
+          <a href="#first" className={'button style2 ' + (showBanner ? 'show' : '')}>
+            Projets Sélectionnés
+          </a>
+        </Scroll>
       </section>
 
       <Projects />
 
-      <article className="container box style3">
-        
-      </article>
+      {/* <article className="container box style3"></article> */}
 
       <article className="container box style3">
         <header>
           <h2>CONTACT</h2>
           <p>
             Une idée à faire germer ?<br />
-            Besoin d'un avis, d'un conseil, d'un devis ?<br /> Écris-moi !
+            Besoin d'un avis, d'un conseil, d'un devis ?<br /> Écrivez-moi !
           </p>
         </header>
         {/* <form method="post" action="#">
