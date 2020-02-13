@@ -28,7 +28,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0-beta.2",
-    "react-images": "^0.5.19",
     "react-parallax": "^3.0.0",
     "react-player": "^1.14.2",
     "react-scrolllock": "^5.0.0",

@@ -79,7 +79,7 @@ export function ProjectSelector({ projectDetails, index }) {
             (index % 2 ? 'right' : 'left')
           }
         >
-          <h1>{projectDetails.title}</h1>
+          <h2>{projectDetails.title}</h2>
           <h3>{projectDetails.subtitle}</h3>
         </header>
       </AniLink>

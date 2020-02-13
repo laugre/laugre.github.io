@@ -4,6 +4,31 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
+@import url('font-awesome.min.css');
+
+// Breakpoints.
+
+@include breakpoints(
+  (
+    wide: (
+      1081px,
+      1680px,
+    ),
+    normal: (
+      841px,
+      1080px,
+    ),
+    narrow: (
+      737px,
+      840px,
+    ),
+    mobile: (
+      null,
+      736px,
+    ),
+  )
+);
 
 .project-selector {
   margin: auto;
@@ -35,9 +60,7 @@
 
 .project-selector-header {
   position: relative;
-  width: 30%;
   top: -20em;
-  margin: auto;
   @include vendor('transition', ('color 0.35s ease-in-out'));
   color: white;
 
@@ -48,11 +71,65 @@
 
   &.left {
     text-align: right;
-    right: -10%;
+    right: 25%;
   }
 
   &.right {
     text-align: left;
-    left: -10%;
+    left: 25%;
+  }
+}
+
+/* Mobile */
+
+@include breakpoint('<=mobile') {
+  .project-selector {
+    margin: auto;
+    margin-top: 3em;
+    // margin-bottom: 3em;
+    width: 80%;
+  
+    &.left {
+      left: -7.5%;
+    }
+  
+    &.right {
+      right: -7.5%;
+    }
+  
+    .parallax-content {
+      height: 10em;
+      background-color: rgb(0, 0, 0);
+      @include vendor('transition', ('opacity 0.5s ease'));
+      opacity: 0.5;
+  
+      &.hover,
+      &:hover {
+        @include vendor('transition', ('opacity 0.5s ease'));
+        opacity: 0;
+      }
+    }
+  }
+
+  .project-selector-header {
+    position: relative;
+    top: -10em;
+    @include vendor('transition', ('color 0.35s ease-in-out'));
+    color: white;
+  
+    &.hover,
+    &:hover {
+      color: #45c89f;
+    }
+  
+    &.left {
+      text-align: right;
+      right: -12.5%;
+    }
+  
+    &.right {
+      text-align: left;
+      left: -12.5%;
+    }
   }
 }

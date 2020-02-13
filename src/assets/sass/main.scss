@@ -7,12 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
 @import url('font-awesome.min.css');
 
-/*
-	Overflow by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 // Breakpoints.
 
 @include breakpoints(
@@ -372,6 +366,16 @@ br.clear {
   clear: both;
 }
 
+a {
+  // color: white;
+  // text-decoration: underline;
+  // text-decoration: none;
+}
+
+a:hover {
+  // text-decoration: underline;
+}
+
 /* Container */
 
 .container {
@@ -542,6 +546,7 @@ button,
     background: #45c89f;
     color: #fff;
     box-shadow: inset 0 0 0 1px #fff;
+    text-decoration: none;
   }
 
   &.style1 {
@@ -563,8 +568,6 @@ button,
     bottom: 3em;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
       @include vendor(
         'transition',
         (
@@ -575,6 +578,8 @@ button,
         )
       );
       @include vendor('transform', 'translateY(0.5em)');
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
   }
 
@@ -583,6 +588,7 @@ button,
       'transition',
       (
         'transform 0.25s ease',
+        'opacity 0.25s ease',
         'background-color 0.25s ease-in-out',
         'color 0.25s ease-in-out'
       )
@@ -597,27 +603,23 @@ button,
     opacity: 0;
 
     &.show {
-      @include vendor(
-        'transition',
-        (
-          'opacity 1s ease 2s'
-        )
-      );
+      @include vendor('transition', 'opacity 0.25s ease 2s');
       opacity: 1;
     }
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
       @include vendor(
         'transition',
         (
           'transform 0.25s ease',
+          'opacity 0.25s ease',
           'background-color 0.25s ease-in-out',
           'color 0.25s ease-in-out'
         )
       );
       @include vendor('transform', 'translateY(0.5em)');
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
   }
 }
@@ -826,11 +828,6 @@ ul.icons {
       border-left: solid 1px #fff;
     }
   }
-
-  img {
-    width: auto;
-    height: 100vh;
-  }
 }
 
 body.is-preload,
@@ -866,11 +863,13 @@ body.is-preload,
 #banner {
   @include vendor('display', 'flex');
   @include vendor('justify-content', 'center');
-  @include vendor('align-items', 'flex-start');
   position: relative;
   height: 100vh;
 
   .content {
+    @include vendor('display', 'flex');
+    @include vendor('flex-direction', 'column');
+    @include vendor('justify-content', 'center');
     width: 10%;
     height: 1vh;
     padding: 2em 2em 2em 2em;
@@ -887,6 +886,17 @@ body.is-preload,
       );
       width: 80%;
       height: 85vh;
+    }
+
+    @include breakpoint('<=mobile') {
+      &.show {
+        @include vendor(
+          'transition',
+          ('height 0.5s ease 0.7s', 'width 0.5s ease 0.7s')
+        );
+        width: 95%;
+        height: 85vh;
+      }
     }
 
     header {
@@ -1106,8 +1116,13 @@ body.is-preload,
   }
 
   a {
-    font-size: 0.5em;
-    letter-spacing: 0px;
+    font-size: 1em;
+
+    &.button {
+      font-size: 0.5em;
+      letter-spacing: 0px;
+      line-height: 1.8em;
+    }
   }
 
   p {

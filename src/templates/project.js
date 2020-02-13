@@ -7,6 +7,7 @@ import ReactPlayer from 'react-player';
 
 import '../assets/sass/project.scss';
 import Pagination from '../components/Pagination';
+import { Parallax } from 'react-parallax';
 
 const project = props => {
   const { pageContext } = props;
@@ -31,8 +32,15 @@ const project = props => {
         previous={'/projects/' + previous.slug}
         next={'/projects/' + next.slug}
       ></Pagination>
-      <section id="header">
-        <img src={require('../assets/images/' + image)} alt="" />
+      <section id="project-header">
+        {/* <img src={require('../assets/images/' + image)} alt="" /> */}
+        <Parallax
+          strength={-100}
+          bgImage={require('../assets/images/' + image)}
+          bgImageAlt=""
+        >
+          <div className="parallax-content" />
+        </Parallax>
         <Scroll type="id" element="project-banner" offset={-60}>
           <a href="#project-banner" className="button style1 more">
             {title}
@@ -52,9 +60,8 @@ const project = props => {
       <section id="project-contents">
         {medias.map((media, index) => (
           <>
-            <div className="line"></div>
+            <div key={index} className="line"></div>
             <article
-              key={index}
               className={'project-content ' + (index % 2 ? 'right' : 'left')}
             >
               <div className="media">

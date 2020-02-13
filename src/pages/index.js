@@ -27,10 +27,10 @@ const IndexPage = () => {
     typewriter
       .changeDelay(delay)
       .pauseFor(pause * 2)
-      .typeString('<header><h2>Bonjour et bienvenue !</h2></header>')
+      .typeString('<header><h2>Bonjour et bienvenue</h2></header>')
       .pauseFor(pause * 2)
       .typeString(
-        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, je suis passionné de nouvelles technologies.</p>"
+        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, j'aime les nouvelles technologies, à bon escient.</p>"
       )
       .pauseFor(pause)
       .typeString(
@@ -42,7 +42,7 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "<p>Je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>"
+        "<p><strong>Artisan du numérique</strong>, je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>"
       )
       .pauseFor(pause)
       .typeString(
@@ -70,7 +70,7 @@ const IndexPage = () => {
         <Scroll
           type="id"
           element="banner"
-          offset={0}
+          offset={-20}
           onClick={toggleBannerVisible}
         >
           <a href="#banner" className="button style1 more">
