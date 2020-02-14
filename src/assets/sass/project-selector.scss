@@ -113,9 +113,17 @@
 
   .project-selector-header {
     position: relative;
-    top: -10em;
+    top: -9em;
     @include vendor('transition', ('color 0.35s ease-in-out'));
     color: white;
+
+    h2 {
+      font-size: 1em;
+    }
+    
+    h3 {
+      font-size: 0.7em;
+    }
   
     &.hover,
     &:hover {
@@ -124,12 +132,12 @@
   
     &.left {
       text-align: right;
-      right: -12.5%;
+      right: 2.5%;
     }
   
     &.right {
       text-align: left;
-      left: -12.5%;
+      left: 2.5%;
     }
   }
 }

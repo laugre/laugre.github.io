@@ -97,14 +97,6 @@ const IndexPage = () => {
       // });
   };
 
-  const skills = [
-    { name: 'html5', icon: 'fa-html5' },
-    { name: 'css3', icon: 'fa-css3-alt' },
-    { name: 'javascript', icon: 'fa-js' },
-    { name: 'reactjs', icon: 'fa-react' },
-    { name: 'vuejs', icon: 'fa-vuejs' },
-  ];
-
   return (
     <Layout>
       <ScrollLock isActive={lockScroll} />
@@ -145,19 +137,6 @@ const IndexPage = () => {
       <article className="container box style2">
         <header>
           <h2>Compétences</h2>
-          {/*<ul className="">
-            {skills.map(skill => {
-              const { icon, name } = skill;
-              return (
-                <li key={name}>
-                  <div className={`icon ${icon}`}>
-                    {/~ <span className="label">{name}</span> ~/}
-                  </div>
-                  <p>{name}</p>
-                </li>
-              );
-            })}
-          </ul>*/}
         </header>
 
         <div className="inner gallery">
