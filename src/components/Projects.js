@@ -32,7 +32,7 @@ export function ProjectSelector({ projectDetails, index }) {
     <div>
       <Parallax
         strength={200}
-        bgImage={require('../assets/images/' + projectDetails.image)}
+        bgImage={require('../assets/images/projects/' + projectDetails.image)}
         className={'project-selector ' + (index % 2 ? 'right' : 'left')}
         renderLayer={percentage => (
           <div

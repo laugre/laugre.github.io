@@ -6,12 +6,51 @@ import Layout from '../components/Layout';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
+import Gallery from '../components/Gallery';
 import config from '../../config';
+
+const ROW1_IMAGES = [
+  {
+    src: require('../assets/images/skills/html5-with-wordmark-color.svg'),
+    caption: 'HTML5',
+  },
+  {
+    src: require('../assets/images/skills/css3.svg'),
+    caption: 'CSS3',
+  },
+  {
+    src: require('../assets/images/skills/javascript-seeklogo.com.svg'),
+    caption: 'JS',
+  },
+  {
+    src: require('../assets/images/skills/sass-seeklogo.com.svg'),
+    caption: "Sass",
+  },
+];
+
+const ROW2_IMAGES = [
+  {
+    src: require('../assets/images/skills/gatsby-seeklogo.com.svg'),
+    caption: 'Gatsby',
+  },
+  {
+    src: require('../assets/images/skills/react-seeklogo.com.svg'),
+    caption: 'React',
+  },
+  {
+    src: require('../assets/images/skills/vuejs-seeklogo.com.svg'),
+    caption: "Vue",
+  },
+  {
+    src: require('../assets/images/skills/git-seeklogo.com.svg'),
+    caption: "Git",
+  },
+];
 
 const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [typeWriter, setTypeWriter] = useState();
-  const [showProjectButton, setShowProjectButton] = useState(false);
+  // const [showProjectButton, setShowProjectButton] = useState(false);
   const [lockScroll, setLockScroll] = useState(true);
 
   const toggleBannerVisible = () => {
@@ -34,7 +73,7 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "<p><strong>Concepteur d'applications interactives</strong> dans les secteurs de la <strong>muséographie</strong> et de l'<strong>évènementiel</strong> depuis 2009, je me focalise aujourd'hui sur le <strong>développement front end</strong>, <strong>web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
+        "<p><strong>Concepteur d'applications interactives</strong> dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le <strong>développement front end</strong>, <strong>web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
       )
       .pauseFor(pause)
       .typeString(
@@ -42,7 +81,7 @@ const IndexPage = () => {
       )
       .pauseFor(pause)
       .typeString(
-        "<p><strong>Artisan du numérique</strong>, je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>"
+        '<p><strong>Artisan du numérique</strong>, je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>'
       )
       .pauseFor(pause)
       .typeString(
@@ -52,11 +91,19 @@ const IndexPage = () => {
       .typeString(
         '<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> sont les trois critères qui guident mes développements.</p>'
       )
-      .pauseFor(pause * 2)
-      .callFunction(() => {
-        setShowProjectButton(true);
-      });
+      // .pauseFor(pause * 2)
+      // .callFunction(() => {
+      //   setShowProjectButton(true);
+      // });
   };
+
+  const skills = [
+    { name: 'html5', icon: 'fa-html5' },
+    { name: 'css3', icon: 'fa-css3-alt' },
+    { name: 'javascript', icon: 'fa-js' },
+    { name: 'reactjs', icon: 'fa-react' },
+    { name: 'vuejs', icon: 'fa-vuejs' },
+  ];
 
   return (
     <Layout>
@@ -84,7 +131,10 @@ const IndexPage = () => {
           <Typewriter onInit={createTypingAnim} />
         </div>
         <Scroll type="id" element="first">
-          <a href="#first" className={'button style2 ' + (showBanner ? 'show' : '')}>
+          <a
+            href="#first"
+            className={'button style2 ' + (showBanner ? 'show' : '')}
+          >
             Projets Sélectionnés
           </a>
         </Scroll>
@@ -92,7 +142,39 @@ const IndexPage = () => {
 
       <Projects />
 
-      {/* <article className="container box style3"></article> */}
+      <article className="container box style2">
+        <header>
+          <h2>Compétences</h2>
+          {/*<ul className="">
+            {skills.map(skill => {
+              const { icon, name } = skill;
+              return (
+                <li key={name}>
+                  <div className={`icon ${icon}`}>
+                    {/~ <span className="label">{name}</span> ~/}
+                  </div>
+                  <p>{name}</p>
+                </li>
+              );
+            })}
+          </ul>*/}
+        </header>
+
+        <div className="inner gallery">
+          <Gallery
+            images={ROW1_IMAGES.map(({ src, caption }) => ({
+              src,
+              caption,
+            }))}
+          />
+          <Gallery
+            images={ROW2_IMAGES.map(({ src, caption }) => ({
+              src,
+              caption,
+            }))}
+          />
+        </div>
+      </article>
 
       <article className="container box style3">
         <header>

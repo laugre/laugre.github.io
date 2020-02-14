@@ -33,10 +33,10 @@ const project = props => {
         next={'/projects/' + next.slug}
       ></Pagination>
       <section id="project-header">
-        {/* <img src={require('../assets/images/' + image)} alt="" /> */}
+        {/* <img src={require('../assets/images/projects/' + image)} alt="" /> */}
         <Parallax
           strength={-100}
-          bgImage={require('../assets/images/' + image)}
+          bgImage={require('../assets/images/projects/' + image)}
           bgImageAlt=""
         >
           <div className="parallax-content" />
@@ -70,7 +70,7 @@ const project = props => {
                     case 'image':
                       return (
                         <img
-                          src={require('../assets/images/' + media.media)}
+                          src={require('../assets/images/projects/' + media.media)}
                           alt=""
                         />
                       );

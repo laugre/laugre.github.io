@@ -201,10 +201,10 @@ html {
 body,
 .main-body {
   background-color: #183026;
-  background-image: url('../images/overlay.png'), url('../images/bg.jpg');
+  background-image: url('../images/overlay.png');
   background-size: cover;
   background-attachment: fixed, fixed;
-  // background-blend-mode: hard-light;
+  background-blend-mode: hard-light;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18pt;
   line-height: 1.75em;
@@ -653,7 +653,7 @@ button,
 
     .inner {
       position: relative;
-      padding: 40px 0 0px 0;
+      padding: 5em 0 1em 0;
 
       &:after {
         content: '';
@@ -661,7 +661,7 @@ button,
         position: absolute;
         top: 0;
         left: 50%;
-        height: 59%;
+        height: 170%;
         border-left: solid 1px #fff;
       }
 
@@ -673,8 +673,8 @@ button,
           display: block;
           position: absolute;
           top: 50%;
-          left: 20px;
-          width: calc(100% - 40px);
+          left: 4em;
+          width: calc(100% - 8em);
           border-bottom: solid 1px #fff;
         }
       }
@@ -682,8 +682,21 @@ button,
       .image {
         position: relative;
         z-index: 1;
-        padding: 20px;
+        padding: 1em;
+        width: 5em;
+        height: 5em;
+        background-color: white;
       }
+    }
+  }
+
+  &.style3 {
+    background: #fff;
+    color: #3a3939;
+    padding: 3em;
+
+    header {
+      text-align: center;
     }
 
     &:before {
@@ -698,30 +711,46 @@ button,
       margin-top: -33px;
       background: url('../images/arrow.svg') no-repeat;
     }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -9em;
-      left: 50%;
-      height: 9em;
-      border-left: solid 1px #fff;
-    }
-  }
-
-  &.style3 {
-    background: #fff;
-    color: #3a3939;
-    padding: 3em;
-
-    header {
-      text-align: center;
-    }
   }
 }
 
-/* Icons */
+/* Image */
+
+	.image {
+		display: inline-block;
+		border: 0;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		&.featured {
+			display: block;
+			width: 100%;
+			margin: 0 0 2em 0;
+		}
+
+		&.fit {
+			display: block;
+			width: 100%;
+		}
+
+		&.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+
+		&.centered {
+			display: block;
+			margin: 0 0 2em 0;
+
+			img {
+				margin: 0 auto;
+				width: auto;
+			}
+		}
+	}
 
 /* Icons */
 
