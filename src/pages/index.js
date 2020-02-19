@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ScrollLock from 'react-scrolllock';
 import Typewriter from 'typewriter-effect';
 import config from '../../config';
 import Footer from '../components/Footer';
@@ -50,10 +49,8 @@ const IndexPage = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [typeWriter, setTypeWriter] = useState();
   // const [showProjectButton, setShowProjectButton] = useState(false);
-  const [lockScroll, setLockScroll] = useState(true);
 
   const toggleBannerVisible = () => {
-    setLockScroll(false);
     setShowBanner(true);
     typeWriter.start();
   };
@@ -98,7 +95,6 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <ScrollLock isActive={lockScroll} />
       <section id="header">
         <div className="inner">
           <h2>{config.authorName}</h2>
@@ -121,14 +117,14 @@ const IndexPage = () => {
         <div className={'content ' + (showBanner ? 'show' : '')}>
           <Typewriter onInit={createTypingAnim} />
         </div>
-        <Scroll type="id" element="first">
+        {/* <Scroll type="id" element="first">
           <a
             href="#first"
             className={'button style2 ' + (showBanner ? 'show' : '')}
           >
             Projets Sélectionnés
           </a>
-        </Scroll>
+        </Scroll> */}
       </section>
 
       <Projects />
