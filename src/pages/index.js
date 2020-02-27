@@ -97,7 +97,7 @@ const IndexPage = () => {
     <Layout>
       <section id="header">
         <div className="inner">
-          <h2>{config.authorName}</h2>
+          <h1>{config.authorName}</h1>
           <p>{config.heading1}</p>
           <p>{config.heading2}</p>
         </div>
