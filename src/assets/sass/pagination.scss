@@ -75,19 +75,14 @@
 
 @include breakpoint('<=mobile') {
   .pagination-buttons {
-    .button-previous,
     .button-next {
-      
-    }
-
-    .button-next {
-      @include vendor('transform', 'scale(.5)');
-      right: -2.5em;
+      @include vendor('transform', 'scale(.6)');
+      right: -0.8em;
     }
 
     .button-previous {
-      @include vendor('transform', 'scale(-0.5)');
-      left: -2.5em;
+      @include vendor('transform', 'scale(-0.6)');
+      left: -0.8em;
     }
   }
 }

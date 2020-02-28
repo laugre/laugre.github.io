@@ -124,6 +124,7 @@
 
     &.right {
       @include vendor('flex-direction', 'row-reverse');
+
       @include breakpoint('<=mobile') {
         @include vendor('flex-direction', 'column-reverse');
       }
@@ -140,7 +141,7 @@
 
       @include breakpoint('<=mobile') {
         width: 100%;
-        height: 100%;
+        height: auto;
         padding: 0.5em;
       }
 
