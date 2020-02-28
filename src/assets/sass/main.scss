@@ -821,13 +821,18 @@ ul.icons {
   }
 
   .more {
+    width: 12em;
+    left: 0;
+    right: 0;
+    margin: auto;
+
     &:after {
       content: '';
       display: block;
       position: absolute;
-      bottom: -22em;
+      bottom: -15em;
       left: 50%;
-      height: 22em;
+      height: 15em;
       border-left: solid 1px #fff;
     }
   }
@@ -836,7 +841,7 @@ ul.icons {
 body.is-preload,
 .main-body.is-preload {
   #header {
-    h2 {
+    h1 {
       @include vendor('transform', 'scale(0.95)');
       opacity: 0;
 
