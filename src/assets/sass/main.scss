@@ -206,7 +206,7 @@ body,
   background-attachment: fixed, fixed;
   // background-blend-mode: hard-light;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18pt;
+  font-size: 1.3vmax;
   line-height: 1.75em;
   font-weight: 300;
   letter-spacing: 1px;
@@ -216,6 +216,7 @@ body,
 
   @include breakpoint('<=mobile') {
     background-size: auto;
+    font-size: 3.5vmax;
   }
   // overflow: hidden;
 
@@ -234,13 +235,17 @@ input,
 textarea,
 select {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18pt;
+  font-size: 1.3vmax;
   line-height: 1.75em;
   font-weight: 300;
   letter-spacing: 1px;
   color: #3a3939;
   text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
   -webkit-text-stroke: 0.25px;
+
+  @include breakpoint('<=mobile') {
+    font-size: 3.5vmax;
+  }
 }
 
 h1,
@@ -265,9 +270,14 @@ h6 a {
 }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 10px;
+
+  @include breakpoint('<=mobile') {
+    font-size: 1.8em;
+    letter-spacing: 4px;
+  }
 }
 
 h2 {
@@ -340,16 +350,6 @@ footer {
 
 br.clear {
   clear: both;
-}
-
-a {
-  // color: white;
-  // text-decoration: underline;
-  // text-decoration: none;
-}
-
-a:hover {
-  // text-decoration: underline;
 }
 
 /* Container */
@@ -513,10 +513,15 @@ button,
   background: #fff;
   color: #35b882;
   text-decoration: none;
+  font-size: 1em;
   outline: 0;
   padding: 1em 3em 1em 3em;
   text-align: center;
   border-radius: 3em;
+
+  @include breakpoint('<=mobile') {
+    font-size: 0.5em;
+  }
 
   &:hover {
     background: #45c89f;
@@ -619,10 +624,15 @@ button,
     header {
       background: #fff;
       padding: 1em 1em 1em 1em;
-      margin: 0;
 
       p {
-        padding: 0;
+        font-size: 1em;
+
+        @include breakpoint('<=mobile') {
+          font-size: 0.8em;
+          // letter-spacing: 0px;
+          // line-height: 1.5em;
+        }
       }
     }
 
@@ -651,6 +661,16 @@ button,
           left: 4em;
           width: calc(100% - 8em);
           border-bottom: solid 1px #fff;
+
+          @include breakpoint('<=mobile') {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 4em;
+            width: 0;
+            border-bottom: solid 1px #fff;
+          }
         }
       }
 
@@ -672,6 +692,16 @@ button,
 
     header {
       text-align: center;
+
+      p {
+        font-size: 1em;
+
+        @include breakpoint('<=mobile') {
+          font-size: 0.8em;
+          // letter-spacing: 0px;
+          // line-height: 1.5em;
+        }
+      }
     }
 
     &:before {
@@ -691,41 +721,41 @@ button,
 
 /* Image */
 
-	.image {
-		display: inline-block;
-		border: 0;
+.image {
+  display: inline-block;
+  border: 0;
 
-		img {
-			display: block;
-			width: 100%;
-		}
+  img {
+    display: block;
+    width: 100%;
+  }
 
-		&.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
+  &.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+  }
 
-		&.fit {
-			display: block;
-			width: 100%;
-		}
+  &.fit {
+    display: block;
+    width: 100%;
+  }
 
-		&.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
+  &.left {
+    float: left;
+    margin: 0 2em 2em 0;
+  }
 
-		&.centered {
-			display: block;
-			margin: 0 0 2em 0;
+  &.centered {
+    display: block;
+    margin: 0 0 2em 0;
 
-			img {
-				margin: 0 auto;
-				width: auto;
-			}
-		}
-	}
+    img {
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+}
 
 /* Icons */
 
@@ -816,8 +846,13 @@ ul.icons {
     @include vendor('transform', 'scale(1)');
     @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
     @include vendor('transition-delay', '.5s');
+    font-size: 1em;
     letter-spacing: _size(letter-spacing-alt);
     text-transform: uppercase;
+
+    @include breakpoint('<=mobile') {
+      font-size: 0.8em;
+    }
   }
 
   .more {
@@ -887,6 +922,10 @@ body.is-preload,
     background: #35b88f bottom center no-repeat;
     box-shadow: inset 0 0 0 1px #fff;
 
+    @include breakpoint('<=mobile') {
+      padding: 2em 1em 2em 1em;
+    }
+
     &.show {
       @include vendor(
         'transition',
@@ -912,11 +951,22 @@ body.is-preload,
         font-weight: 400;
         font-size: 1.75em;
         letter-spacing: 8px;
+
+        @include breakpoint('<=mobile') {
+          font-size: 0.7em;
+          letter-spacing: 4px;
+        }
       }
     }
 
     p {
       margin: 0;
+
+      @include breakpoint('<=mobile') {
+        font-size: 0.6em;
+        letter-spacing: 0px;
+        line-height: 1.5em;
+      }
     }
   }
 }
@@ -969,237 +1019,19 @@ body.is-preload,
 /* Wide */
 
 @include breakpoint('<=wide') {
-  /* Basic */
-
-  //   body,
-  //   input,
-  //   textarea,
-  //   select {
-  //     font-size: 16pt;
-  //   }
-
-  //   /* Header */
-
-  //   #header {
-  //     padding: 10em 0 12em 0;
-  //   }
 }
 
 /* Normal */
 
 @include breakpoint('<=normal') {
-  /* Banner */
-
-  // #banner {
-  //   padding: 4em 0 4em 0;
-  //   background-size: auto, 175% auto;
-  // }
-
-  // /* Header */
-
-  // #header {
-  //   padding: 8em 0 10em 0;
-  // }
 }
 
 /* Narrow */
 
 @include breakpoint('<=narrow') {
-  /* Basic */
-
-  // body {
-  //   background-color: #203936;
-  //   background-image: url('../images/overlay.png'), url('../images/bg-alt.jpg');
-  //   background-repeat: repeat, no-repeat;
-  //   background-size: auto, 100% auto;
-  //   background-position: top left, top center;
-  //   background-attachment: scroll, scroll;
-  //   font-size: 14pt;
-  // }
-
-  // input,
-  // textarea,
-  // select {
-  //   font-size: 14pt;
-  // }
-
-  // h1,
-  // h2,
-  // h3,
-  // h4,
-  // h5,
-  // h6 {
-  //   line-height: 1.5em;
-  // }
-
-  // header {
-  //   p {
-  //     margin: 0.25em 0 0 0;
-  //     padding: 0 0 0.5em 0;
-  //   }
-  // }
-
-  // /* Box */
-  // .box {
-  //   position: relative;
-
-  //   section {
-  //     margin: 0 0 2em 0;
-  //   }
-
-  //   &.style1 {
-  //     padding: 2.5em 2em 2.5em 2em;
-
-  //     &.right {
-  //       .inner {
-  //         padding-left: 2em;
-  //       }
-  //     }
-
-  //     &.left {
-  //       .inner {
-  //         padding-right: 2em;
-  //       }
-  //     }
-  //   }
-
-  //   &.style2 {
-  //     header {
-  //       padding: 2em;
-  //     }
-
-  //     .inner {
-  //       position: relative;
-  //       padding: 30px 0 0 0;
-  //     }
-  //   }
-
-  //   &.style3 {
-  //     padding: 2.5em 2em 2.5em 2em;
-  //   }
-  // }
-
-  // /* Header */
-
-  // #header {
-  //   padding: 10em 0 12em 0;
-  // }
-
-  /* Banner */
-
-  // #banner {
-  //   padding: 3.5em;
-  //   background-size: 200% auto;
-
-  //   br {
-  //     display: none;
-  //   }
-  // }
 }
 
 /* Mobile */
 
 @include breakpoint('<=mobile') {
-  /* Basic */
-
-  body,
-  input,
-  textarea,
-  select {
-    line-height: 1.5em;
-    font-size: 12pt;
-    letter-spacing: 0;
-  }
-
-  h1 {
-    font-size: 1.25em;
-    letter-spacing: 4px;
-  }
-
-  h2 {
-    font-size: 1.25em;
-    letter-spacing: 4px;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1em;
-  }
-
-  a {
-    font-size: 1em;
-
-    &.button {
-      font-size: 0.5em;
-      letter-spacing: 0px;
-      line-height: 1.8em;
-    }
-  }
-
-  p {
-    font-size: 0.7em;
-  }
-
-  #banner {
-    .content {
-      padding: 2em 1em 2em 1em;
-      header {
-        h2 {
-          font-size: 0.7em;
-          letter-spacing: 1px;
-          line-height: 1em;
-        }
-      }
-      p {
-        font-size: 0.5em;
-        letter-spacing: 0px;
-        line-height: 1.8em;
-      }
-    }
-  }
-
-  .box {
-    position: relative;
-    margin-top: 9em;
-    margin-left: auto;
-    margin-right: auto;
-  
-    :last-child {
-      margin-bottom: 0;
-    }
-  
-    &.style2 {
-      .inner {
-        .row {
-          position: relative;
-  
-          &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 4em;
-            width: 0;
-            border-bottom: solid 1px #fff;
-          }
-        }
-      }
-    }
-  }
-
-  /* List */
-
-  ul {
-    li {
-      padding-left: 0.5em;
-    }
-  }
-
-  ol {
-    li {
-      padding-left: 0.25em;
-    }
-  }
 }
