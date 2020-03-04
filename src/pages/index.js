@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Typewriter from 'typewriter-effect';
 import config from '../../config';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
 import Scroll from '../components/Scroll';
+import Banner from '../components/Banner';
 
 const ROW1_IMAGES = [
   {
@@ -46,52 +46,7 @@ const ROW2_IMAGES = [
 ];
 
 const IndexPage = () => {
-  const [showBanner, setShowBanner] = useState(false);
-  const [typeWriter, setTypeWriter] = useState();
   // const [showProjectButton, setShowProjectButton] = useState(false);
-
-  const toggleBannerVisible = () => {
-    setShowBanner(true);
-    typeWriter.start();
-  };
-
-  const delay = 20;
-  const pause = 500;
-  const createTypingAnim = typewriter => {
-    setTypeWriter(typewriter);
-    typewriter
-      .changeDelay(delay)
-      .pauseFor(pause * 2)
-      .typeString('<header><h2>Bonjour et bienvenue</h2></header>')
-      .pauseFor(pause * 2)
-      .typeString(
-        "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, j'aime les nouvelles technologies, à bon escient.</p>"
-      )
-      .pauseFor(pause)
-      .typeString(
-        "<p><strong>Concepteur d'applications interactives</strong> dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le <strong>développement front end</strong>, <strong>web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
-      )
-      .pauseFor(pause)
-      .typeString(
-        '<p>Appréciant la diversité des projets et le côté relationnel, je travaille désormais en <strong>freelance</strong> afin de pouvoir échanger directement avec les clients sur des projets variés.</p>'
-      )
-      .pauseFor(pause)
-      .typeString(
-        '<p><strong>Artisan du numérique</strong>, je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>'
-      )
-      .pauseFor(pause)
-      .typeString(
-        "<p>Mon objectif est de rendre l'<strong>expérience utilisateur</strong> toujours plus <strong>immersive</strong> et <strong>intuitive</strong>.</p>"
-      )
-      .pauseFor(pause)
-      .typeString(
-        '<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> sont les trois critères qui guident mes développements.</p>'
-      );
-    // .pauseFor(pause * 2)
-    // .callFunction(() => {
-    //   setShowProjectButton(true);
-    // });
-  };
 
   return (
     <Layout>
@@ -101,32 +56,14 @@ const IndexPage = () => {
           <p>{config.heading1}</p>
           <p>{config.heading2}</p>
         </div>
-        <Scroll
-          type="id"
-          element="banner"
-          offset={-20}
-          onClick={toggleBannerVisible}
-        >
+        <Scroll type="id" element="banner" offset={-20}>
           <a href="#banner" className="button style1 more">
             What Else ?
           </a>
         </Scroll>
       </section>
 
-      <section id="banner">
-        <div className={'content ' + (showBanner ? 'show' : '')}>
-          <Typewriter onInit={createTypingAnim} />
-        </div>
-        {/* <Scroll type="id" element="first">
-          <a
-            href="#first"
-            className={'button style2 ' + (showBanner ? 'show' : '')}
-          >
-            Projets Sélectionnés
-          </a>
-        </Scroll> */}
-      </section>
-
+      <Banner />
       <Projects />
 
       <article className="container box style2">
@@ -138,20 +75,29 @@ const IndexPage = () => {
             réalisation de votre projet.
           </p>
           <p>
-            <strong>site vitrine</strong> | <strong>site one page</strong> | <strong>landing page</strong> | <strong>e-commerce</strong> | <strong>sur
-            mesure</strong>
+            <strong>site vitrine</strong> | <strong>site one page</strong> |{' '}
+            <strong>landing page</strong> | <strong>e-commerce</strong> |{' '}
+            <strong>sur mesure</strong>
           </p>
           <p>
             À l'ère à laquelle les sites web sont largement plus consultés
             depuis des mobiles (smartphones et tablettes), il devient
             indispensable de s'adapter à tous les formats d'affichage.
           </p>
-          <p><strong>rafraîchissement de site</strong> | <strong>refonte</strong> | <strong>application mobile dédiée</strong></p>
+          <p>
+            <strong>rafraîchissement de site</strong> | <strong>refonte</strong>{' '}
+            | <strong>application mobile dédiée</strong>
+          </p>
           <p>
             En constante évolution, une veille quotidienne est primordiale pour
             suivre et s'inspirer des nouveaux concepts du web
           </p>
-          <p><strong>responsive design</strong> | <strong>creative coding</strong> | <strong>UX design</strong> | <strong>interactivity</strong> | <strong>progressive web app</strong></p>
+          <p>
+            <strong>responsive design</strong> |{' '}
+            <strong>creative coding</strong> | <strong>UX design</strong> |{' '}
+            <strong>interactivity</strong> |{' '}
+            <strong>progressive web app</strong>
+          </p>
         </header>
 
         <div className="inner gallery">

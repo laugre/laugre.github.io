@@ -8,11 +8,8 @@ module.exports = {
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/my_logo.png',
   authorName: 'Devologic',
-  // heading1: 'Développement Front End Web, Mobile, Multimédia',
-  // heading1: 'Créativité, Reactivité, Interactivité',
   heading1: 'Développement Front End',
   heading2: 'Web Mobile Multimédia',
-  heading3: 'En cours de mise à jour...Coming soon',
   // social
   socialLinks: [
     {

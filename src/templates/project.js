@@ -60,7 +60,7 @@ const project = props => {
       <section id="project-contents">
         {medias.map((media, index) => (
           <>
-            <div key={index} className="line"></div>
+            <div className="line"></div>
             <article
               className={'project-content ' + (index % 2 ? 'right' : 'left')}
             >
@@ -70,7 +70,8 @@ const project = props => {
                     case 'image':
                       return (
                         <img
-                          src={require('../assets/images/projects/' + media.media)}
+                          src={require('../assets/images/projects/' +
+                            media.media)}
                           alt=""
                         />
                       );
