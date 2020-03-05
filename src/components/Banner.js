@@ -44,27 +44,15 @@ class Banner extends Component {
                 .typeString('<header><h2>Bonjour et bienvenue</h2></header>')
                 .pauseFor(pause * 2)
                 .typeString(
-                  "<p>Je m'appelle Laurent Garnier, j'ai 34 ans, j'aime les nouvelles technologies, à bon escient.</p>"
+                  "<p>Je m'appelle Laurent Garnier, je suis <strong>développeur</strong> orienté <strong>front end</strong> et je travaille en <strong>freelance</strong>.</p>"
                 )
                 .pauseFor(pause)
                 .typeString(
-                  "<p><strong>Concepteur d'applications interactives</strong> dans les secteurs de la muséographie et de l'évènementiel depuis 2009, je me focalise aujourd'hui sur le <strong>développement front end</strong>, <strong>web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
+                  "<p>J'aide les agences et les entreprises à <strong>concevoir</strong> et <strong>développer</strong> des <strong>sites</strong> et <strong>applications web</strong>, <strong>mobile</strong> et <strong>multimédia</strong>.</p>"
                 )
                 .pauseFor(pause)
                 .typeString(
-                  '<p>Appréciant la diversité des projets et le côté relationnel, je travaille désormais en <strong>freelance</strong> afin de pouvoir échanger directement avec les clients sur des projets variés.</p>'
-                )
-                .pauseFor(pause)
-                .typeString(
-                  '<p><strong>Artisan du numérique</strong>, je souhaite apporter mon <strong>savoir-faire</strong> en proposant des <strong>solutions sur mesure</strong>.</p>'
-                )
-                .pauseFor(pause)
-                .typeString(
-                  "<p>Mon objectif est de rendre l'<strong>expérience utilisateur</strong> toujours plus <strong>immersive</strong> et <strong>intuitive</strong>.</p>"
-                )
-                .pauseFor(pause)
-                .typeString(
-                  '<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> sont les trois critères qui guident mes développements.</p>'
+                  "<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> guident mes développements afin de rendre l'<strong>expérience utilisateur intuitive</strong>, <strong>fluide</strong> et <strong>immersive</strong>.</p>"
                 );
             }}
           />
