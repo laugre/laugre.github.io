@@ -59,6 +59,10 @@ class Gallery extends Component {
       return (
         <div className="col-3 col-12-mobile" key={i}>
           <div
+            data-sal="flip-down"
+            data-sal-duration="1000"
+            data-sal-delay={i*300}
+            data-sal-easing="ease"
             className="image"
           >
             <img src={obj.src} alt="" title={obj.caption} />

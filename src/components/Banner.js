@@ -24,7 +24,13 @@ class Banner extends Component {
   render() {
     return (
       <section id="banner">
-        <div data-sal="zoom-in" className="content">
+        <div
+          data-sal="zoom-in"
+          data-sal-duration="300"
+          data-sal-delay="0"
+          data-sal-easing="ease"
+          className="content"
+        >
           <Typewriter
             onInit={typewriter => {
               this.setState({

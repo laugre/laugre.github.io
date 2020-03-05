@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import config from '../../config';
 import Footer from '../components/Footer';
 import Gallery from '../components/Gallery';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects';
-import Scroll from '../components/Scroll';
 import Banner from '../components/Banner';
+import Header from '../components/Header';
 
 const ROW1_IMAGES = [
   {
@@ -50,23 +49,16 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <section id="header">
-        <div className="inner">
-          <h1>{config.authorName}</h1>
-          <p>{config.heading1}</p>
-          <p>{config.heading2}</p>
-        </div>
-        <Scroll type="id" element="banner" offset={-20}>
-          <a href="#banner" className="button style1 more">
-            What Else ?
-          </a>
-        </Scroll>
-      </section>
-
+      <Header />
       <Banner />
       <Projects />
-
-      <article className="container box style2">
+      <article
+        data-sal="fade"
+        data-sal-duration="1000"
+        data-sal-delay="0"
+        data-sal-easing="ease"
+        className="container box style2"
+      >
         <header>
           <h2>Prestations</h2>
           <p>
@@ -95,7 +87,7 @@ const IndexPage = () => {
           <p>
             <strong>responsive design</strong> |{' '}
             <strong>creative coding</strong> | <strong>UX design</strong> |{' '}
-            <strong>interactivity</strong> |{' '}
+            <strong>interaction design</strong> |{' '}
             <strong>progressive web app</strong>
           </p>
         </header>
@@ -115,8 +107,13 @@ const IndexPage = () => {
           />
         </div>
       </article>
-
-      <article className="container box style3">
+      <article
+        data-sal="zoom-in"
+        data-sal-duration="300"
+        data-sal-delay="0"
+        data-sal-easing="ease"
+        className="container box style3"
+      >
         <header>
           <h2>CONTACT</h2>
           <p>
@@ -155,7 +152,6 @@ const IndexPage = () => {
       </div>
     </form> */}
       </article>
-
       {/* <article className="container box style3">
     <header>
       <h2>Elements</h2>
@@ -165,7 +161,6 @@ const IndexPage = () => {
       <Link to="/Element"> here </Link>
     </header>
   </article> */}
-
       <Footer />
     </Layout>
   );
