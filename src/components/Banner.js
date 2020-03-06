@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Typewriter from 'typewriter-effect';
+import Scroll from '../components/Scroll';
 import '../assets/sass/main.scss';
 
 class Banner extends Component {
   constructor(props) {
     super(props);
-    this.state = { writer: null };
+    this.state = { writer: null, textWritten: false };
     this.startAnim = this.startAnim.bind(this);
   }
 
@@ -40,7 +41,7 @@ class Banner extends Component {
               var pause = 500;
               typewriter
                 .changeDelay(delay)
-                .pauseFor(pause * 2)
+                .pauseFor(pause)
                 .typeString('<header><h2>Bonjour et bienvenue</h2></header>')
                 .pauseFor(pause * 2)
                 .typeString(
@@ -52,19 +53,29 @@ class Banner extends Component {
                 )
                 .pauseFor(pause)
                 .typeString(
-                  "<p><strong>Activité</strong>, <strong>Réactivité</strong> et <strong>Interactivité</strong> guident mes développements afin de rendre l'<strong>expérience utilisateur intuitive</strong>, <strong>fluide</strong> et <strong>immersive</strong>.</p>"
-                );
+                  "<p><strong>Activité</strong>, <strong>Réactivité</strong>, <strong>Interactivité</strong></br>guident mes développements afin de rendre l'<strong>expérience utilisateur</strong> toujours plus</br><strong>fluide</strong>, <strong>immersive</strong> et <strong>intuitive</strong>.</p>"
+                )
+                .callFunction(() => {
+                  this.setState({
+                    textWritten: true,
+                  });
+                });
             }}
           />
         </div>
-        {/* <Scroll type="id" element="first">
+        <Scroll type="id" element="first">
           <a
             href="#first"
-            className={'button style2 ' + (showBanner ? 'show' : '')}
+            className="button style2"
+            data-sal="fade"
+            data-sal-duration="1000"
+            data-sal-delay="500"
+            data-sal-easing="ease"
           >
-            Projets Sélectionnés
+            {!this.state.textWritten && <p>Skip Blabla ;)</p>}
+            <p>Projets Sélectionnés</p>
           </a>
-        </Scroll> */}
+        </Scroll>
       </section>
     );
   }

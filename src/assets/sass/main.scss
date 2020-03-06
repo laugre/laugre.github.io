@@ -561,6 +561,11 @@ button,
       @include vendor('transform', 'translateY(0.5em)');
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
+
+      @include breakpoint('<=mobile') {
+        color: #3a3939;
+        background: #fff;
+      }
     }
   }
 
@@ -581,11 +586,9 @@ button,
     box-shadow: inset 0 0 0 1px #fff;
     position: absolute;
     bottom: 6em;
-    opacity: 0;
 
-    &.show {
-      @include vendor('transition', 'opacity 0.25s ease 2s');
-      opacity: 1;
+    @include breakpoint('<=mobile') {
+      bottom: 2em;
     }
 
     &:hover {
@@ -601,6 +604,16 @@ button,
       @include vendor('transform', 'translateY(0.5em)');
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
+
+      @include breakpoint('<=mobile') {
+        color: #3a3939;
+        background: #fff;
+      }
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5em;
     }
   }
 }
@@ -921,8 +934,10 @@ body.is-preload,
 
   @include breakpoint('<=mobile') {
     @include vendor('display', 'flex');
+    @include vendor('flex-direction', 'column');
     @include vendor('justify-content', 'flex-start');
-    height: 165vh;
+    @include vendor('align-items', 'center');
+    height: 100vh;
   }
 
   .content {
@@ -956,12 +971,9 @@ body.is-preload,
       height: 1vh;
 
       &.sal-animate {
-        @include vendor(
-          'transition',
-          ('height 0.5s ease 0.7s', 'width 0.5s ease 0.7s')
-        );
+        @include vendor('transition', ('height 0.5s ease', 'width 0.5s ease'));
         width: 95%;
-        height: 145vh;
+        height: 100vh;
       }
     }
 

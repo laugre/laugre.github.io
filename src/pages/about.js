@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 
 import '../assets/sass/project.scss';
 import { Parallax } from 'react-parallax';
+import Contact from '../components/Contact';
 
 const IndexPage = () => {
   return (
@@ -59,59 +60,18 @@ const IndexPage = () => {
         </p>
       </section>
 
-      {/* <section id="project-contents">
-      {medias.map((media, index) => (
-        <>
-          <div className="line"></div>
-          <article
-            className={'project-content ' + (index % 2 ? 'right' : 'left')}
-          >
-            <div className="media">
-              {(() => {
-                switch (media.type) {
-                  case 'image':
-                    return (
-                      <img
-                        src={require('../assets/images/projects/' +
-                          media.media)}
-                        alt=""
-                      />
-                    );
-                  case 'video':
-                    return (
-                      <ReactPlayer
-                        url={require('../assets/videos/' + media.media)}
-                        playing={true}
-                        loop={true}
-                        width="100%"
-                        height="100%"
-                      />
-                    );
-                  default:
-                    return null;
-                }
-              })()}
-            </div>
-            <div className="inner">
-              <header>
-                <h3>{media.title}</h3>
-              </header>
-              <p dangerouslySetInnerHTML={{ __html: media.caption }} />
-            </div>
-          </article>
-        </>
-      ))}
-    </section> */}
-
       <article className="container box style2">
         <header>
-          <p>client</p>
-          <p>year</p>
-          <p>role</p>
-          <p>technology</p>
+          <h2>Parcours Professionnel</h2>
+          <p>Avant de travailler en indépendant et à compter de la fin de mes études (2009) je me suis forgé mon expérience professionnelle à travers plusieurs laboratoires de recherches et entreprises.</p>
+          <p><strong>2012 - 2018 : Ingénieur d'étude, Société Blue Yeti, Royan</strong><br/>Dans cette société spécialisée dans la création de dispositifs numériques interactifs (installations visuelles et sonores, espaces immersifs et expérientiels, moutons numériques à 5 pattes), pour des clients privés et publics (musées, institutions, entreprises et artistes), j'étais en charge d'une partie R&D ainsi que du développement des interfaces et applications interactives.</p>
+          <p><strong>2010 - 2012 : Ingénieur d'étude, Société Galamus Software, Bugarach</strong><br/>Dans cette société spécialisée dans la création de dispositifs numériques interactifs pour les secteurs de la muséographie et de l'évènementiel, j'étais en charge de la partie R&D, en lien avec des plateformes de recherche (Jamoma, Virage) afin de faire évoluer des bibliothèques d'interopérabilité des dispositifs interactifs et des outils en fonction des besoins de l'entreprise.</p>
+          <p><strong>2010 : Ingénieur d'étude, GMEA-Centre National de Création Musicale, Albi</strong><br/>Dans cette structure labelisée par le Ministère de la Culture, je travaillais sur l'étude et le développement d'un séquenceur temporel interactif basé sur l'interopérabilité des dispostifs connectés et sur la notion de temps souple.</p>
+          <p><strong>2009 - 2010 : Ingénieur d'étude et développement Multimédia, LIMSI-CNRS, Orsay</strong><br/>C'est dans ce laboratoire parisien du CNRS que j'ai pu mettre un pied dans le monde de la recherche. Une très belle première expérience professionnelle suite à mon stage de fin d'études, réalisé sur une plateforme de recherche avec les mêmes acteurs, artistes, laboratoires et industriels afin de développer de nouvelles interfaces de contrôle, de captation et de pilotage de dispositifs interactifs destinées à l'art et au spectacle vivant.</p>
         </header>
       </article>
 
+      <Contact />
       <Footer />
     </Layout>
   );
