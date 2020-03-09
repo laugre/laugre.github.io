@@ -62,20 +62,17 @@ class Banner extends Component {
                 });
             }}
           />
+          {this.state.textWritten && (
+            <Scroll type="id" element="first">
+              <a
+                href="#first"
+                className="button style2"
+              >
+                <p>Projets Sélectionnés</p>
+              </a>
+            </Scroll>
+          )}
         </div>
-        <Scroll type="id" element="first">
-          <a
-            href="#first"
-            className="button style2"
-            data-sal="fade"
-            data-sal-duration="1000"
-            data-sal-delay="500"
-            data-sal-easing="ease"
-          >
-            {!this.state.textWritten && <p>Skip Blabla ;)</p>}
-            <p>Projets Sélectionnés</p>
-          </a>
-        </Scroll>
       </section>
     );
   }

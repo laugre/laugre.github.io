@@ -216,9 +216,9 @@ body,
 
   @include breakpoint('<=mobile') {
     background-size: auto;
-    font-size: 3.5vmax;
+    background-attachment: fixed, fixed;
+    font-size: 3vmax;
   }
-  // overflow: hidden;
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -584,12 +584,6 @@ button,
     color: #3a3939;
     background: #fff;
     box-shadow: inset 0 0 0 1px #fff;
-    position: absolute;
-    bottom: 6em;
-
-    @include breakpoint('<=mobile') {
-      bottom: 2em;
-    }
 
     &:hover {
       @include vendor(
@@ -973,7 +967,7 @@ body.is-preload,
       &.sal-animate {
         @include vendor('transition', ('height 0.5s ease', 'width 0.5s ease'));
         width: 95%;
-        height: 100vh;
+        height: 80vh;
       }
     }
 

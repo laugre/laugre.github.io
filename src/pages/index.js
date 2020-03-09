@@ -52,8 +52,8 @@ const IndexPage = () => {
       <Banner />
       <Projects />
       <article
-        data-sal="fade"
-        data-sal-duration="1000"
+        data-sal="zoom-in"
+        data-sal-duration="300"
         data-sal-delay="0"
         data-sal-easing="ease"
         className="container box style2"
@@ -72,7 +72,7 @@ const IndexPage = () => {
           </p>
           <p>
             À l'ère à laquelle les sites web sont largement plus consultés
-            depuis des mobiles (smartphones et tablettes), il devient
+            depuis des appareils mobiles (smartphones et tablettes), il devient
             indispensable de s'adapter à tous les formats d'affichage.
           </p>
           <p>

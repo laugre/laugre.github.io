@@ -12,6 +12,27 @@ $maxWidth: 700px;
 $minWidth: 701px;
 $maxHeight: 600px;
 
+@include breakpoints(
+  (
+    wide: (
+      1081px,
+      1680px,
+    ),
+    normal: (
+      841px,
+      1080px,
+    ),
+    narrow: (
+      737px,
+      840px,
+    ),
+    mobile: (
+      null,
+      736px,
+    ),
+  )
+);
+
 .navigationBar {
   width: 100%;
   position: fixed;
@@ -56,6 +77,10 @@ $maxHeight: 600px;
 
   &:hover {
     color: #45c89f;
+
+    @include breakpoint('<=mobile') {
+      color: white;
+    }
   }
 }
 @media (max-width: $maxWidth) {
