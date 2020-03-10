@@ -88,21 +88,21 @@
     margin-top: 3em;
     // margin-bottom: 3em;
     width: 80%;
-  
+
     &.left {
       left: -7.5%;
     }
-  
+
     &.right {
       right: -7.5%;
     }
-  
+
     .parallax-content {
       height: 10em;
       background-color: rgb(0, 0, 0);
       @include vendor('transition', ('opacity 0.5s ease'));
       opacity: 0.5;
-  
+
       &.hover,
       &:hover {
         @include vendor('transition', ('opacity 0.5s ease'));
@@ -120,21 +120,21 @@
     h2 {
       font-size: 1em;
     }
-    
+
     h3 {
       font-size: 0.7em;
     }
-  
+
     &.hover,
     &:hover {
       color: #45c89f;
     }
-  
+
     &.left {
       text-align: right;
       right: 2.5%;
     }
-  
+
     &.right {
       text-align: left;
       left: 2.5%;

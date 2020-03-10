@@ -2,10 +2,11 @@ module.exports = {
   siteTitle: 'Devologic', // <title>
   manifestName: 'Devologic',
   manifestShortName: 'Devologic', // max 12 characters
+  manifestDescription: 'Développement Front End, Web, Mobile, Multimédia',
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
-  manifestDisplay: 'standalone',
+  manifestDisplay: 'fullscreen',
   manifestIcon: 'src/assets/img/my_logo.png',
   authorName: 'Devologic',
   heading1: 'Développement Front End',
