@@ -125,5 +125,52 @@
         "media": "quiz_manger.webm"
       }
     ]
+  },
+  {
+    "id": 4,
+    "title": "Morphing",
+    "slug": "morphing",
+    "subtitle": "Muséo",
+    "image": "paleosite_morphing4_bw.png",
+    "imageMobile": "paleosite_morphing4_bw.png",
+    "text": "Réalisation d'un dispositif de <strong>morphing temps réel</strong>.",
+    "quote": "\"En inclinant le joystick dans un sens ou dans l'autre, faites défiler les millénaires !\"",
+    "objectif": "Dispositif réalisé en <strong>Unity 3D</strong> avec contrôles à l'aide d'un lecteur de carte visiteur, d'un <strong>bouton physique</strong> et d'un <strong>joystick</strong> pour effectuer progressivement le morphing du visage et la poussée des cheveux de l'homme de Néandertal en temps réel, avec image caméra en mouvement sur l'image de face et <strong>captation 3D</strong> pour déformer l'image et afficher la perruque 3D sur la tête.",
+    "client": "Client : Projet réalisé en tant que développeur chez Blue Yeti",
+    "year": "Année : 2017",
+    "role": "Rôle : Développeur",
+    "technology": "Technologies : Unity 3D, Caméra Realsense SR300",
+    "medias": [
+      {
+        "title": "Ecran d'accueil",
+        "caption": "Le visiteur peut s'asseoir face à cet écran d'accueil sur lequel tourne une <strong>animation</strong> en boucle.",
+        "type": "image",
+        "media": "paleosite_morphing.png"
+      },
+      {
+        "title": "Pass visiteur",
+        "caption": "Un <strong>lecteur de carte</strong> que j'ai connecté à l'application de morphing permet au visiteur d'<strong>insérer son pass</strong> et de <strong>commencer la séquence</strong>.",
+        "type": "image",
+        "media": "paleosite_morphing2.png"
+      },
+      {
+        "title": "Sequence de morphing",
+        "caption": "Sequence de test des prises de photos face par la <strong>caméra 3D Realsense</strong> et profil par la <strong>webcam</strong>. Puis test de <strong>rendu</strong> du <strong>morphing</strong> du visage de face et de profil.",
+        "type": "video",
+        "media": "morphing.webm"
+      },
+      {
+        "title": "Envoi",
+        "caption": "Le visiteur peut choisir d'envoyer ses photos afin que celles ci soient imprimées et qu'il reparte avec.",
+        "type": "image",
+        "media": "paleosite_morphing4.png"
+      },
+      {
+        "title": "Impression",
+        "caption": "Exemple d'impression face et profil avec morphing et perruque virtuelle 3D",
+        "type": "image",
+        "media": "paleosite_morphing5.jpg"
+      }
+    ]
   }
 ]

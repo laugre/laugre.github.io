@@ -14,6 +14,7 @@ const project = props => {
   const {
     title,
     image,
+    imageMobile,
     text,
     quote,
     objectif,
@@ -35,8 +36,13 @@ const project = props => {
       <section id="project-header">
         {/* <img src={require('../assets/images/projects/' + image)} alt="" /> */}
         <Parallax
-          strength={-100}
-          bgImage={require('../assets/images/projects/' + image)}
+          strength={-200}
+          bgImage={
+            window.innerWidth < 897
+              ? require('../assets/images/projects/' +
+                  imageMobile)
+              : require('../assets/images/projects/' + image)
+          }
           bgImageAlt=""
         >
           <div className="parallax-content" />

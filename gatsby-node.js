@@ -16,6 +16,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
             slug
             subtitle
             image
+            imageMobile
             text
             quote
             objectif
@@ -48,6 +49,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         slug: project.slug,
         subtitle: project.subtitle,
         image: project.image,
+        imageMobile: project.imageMobile,
         text: project.text,
         quote: project.quote,
         objectif: project.objectif,

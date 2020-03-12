@@ -32,7 +32,12 @@ export function ProjectSelector({ projectDetails, index }) {
     <div>
       <Parallax
         strength={200}
-        bgImage={require('../assets/images/projects/' + projectDetails.image)}
+        bgImage={
+          window.innerWidth < 897
+            ? require('../assets/images/projects/' +
+                projectDetails.imageMobile)
+            : require('../assets/images/projects/' + projectDetails.image)
+        }
         className={'project-selector ' + (index % 2 ? 'right' : 'left')}
         renderLayer={percentage => (
           <div
@@ -72,7 +77,7 @@ export function ProjectSelector({ projectDetails, index }) {
         onMouseLeave={() => toggleHover(false)}
       >
         <header
-          style={{ opacity: 1-Math.cos(2 * Math.PI * percentage) }}
+          style={{ opacity: 1 - Math.cos(2 * Math.PI * percentage) }}
           className={
             'project-selector-header ' +
             (hover ? 'hover ' : ' ') +
