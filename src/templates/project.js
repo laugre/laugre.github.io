@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
@@ -8,8 +8,9 @@ import ReactPlayer from 'react-player';
 import '../assets/sass/project.scss';
 import Pagination from '../components/Pagination';
 import { Parallax } from 'react-parallax';
+import { useWindowSize } from '../components/useWindowSize';
 
-const project = props => {
+const Project = props => {
   const { pageContext } = props;
   const {
     title,
@@ -26,6 +27,7 @@ const project = props => {
     previous,
     next,
   } = pageContext;
+  const windowsSize = useWindowSize();
 
   return (
     <Layout>
@@ -38,9 +40,8 @@ const project = props => {
         <Parallax
           strength={-200}
           bgImage={
-            window.innerWidth < 897
-              ? require('../assets/images/projects/' +
-                  imageMobile)
+            windowsSize.width < 897
+              ? require('../assets/images/projects/' + imageMobile)
               : require('../assets/images/projects/' + image)
           }
           bgImageAlt=""
@@ -120,4 +121,4 @@ const project = props => {
     </Layout>
   );
 };
-export default project;
+export default Project;

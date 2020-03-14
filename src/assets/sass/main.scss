@@ -929,7 +929,7 @@ body.is-preload,
   @include breakpoint('<=mobile') {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'column');
-    @include vendor('justify-content', 'flex-start');
+    @include vendor('justify-content', 'center');
     @include vendor('align-items', 'center');
     height: 100vh;
   }
@@ -959,7 +959,7 @@ body.is-preload,
     @include breakpoint('<=mobile') {
       @include vendor('display', 'flex');
       @include vendor('flex-direction', 'column');
-      @include vendor('justify-content', 'flex-start');
+      @include vendor('justify-content', 'center');
       margin-top: 2em;
       width: 10%;
       height: 1vh;

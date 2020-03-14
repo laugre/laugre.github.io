@@ -3,6 +3,7 @@ import { Parallax } from 'react-parallax';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import ProjectData from '../data/projects.json';
 import '../assets/sass/project-selector.scss';
+import { useWindowSize } from './useWindowSize';
 
 export default function Projects() {
   return (
@@ -28,14 +29,15 @@ export function ProjectSelector({ projectDetails, index }) {
     setHover(state);
   };
 
+  const windowsSize = useWindowSize();
+
   return (
     <div>
       <Parallax
         strength={200}
         bgImage={
-          window.innerWidth < 897
-            ? require('../assets/images/projects/' +
-                projectDetails.imageMobile)
+          windowsSize.width < 897
+            ? require('../assets/images/projects/' + projectDetails.imageMobile)
             : require('../assets/images/projects/' + projectDetails.image)
         }
         className={'project-selector ' + (index % 2 ? 'right' : 'left')}
