@@ -38,7 +38,7 @@ const Project = props => {
       <section id="project-header">
         {/* <img src={require('../assets/images/projects/' + image)} alt="" /> */}
         <Parallax
-          strength={-200}
+          strength={windowsSize.width < 897 ? -200 : -100}
           bgImage={
             windowsSize.width < 897
               ? require('../assets/images/projects/' + imageMobile)
