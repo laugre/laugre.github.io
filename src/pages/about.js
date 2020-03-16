@@ -7,7 +7,7 @@ import Scroll from '../components/Scroll';
 import '../assets/sass/project.scss';
 import { Parallax } from 'react-parallax';
 import Contact from '../components/Contact';
-import { useWindowSize } from '../components/useWindowSize';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 const IndexPage = () => {
   const windowsSize = useWindowSize();

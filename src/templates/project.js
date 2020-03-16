@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player';
 import '../assets/sass/project.scss';
 import Pagination from '../components/Pagination';
 import { Parallax } from 'react-parallax';
-import { useWindowSize } from '../components/useWindowSize';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 const Project = props => {
   const { pageContext } = props;

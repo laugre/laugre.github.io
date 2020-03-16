@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import ProjectData from '../data/projects.json';
 import '../assets/sass/project-selector.scss';
-import { useWindowSize } from './useWindowSize';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 export default function Projects() {
   return (
