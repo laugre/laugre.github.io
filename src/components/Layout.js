@@ -40,9 +40,7 @@ class Layout extends Component {
     const { isPreloaded } = this.state;
     const navigationItems = [
       { link: '/#home', name: 'home', icon: 'fa-home' },
-      // { link: '#project', name: 'Projets' },
       { link: '/about', name: 'about', icon: 'fa-address-card' },
-      // { link: '#contact', name: 'Contact' },
     ];
     return (
       <StaticQuery
@@ -61,7 +59,10 @@ class Layout extends Component {
               title={data.site.siteMetadata.title}
               meta={[
                 { name: 'description', content: 'Devologic' },
-                { name: 'keywords', content: 'développeur, web, mobile' },
+                {
+                  name: 'keywords',
+                  content: 'développeur, front-end, web, mobile, multimédia',
+                },
               ]}
             >
               <html lang="en" />

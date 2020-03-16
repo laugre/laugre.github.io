@@ -14,7 +14,10 @@ class NavigationBar extends Component {
                 <div className={`icon ${item.icon}`} style={{fontSize: 1.5 + 'em'}}></div>
               </AniLink> */}
               <Link to={item.link}>
-                <div className={`icon ${item.icon}`} style={{fontSize: 1.5 + 'em'}}></div>
+                <div
+                  className={`icon ${item.icon}`}
+                  style={{ fontSize: 1.5 + 'em' }}
+                ></div>
               </Link>
             </li>
           ))}

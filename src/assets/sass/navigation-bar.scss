@@ -7,11 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600');
 @import url('font-awesome.min.css');
 
-$smallerDevicesMaxWidth: 360px;
-$maxWidth: 700px;
-$minWidth: 701px;
-$maxHeight: 600px;
-
 @include breakpoints(
   (
     wide: (
@@ -34,46 +29,25 @@ $maxHeight: 600px;
 );
 
 .navigationBar {
-  width: 100%;
   position: fixed;
+  width: 100%;
+  height: 2.2em;
+  top: 0;
+  padding: 0.4em;
   z-index: 1;
-
-  //   fix at the top of page
-  top: 0px;
-  padding: 0 1rem 0 1rem;
-
-  display: flex;
-  // to have logo on the left and links on the right
-  justify-content: space-between;
 }
 
-@media (max-width: $maxWidth) {
-  .navigationBar {
-    height: 54px;
-  }
-}
-@media (min-width: $minWidth) and (min-height: $maxHeight) {
-  .navigationBar {
-    height: 72px;
-  }
-}
-// headerMenu
 .navigationBarMenu {
-  list-style: none;
-  margin: 0;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
+  background-color: rgba($color: #000000, $alpha: 0.4);
 }
 
 .navigationBarMenu li a {
-  @include vendor(
-    'transition',
-    ('color 0.35s ease-in-out')
-  );
+  @include vendor('transition', ('color 0.35s ease-in-out'));
   display: block;
   color: white;
   text-decoration: none;
+  padding: 0.4em;
+  font-size: 0.7em;
 
   &:hover {
     color: #45c89f;
@@ -81,23 +55,5 @@ $maxHeight: 600px;
     @include breakpoint('<=mobile') {
       color: white;
     }
-  }
-}
-@media (max-width: $maxWidth) {
-  .navigationBarMenu li a {
-    padding: 3px 10px 5px 0;
-    font-size: 16px;
-  }
-}
-@media (max-width: $smallerDevicesMaxWidth) {
-  .navigationBarMenu li a {
-    padding: 3px 5px 5px 0;
-    font-size: 13px;
-  }
-}
-@media (min-width: $minWidth) {
-  .navigationBarMenu li a {
-    padding: 15px 15px;
-    font-size: 22px;
   }
 }
