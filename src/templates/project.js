@@ -8,7 +8,9 @@ import Pagination from '../components/Pagination';
 import { Parallax } from 'react-parallax';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { Swipeable } from 'react-touch';
-import { navigate } from "gatsby";
+import { navigate } from 'gatsby';
+import { useTriggerTransition } from 'gatsby-plugin-transition-link';
+import { fade } from '../transitions/fade'
 
 const Project = props => {
   const { pageContext } = props;
@@ -30,10 +32,28 @@ const Project = props => {
   const windowsSize = useWindowSize();
   const gotoPrevProject = () => {
     navigate('/projects/' + previous.slug);
+    // triggerTransition({
+    //   to: '/projects/' + previous.slug,
+    // });
   };
   const gotoNextProject = () => {
     navigate('/projects/' + next.slug);
+    // triggerTransition({
+    //   to: '/projects/' + next.slug,
+    // });
   };
+
+  const triggerTransition = useTriggerTransition({
+    exit: {
+      length: 1,
+      trigger: ({ exit, node }) => fade({ exit, node, direction: 'out' }),
+    },
+    entry: {
+      length: 1,
+      delay: 0.5,
+      trigger: ({ exit, node }) => fade({ exit, node, direction: 'in' }),
+    },
+  })
 
   return (
     <Layout>
