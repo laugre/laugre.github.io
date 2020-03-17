@@ -58,7 +58,10 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Devologic' },
+                {
+                  name: 'description',
+                  content: 'Développement Front End, Web, Mobile, Multimédia',
+                },
                 {
                   name: 'keywords',
                   content: 'développeur, front-end, web, mobile, multimédia',
