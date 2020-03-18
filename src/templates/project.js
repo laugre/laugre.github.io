@@ -10,7 +10,8 @@ import { useWindowSize } from '../hooks/useWindowSize';
 import { Swipeable } from 'react-touch';
 import { navigate } from 'gatsby';
 import { useTriggerTransition } from 'gatsby-plugin-transition-link';
-import { fade } from '../transitions/fade'
+import { fade } from '../transitions/fade';
+import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink';
 
 const Project = props => {
   const { pageContext } = props;
@@ -31,16 +32,16 @@ const Project = props => {
   } = pageContext;
   const windowsSize = useWindowSize();
   const gotoPrevProject = () => {
-    navigate('/projects/' + previous.slug);
-    // triggerTransition({
-    //   to: '/projects/' + previous.slug,
-    // });
+    // navigate('/projects/' + previous.slug);
+    triggerTransition({
+      to: '/projects/' + previous.slug,
+    });
   };
   const gotoNextProject = () => {
-    navigate('/projects/' + next.slug);
-    // triggerTransition({
-    //   to: '/projects/' + next.slug,
-    // });
+    // navigate('/projects/' + next.slug);
+    triggerTransition({
+      to: '/projects/' + next.slug,
+    });
   };
 
   const triggerTransition = useTriggerTransition({
@@ -49,11 +50,11 @@ const Project = props => {
       trigger: ({ exit, node }) => fade({ exit, node, direction: 'out' }),
     },
     entry: {
-      length: 1,
       delay: 0.5,
+      length: 1,
       trigger: ({ exit, node }) => fade({ exit, node, direction: 'in' }),
     },
-  })
+  });
 
   return (
     <Layout>
