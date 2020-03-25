@@ -41,47 +41,36 @@
   .button-next {
     @include vendor(
       'transition',
-      ('opacity 0.5s ease-in-out', 'background-color 0.5s ease-in-out')
+      ('opacity 0.5s ease-in-out', 'color 0.5s ease-in-out')
     );
-    position: absolute;
-    width: 96px;
-    height: 64px;
-    top: calc(50% - 1.5em);
-    mask-image: url('../images/poptrox-nav.svg');
-    background-color: white;
-    opacity: 0.7;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    color: white;
+    // opacity: 0.7;
+    font-size: 1.5em;
   }
 
   &:hover {
     .button-next,
     .button-previous {
-      opacity: 1;
+      // opacity: 1;
 
       &:hover {
-        background-color: #45c89f;
+        color: #45c89f;
       }
     }
-  }
-
-  .button-next {
-    right: 0;
-  }
-
-  .button-previous {
-    @include vendor('transform', 'scaleX(-1)');
-    left: 0;
   }
 }
 
 @include breakpoint('<=mobile') {
   .pagination-buttons {
+    font-size: 0.5em;
+    opacity: 0.7;
     .button-next {
-      @include vendor('transform', 'scale(.6)');
-      right: -0.8em;
+      right: 50px;
     }
 
     .button-previous {
-      @include vendor('transform', 'scale(-0.6)');
       left: -0.8em;
     }
   }

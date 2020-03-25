@@ -38,10 +38,7 @@ class Layout extends Component {
   render() {
     const { children } = this.props;
     const { isPreloaded } = this.state;
-    const navigationItems = [
-      { link: '/#home', name: 'home', icon: 'fa-home' },
-      { link: '/about', name: 'about', icon: 'fa-address-card' },
-    ];
+    
     return (
       <StaticQuery
         query={graphql`
@@ -70,7 +67,7 @@ class Layout extends Component {
             >
               <html lang="en" />
             </Helmet>
-            <NavigationBar navigationProps={navigationItems} />
+            <NavigationBar />
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>

@@ -6,10 +6,16 @@ export default function Pagination({ previous, next }) {
   return (
     <div className="pagination-buttons">
       <AniLink cover to={previous} direction="right" bg="black">
-        <div className="button-previous"></div>
+        <div
+          className="icon fa-arrow-left button-previous"
+          // style={{ fontSize: 1.5 + 'em' }}
+        ></div>
       </AniLink>
       <AniLink cover to={next} direction="left" bg="black">
-        <div className="button-next"></div>
+        <div
+          className="icon fa-arrow-right button-next"
+          // style={{ fontSize: 1.5 + 'em' }}
+        ></div>
       </AniLink>
     </div>
   );
