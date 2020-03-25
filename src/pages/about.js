@@ -1,17 +1,54 @@
 import React from 'react';
-
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
 import Scroll from '../components/Scroll';
-
+import Gallery from '../components/Gallery';
 import '../assets/sass/project.scss';
 import { Parallax } from 'react-parallax';
 import Contact from '../components/Contact';
 import { useWindowSize } from '../hooks/useWindowSize';
 
+const ROW1_IMAGES = [
+  {
+    src: require('../assets/images/skills/html5-with-wordmark-color.svg'),
+    caption: 'HTML5',
+  },
+  {
+    src: require('../assets/images/skills/css3.svg'),
+    caption: 'CSS3',
+  },
+  {
+    src: require('../assets/images/skills/javascript-seeklogo.com.svg'),
+    caption: 'JS',
+  },
+  {
+    src: require('../assets/images/skills/sass-seeklogo.com.svg'),
+    caption: 'Sass',
+  },
+];
+
+const ROW2_IMAGES = [
+  {
+    src: require('../assets/images/skills/gatsby-seeklogo.com.svg'),
+    caption: 'Gatsby',
+  },
+  {
+    src: require('../assets/images/skills/react-seeklogo.com.svg'),
+    caption: 'React',
+  },
+  {
+    src: require('../assets/images/skills/vuejs-seeklogo.com.svg'),
+    caption: 'Vue',
+  },
+  {
+    src: require('../assets/images/skills/git-seeklogo.com.svg'),
+    caption: 'Git',
+  },
+];
+
 const IndexPage = () => {
   const windowsSize = useWindowSize();
-  
+
   return (
     <Layout>
       <section id="project-header">
@@ -66,6 +103,48 @@ const IndexPage = () => {
           développements.
         </p>
       </section>
+
+      <article
+        data-sal="zoom-in"
+        data-sal-duration="300"
+        data-sal-delay="0"
+        data-sal-easing="ease"
+        className="container box style2"
+      >
+        <header>
+          <h2>Compétences</h2>
+          <p>
+            En constante évolution, une veille quotidienne est primordiale pour
+            suivre et s'inspirer des nouveaux concepts du web.
+          </p>
+          <p>
+            <strong>responsive design</strong> |{' '}
+            <strong>creative coding</strong> | <strong>UX design</strong> |{' '}
+            <strong>interaction design</strong> |{' '}
+            <strong>progressive web app</strong>
+          </p>
+          <p>
+            Ainsi j'éprouve un certain plaisir à mettre en oeuvre des solutions
+            sur mesure répondant aux dernières normes et problématiques du web
+            en utilisant les dernières technologies.
+          </p>
+        </header>
+
+        <div className="inner gallery">
+          <Gallery
+            images={ROW1_IMAGES.map(({ src, caption }) => ({
+              src,
+              caption,
+            }))}
+          />
+          <Gallery
+            images={ROW2_IMAGES.map(({ src, caption }) => ({
+              src,
+              caption,
+            }))}
+          />
+        </div>
+      </article>
 
       <article className="container box style2">
         <header>
