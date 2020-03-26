@@ -151,7 +151,7 @@ const IndexPage = () => {
           <h2>Parcours Professionnel</h2>
           <p>
             Avant de travailler en indépendant et à compter de la fin de mes
-            études (2009) je me suis forgé mon expérience professionnelle à
+            études (2009) j'ai forgé mon expérience professionnelle à
             travers plusieurs laboratoires de recherches et entreprises.
           </p>
           <p>
